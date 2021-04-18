@@ -23,7 +23,10 @@
       </p>
       <hr class="mb-2" />
       <div class="mb-4 text-lg font-bold">25,000 sum</div>
-      <button class="w-full p-2 text-white bg-green-500 rounded-lg">
+      <button
+        @click="$emit('close', close)"
+        class="w-full p-2 text-white bg-green-500 rounded-lg"
+      >
         НАЗАД
       </button>
     </div>

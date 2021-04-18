@@ -1,7 +1,10 @@
 <template>
   <BaseModal>
     <template #trigger="{ open }">
-      <div class="flex flex-col items-center justify-center" @click="open">
+      <div
+        class="flex flex-col items-center justify-center cursor-pointer"
+        @click="open"
+      >
         <img
           class="object-cover w-full h-40 mb-1 md:h-64 lg:h-96 rounded-xl"
           src="../assets/iskander.jpg"
