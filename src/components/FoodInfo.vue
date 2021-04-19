@@ -2,7 +2,7 @@
   <div class="w-full">
     <img
       class="object-cover object-center w-full h-72 md:h-96"
-      src="../assets/iskander.jpg"
+      src="../assets/iskanderr.jpg"
       alt=""
     />
     <div class="p-5">
@@ -23,12 +23,30 @@
       </p>
       <hr class="mb-2" />
       <div class="mb-4 text-lg font-bold">25,000 sum</div>
-      <button
-        @click="$emit('close', close)"
-        class="w-full p-2 text-white bg-green-500 rounded-lg"
-      >
-        НАЗАД
-      </button>
+      <div class="flex items-center">
+        <button
+          @click="$emit('close', close)"
+          class="w-full p-2 text-white bg-green-500 rounded-lg"
+        >
+          НАЗАД
+        </button>
+        <div class="ml-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="#10B981"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </template>

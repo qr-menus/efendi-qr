@@ -7,7 +7,7 @@
       >
         <img
           class="object-cover w-full h-40 mb-1 md:h-64 lg:h-96 rounded-xl"
-          src="../assets/iskander.jpg"
+          src="../assets/iskanderr.jpg"
           alt="food"
         />
         <h2 class="my-3 text-lg font-medium text-gray-600">Iskander kebap</h2>
