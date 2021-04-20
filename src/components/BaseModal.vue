@@ -9,7 +9,7 @@
       aria-modal="true"
     >
       <div
-        class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0"
+        class="flex items-end justify-center min-h-screen pt-4 text-center sm:block sm:p-0"
       >
         <!--
       Background overlay, show/hide based on modal state.
@@ -31,7 +31,7 @@
         >
           <div
             v-show="isOpen"
-            class="fixed inset-0 transition-opacity bg-gray-700 bg-opacity-75"
+            class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75"
             aria-hidden="true"
             @click.stop="close"
           ></div>
@@ -55,15 +55,15 @@
         To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
     -->
         <transition
-          enter-active-class="duration-300 ease-out"
+          enter-active-class="duration-500 ease-out"
           enter-class="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
-          enter-to-class="translate-y-0 opacity-100 sm:scale-100"
-          leave-active-class="duration-200 ease-in"
-          leave-class="translate-y-0 opacity-100 sm:scale-100"
+          enter-to-class="translate-y-0 opacity-50 sm:scale-100"
+          leave-active-class="duration-500 ease-in"
+          leave-class="translate-y-0 opacity-50 sm:scale-100"
           leave-to-class="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
         >
           <div
-            class="inline-block overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full"
+            class="inline-block overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl rounded-t-xl sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full"
           >
             <div
               @click.stop="close"
@@ -82,7 +82,11 @@
                 />
               </svg>
             </div>
-            <slot name="default" :close="close"></slot>
+            <slot
+              class="transition duration-300 transform hover:translate-y-32"
+              name="default"
+              :close="close"
+            ></slot>
           </div>
         </transition>
       </div>
