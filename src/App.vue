@@ -79,7 +79,7 @@
           <scrollactive
             ref="scrollContainer"
             active-class="active"
-            :offset="120"
+            :offset="130"
             class="flex items-center px-4 py-2 space-x-2 overflow-x-auto my-nav"
             @itemchanged="onItemChanged"
           >
@@ -101,7 +101,7 @@
         :id="key"
         class="px-4 pb-4 mb-4"
       >
-        <h2 class="mb-4 text-xl font-black text-left">
+        <h2 class="my-4 text-xl font-black text-left">
           {{ category.name_ru }}
         </h2>
         <div
