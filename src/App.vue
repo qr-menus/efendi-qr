@@ -18,56 +18,6 @@
               </div>
             </div>
           </div>
-          <SlideOver>
-            <template #trigger="{ onClick }">
-              <div class="ml-3" @click.stop="onClick">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-7 h-7"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="#ED2024"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-              </div>
-            </template>
-            <template #default>
-              <div
-                class="sticky top-0 flex px-4 py-2 mb-2 space-x-2 overflow-x-auto bg-white"
-              >
-                <router-link
-                  to="category"
-                  class="px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-100 rounded-full hover:text-gray-700"
-                >
-                  Первое
-                </router-link>
-                <router-link
-                  active-class="bg-gray-100"
-                  v-for="item in 6"
-                  :key="item"
-                  to="category"
-                  class="px-3 py-1.5 text-sm font-medium text-gray-700 rounded-full hover:text-gray-700"
-                >
-                  Десерты
-                </router-link>
-              </div>
-              <div class="px-2 space-y-3">
-                <!-- <FavouriteItem
-                  :category="key"
-                  :id="$productIndex + 1"
-                  :product="product"
-                  v-for="item in 14"
-                  :key="item"
-                /> -->
-              </div>
-            </template>
-          </SlideOver>
         </div>
         <div class="">
           <!-- <router-link
@@ -121,14 +71,12 @@
 </template>
 <script>
 import FoodCard from "./components/FoodCard.vue";
-import SlideOver from "./components/SlideOver.vue";
 // import FavouriteItem from "./components/FavouriteItem.vue";
 import { mapState } from "vuex";
 
 export default {
   components: {
     FoodCard,
-    SlideOver,
     // FavouriteItem,
   },
   computed: {
