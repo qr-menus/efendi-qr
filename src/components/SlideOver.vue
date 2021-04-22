@@ -56,7 +56,7 @@
             leave-to-class="translate-x-full"
             @after-leave="close"
           >
-            <div v-show="showContent" class="max-w-max">
+            <div v-show="showContent" class="max-w-full">
               <div
                 class="flex flex-col h-full py-3 overflow-y-scroll bg-white shadow-xl"
               >

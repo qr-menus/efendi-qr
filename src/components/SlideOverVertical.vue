@@ -57,7 +57,7 @@
             @after-leave="close"
           >
             <div v-show="showContent" class="">
-              <div class="h-full bg-white">
+              <div class="h-full overflow-x-hidden bg-white rounded-t-xl">
                 <div class="relative">
                   <div
                     @click.stop="hideContent"

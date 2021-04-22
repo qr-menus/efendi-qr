@@ -3,7 +3,7 @@
     <div class="relative">
       <img
         class="object-cover object-center w-full bg-gray-100"
-        src="../assets/dil_shurba.webp"
+        :src="`../images/${category}/${category}_${id}.webp`"
         alt=""
       />
       <div class="absolute flex space-x-2 bottom-4 right-4">
@@ -41,26 +41,23 @@
     </div>
     <div class="p-5 text-left">
       <h2 class="text-xl font-black capitalize">
-        {{ "TÜRK SALATASI / ТУРЕЦКИЙ САЛАТ".toLowerCase() }}
+        {{ product.name_ru && product.name_ru.toLowerCase() }}
       </h2>
       <p
         class="pr-2 my-4 overflow-y-auto text-sm text-gray-500 max-h-40 sm:max-h-64"
       >
-        Один из самых известных турецких мясных блюд, этот вид кебаба назван в
-        честь изобретателя 19 века Искендера Эфенди. Как еда, кебаб, как
-        правило, берет свое начало в культурах Ближнего Востока, Турции и Индии.
-        Но хотя мы склонны думать о кусках мяса на вертеле, которые часто
-        чередуются с кусочками овощей, когда мы слышим слово кебаб, на самом
-        деле это более широкий термин, который охватывает многие мясные блюда на
-        гриле.Но хотя мы склонны думать о кусках мяса на вертеле, которые часто
-        чередуются с кусочками овощей, когда мы слышим слово кебаб, на самом
-        деле это более широкий термин, который охватывает многие мясные блюда на
-        гриле.
+        {{ product.ingredients_ru && product.ingredients_ru.toLowerCase() }}
       </p>
       <hr class="my-4" />
       <div class="flex mb-4 space-x-2 text-sm font-bold md:text-lg">
-        <h2>1x <span class="text-lg text-primary">- 25,000 сум</span> /</h2>
-        <h2>0.5x <span class="text-lg text-primary">- 20,000 сум</span></h2>
+        <h2>
+          1x
+          <span class="text-lg text-primary">- {{ product.price_1 }} сум</span>
+        </h2>
+        <h2 v-if="product.price_05">
+          / 0.5x
+          <span class="text-lg text-primary">- {{ product.price_05 }} сум</span>
+        </h2>
       </div>
       <div class="flex items-center mb-4">
         <button
@@ -76,6 +73,20 @@
 
 <script>
 export default {
+  props: {
+    product: {
+      type: Object,
+      required: true,
+    },
+    id: {
+      type: Number,
+      required: true,
+    },
+    category: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       liked: false,

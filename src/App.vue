@@ -39,35 +39,79 @@
             </template>
             <template #default>
               <div
-                class="grid grid-cols-2 px-4 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-4 gap-y-8"
+                class="sticky top-0 flex px-4 py-2 mb-2 space-x-2 overflow-x-auto bg-white"
               >
-                <FoodCard v-for="item in 10" :key="item" />
+                <router-link
+                  to="category"
+                  class="px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-100 rounded-full hover:text-gray-700"
+                >
+                  Первое
+                </router-link>
+                <router-link
+                  active-class="bg-gray-100"
+                  v-for="item in 6"
+                  :key="item"
+                  to="category"
+                  class="px-3 py-1.5 text-sm font-medium text-gray-700 rounded-full hover:text-gray-700"
+                >
+                  Десерты
+                </router-link>
+              </div>
+              <div class="px-2 space-y-3">
+                <!-- <FavouriteItem
+                  :category="key"
+                  :id="$productIndex + 1"
+                  :product="product"
+                  v-for="item in 14"
+                  :key="item"
+                /> -->
               </div>
             </template>
           </SlideOver>
         </div>
-        <div class="flex px-4 py-2 space-x-2 overflow-x-auto">
-          <router-link
+        <div class="flex items-center px-4 py-2 space-x-2 overflow-x-auto">
+          <!-- <router-link
             to="category"
-            class="px-3 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-full hover:text-gray-700"
+            class="px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-100 rounded-full hover:text-gray-700"
           >
-            Perviy
-          </router-link>
-          <router-link
-            active-class="text-gray-600 bg-gray-100"
-            v-for="item in 6"
-            :key="item"
-            to="category"
-            class="px-3 py-2 text-sm font-medium text-gray-500 rounded-full hover:text-gray-700"
+            Первое
+          </router-link> -->
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 text-gray-700"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <a
+            v-for="item in categories"
+            :key="item.name_ru"
+            href=""
+            class="px-3 py-1.5 text-sm flex-shrink-0 leading-4 focus:bg-primary focus:text-white font-medium text-gray-700 rounded-full hover:text-gray-700"
           >
-            Billing
-          </router-link>
+            {{ item.name_ru }}
+          </a>
         </div>
       </nav>
-      <div
-        class="grid grid-cols-2 px-4 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-4 gap-y-8"
-      >
-        <FoodCard v-for="item in 10" :key="item" />
+      <div v-for="(category, key) in categories" :key="key" class="pb-4 mb-4">
+        <div
+          class="grid grid-cols-2 px-4 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-4 gap-y-8"
+        >
+          <FoodCard
+            v-for="(product, $productIndex) in category.products"
+            :key="`product-${$productIndex}`"
+            :category="key"
+            :id="$productIndex + 1"
+            :product="product"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -75,12 +119,19 @@
 <script>
 import FoodCard from "./components/FoodCard.vue";
 import SlideOver from "./components/SlideOver.vue";
+// import FavouriteItem from "./components/FavouriteItem.vue";
+import { mapState } from "vuex";
+
 export default {
   components: {
     FoodCard,
     SlideOver,
+    // FavouriteItem,
   },
   computed: {
+    ...mapState({
+      categories: (state) => state.categories,
+    }),
     filtered() {
       return this.items.filter((item) =>
         item.name.toLowerCase().includes(this.searchQuery.toLowerCase())
