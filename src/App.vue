@@ -69,40 +69,43 @@
             </template>
           </SlideOver>
         </div>
-        <div class="flex items-center px-4 py-2 space-x-2 overflow-x-auto">
+        <div class="">
           <!-- <router-link
             to="category"
             class="px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-100 rounded-full hover:text-gray-700"
           >
             Первое
           </router-link> -->
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-5 h-5 text-gray-700"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <a
-            v-for="item in categories"
-            :key="item.name_ru"
-            href=""
-            class="px-3 py-1.5 text-sm flex-shrink-0 leading-4 focus:bg-primary focus:text-white font-medium text-gray-700 rounded-full hover:text-gray-700"
+          <scrollactive
+            ref="scrollContainer"
+            active-class="active"
+            :offset="120"
+            class="flex items-center px-4 py-2 space-x-2 overflow-x-auto my-nav"
+            @itemchanged="onItemChanged"
           >
-            {{ item.name_ru }}
-          </a>
+            <a
+              :ref="`link-${key}`"
+              v-for="(item, key) in categories"
+              :key="item.name_ru"
+              :href="`#${key}`"
+              class="px-3 py-1.5 scrollactive-item text-sm flex-shrink-0 leading-4 font-medium rounded-full"
+            >
+              {{ item.name_ru }}
+            </a>
+          </scrollactive>
         </div>
       </nav>
-      <div v-for="(category, key) in categories" :key="key" class="pb-4 mb-4">
+      <div
+        v-for="(category, key) in categories"
+        :key="key"
+        :id="key"
+        class="px-4 pb-4 mb-4"
+      >
+        <h2 class="mb-4 text-xl font-black text-left">
+          {{ category.name_ru }}
+        </h2>
         <div
-          class="grid grid-cols-2 px-4 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-4 gap-y-8"
+          class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-4 gap-y-8"
         >
           <FoodCard
             v-for="(product, $productIndex) in category.products"
@@ -143,6 +146,36 @@ export default {
       searchQuery: "",
     };
   },
+  methods: {
+    onItemChanged(e, curr, lastActive) {
+      if (e) {
+        const categories = Object.keys(this.categories)
+          .map((key, index) => ({
+            [key]: index,
+          }))
+          .reduce((prev, curr) => {
+            return { ...prev, ...curr };
+          }, {});
+
+        const currCategory = curr.href.split("#")[1];
+        const lastActiveCategory = lastActive.href.split("#")[1];
+
+        if (categories[currCategory] > categories[lastActiveCategory]) {
+          this.$refs["scrollContainer"].$el.scrollLeft += curr.offsetWidth;
+        } else {
+          this.$refs["scrollContainer"].$el.scrollLeft -= curr.offsetWidth;
+        }
+      }
+    },
+  },
+  mounted() {
+    this.$nextTick(() => {
+      const firstLinkArr = this.$refs[
+        `link-${Object.keys(this.categories)[0]}`
+      ];
+      firstLinkArr[0].click();
+    });
+  },
 };
 </script>
 <style>
@@ -165,5 +198,9 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+.active {
+  @apply bg-primary;
+  @apply text-white;
 }
 </style>
