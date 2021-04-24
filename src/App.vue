@@ -2,43 +2,56 @@
   <div id="app">
     <div>
       <nav class="sticky top-0 bg-white">
-        <div class="flex items-center px-4 border-b">
+        <div class="flex items-center px-4 border-b max-w-7xl">
           <div class="relative w-full rounded-md">
             <div class="flex items-center justify-between">
-              <img class="w-16 h-16" src="./assets/logo.svg" alt="" />
+              <div class="flex items-center space-x-4">
+                <img class="w-16 h-16" src="./assets/logo.svg" alt="" />
+                <button></button>
+                <!-- <div>
+                  <h6 class="text-sm font-medium">
+                    <span class="font-bold text-primary">E1 -</span> (71)
+                    233-15-02
+                  </h6>
+                  <h6 class="text-sm font-medium">
+                    <span class="font-bold text-primary">E2 -</span> (95)
+                    177-09-93
+                  </h6>
+                </div> -->
+              </div>
               <div>
                 <select
-                  id="location"
-                  name="location"
+                  v-model="selectedLang"
+                  name="language"
                   class="block py-1 pl-4 text-base bg-gray-100 border-none rounded-md focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
                 >
-                  <option selected>Tr/Ru</option>
-                  <option>Tr/En</option>
+                  <option
+                    v-for="lang in langOptions"
+                    :key="lang.text"
+                    v-bind:value="lang.text"
+                  >
+                    {{ lang.text }}
+                  </option>
                 </select>
               </div>
             </div>
           </div>
         </div>
-        <div class="">
-          <!-- <router-link
-            to="category"
-            class="px-3 py-1.5 text-sm font-medium text-gray-700 bg-gray-100 rounded-full hover:text-gray-700"
-          >
-            Первое
-          </router-link> -->
+        <div>
           <scrollactive
             ref="scrollContainer"
             active-class="active"
             :offset="130"
             class="flex items-center px-4 py-2 space-x-2 overflow-x-auto my-nav"
             @itemchanged="onItemChanged"
+            v-if="selectedLang == 'Tr/Ru'"
           >
             <a
               :ref="`link-${key}`"
               v-for="(item, key) in categories"
               :key="item.name_ru"
               :href="`#${key}`"
-              class="px-3 py-1.5 scrollactive-item text-sm flex-shrink-0 leading-4 font-medium rounded-full"
+              class="flex-shrink-0 px-3 py-2 text-sm font-medium leading-4 rounded-full scrollactive-item"
             >
               {{ item.name_ru }}
             </a>
@@ -51,7 +64,7 @@
         :id="key"
         class="px-4 pb-4 mb-4"
       >
-        <h2 class="my-4 text-xl font-black text-left">
+        <h2 class="my-2 text-xl font-black text-left">
           {{ category.name_ru }}
         </h2>
         <div
@@ -92,6 +105,8 @@ export default {
   data() {
     return {
       searchQuery: "",
+      selectedLang: "Tr/Ru",
+      langOptions: [{ text: "Tr/Ru" }, { text: "Tr/En" }],
     };
   },
   methods: {

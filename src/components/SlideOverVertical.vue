@@ -36,7 +36,9 @@
           ></div>
         </transition>
 
-        <div class="absolute inset-x-0 bottom-0 flex items-end max-w-full">
+        <div
+          class="absolute inset-x-0 bottom-0 flex items-end justify-center max-w-full"
+        >
           <!--
         Slide-over panel, show/hide based on slide-over state.
 
@@ -57,7 +59,9 @@
             @after-leave="close"
           >
             <div v-show="showContent" class="">
-              <div class="h-full overflow-x-hidden bg-white rounded-t-xl">
+              <div
+                class="h-full max-w-2xl overflow-x-hidden bg-white rounded-t-xl"
+              >
                 <div class="relative">
                   <div
                     @click.stop="hideContent"

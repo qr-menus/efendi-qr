@@ -7,15 +7,17 @@
       >
         <div>
           <img
-            class="object-cover w-full mb-1 bg-gray-100 rounded-xl"
-            :src="`/images/${category}/${category}_${id}.webp`"
+            class="object-cover w-full mb-1 bg-yellow-400 rounded-xl"
+            src="../assets/shorva1.webp"
             alt="food"
           />
           <h2 class="my-3 text-lg font-medium text-gray-600">
             {{ product.name_tr && product.name_tr.toLowerCase() }}
           </h2>
         </div>
-        <h6 class="w-full py-3 font-bold bg-gray-100 rounded-lg text-primary">
+        <h6
+          class="w-full py-3 font-black text-yellow-500 bg-gray-100 rounded-lg"
+        >
           {{ product.price_1 }} sum
         </h6>
       </div>

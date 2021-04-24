@@ -1,8 +1,8 @@
 <template>
   <div class="w-full">
     <img
-      class="object-cover object-center w-full bg-gray-100"
-      :src="`../images/${category}/${category}_${id}.webp`"
+      class="object-cover object-center w-full bg-yellow-400"
+      src="../assets/shorva1.webp"
       alt=""
     />
     <div class="p-5 text-left">
@@ -18,17 +18,21 @@
       <div class="flex mb-4 space-x-2 text-sm font-bold md:text-lg">
         <h2>
           1x
-          <span class="text-lg text-primary">- {{ product.price_1 }} сум</span>
+          <span class="text-lg text-yellow-500"
+            >- {{ product.price_1 }} сум</span
+          >
         </h2>
         <h2 v-if="product.price_05">
           / 0.5x
-          <span class="text-lg text-primary">- {{ product.price_05 }} сум</span>
+          <span class="text-lg text-yellow-500"
+            >- {{ product.price_05 }} сум</span
+          >
         </h2>
       </div>
       <div class="flex items-center mb-4">
         <button
           @click="$emit('close', close)"
-          class="w-full p-2 text-white rounded-lg bg-primary"
+          class="w-full p-2 font-medium text-white bg-yellow-500 rounded-lg"
         >
           НАЗАД
         </button>
