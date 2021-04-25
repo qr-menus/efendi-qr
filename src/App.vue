@@ -2,7 +2,7 @@
   <div id="app">
     <div>
       <nav class="sticky top-0 bg-white">
-        <div class="flex items-center px-4 border-b max-w-7xl">
+        <div class="flex items-center px-4 mx-auto border-b max-w-7xl">
           <div class="relative w-full rounded-md">
             <div class="flex items-center justify-between">
               <div class="flex items-center space-x-4">
@@ -43,7 +43,7 @@
             ref="scrollContainer"
             active-class="active"
             :offset="130"
-            class="flex items-center px-4 py-2 space-x-2 overflow-x-auto my-nav"
+            class="flex items-center px-4 py-2 mx-auto space-x-2 overflow-x-auto max-w-7xl my-nav"
             @itemchanged="onItemChanged"
           >
             <a
@@ -51,7 +51,7 @@
               v-for="(item, key) in categories"
               :key="item.name_ru"
               :href="`#${key}`"
-              class="flex-shrink-0 px-3 py-2 text-sm font-medium leading-4 rounded-full scrollactive-item"
+              class="flex-shrink-0 px-3 py-2 font-medium leading-4 rounded-full scrollactive-item"
             >
               {{ item[$options.filters.locale("name")] }}
             </a>
@@ -62,7 +62,7 @@
         v-for="(category, key) in categories"
         :key="key"
         :id="key"
-        class="px-4 pb-4 mb-4"
+        class="px-4 pb-4 mx-auto mb-4 max-w-7xl"
       >
         <h2 class="my-3 text-xl font-black text-left">
           {{ category[$options.filters.locale("name")] }}
