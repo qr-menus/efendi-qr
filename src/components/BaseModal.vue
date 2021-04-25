@@ -3,13 +3,13 @@
     <slot name="trigger" :open="open"></slot>
     <div
       v-show="isOpen"
-      class="fixed inset-0 z-10 overflow-y-auto"
+      class="fixed inset-0 z-20 overflow-y-auto"
       aria-labelledby="modal-title"
       role="dialog"
       aria-modal="true"
     >
       <div
-        class="flex items-end justify-center min-h-screen pt-4 text-center sm:block sm:p-0"
+        class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0"
       >
         <!--
       Background overlay, show/hide based on modal state.
@@ -22,18 +22,19 @@
         To: "opacity-0"
     -->
         <transition
-          enter-active-class="duration-300 ease-out"
+          enter-active-class="duration-200 ease-out"
           enter-class="opacity-0"
           enter-to-class="opacity-100"
           leave-active-class="duration-200 ease-in"
           leave-class="opacity-100"
           leave-to-class="opacity-0"
+          @after-enter="showContent = true"
         >
           <div
             v-show="isOpen"
-            class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75"
+            class="fixed inset-0 transition-opacity bg-gray-700 bg-opacity-75"
             aria-hidden="true"
-            @click.stop="close"
+            @click.stop="hideContent"
           ></div>
         </transition>
 
@@ -55,38 +56,19 @@
         To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
     -->
         <transition
-          enter-active-class="duration-500 ease-out"
+          enter-active-class="duration-300 ease-out"
           enter-class="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
-          enter-to-class="translate-y-0 opacity-50 sm:scale-100"
-          leave-active-class="duration-500 ease-in"
-          leave-class="translate-y-0 opacity-50 sm:scale-100"
+          enter-to-class="translate-y-0 opacity-100 sm:scale-100"
+          leave-active-class="duration-200 ease-in"
+          leave-class="translate-y-0 opacity-100 sm:scale-100"
           leave-to-class="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
+          @after-leave="close"
         >
           <div
-            class="inline-block overflow-hidden text-left align-bottom transition-all transform bg-white shadow-xl rounded-t-xl sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full"
+            v-if="showContent"
+            class="inline-block w-full overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-2xl"
           >
-            <div
-              @click.stop="close"
-              class="absolute cursor-pointer top-2 right-2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-10 h-10"
-                viewBox="0 0 20 20"
-                fill="#fefefe"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <slot
-              class="transition duration-300 transform hover:translate-y-32"
-              name="default"
-              :close="close"
-            ></slot>
+            <slot name="default" :close="hideContent"></slot>
           </div>
         </transition>
       </div>
@@ -96,15 +78,19 @@
 
 <script>
 export default {
-  name: "FoodInfo",
+  name: "BaseModal",
   data() {
     return {
       isOpen: false,
+      showContent: false,
     };
   },
   methods: {
     open() {
       this.isOpen = true;
+    },
+    hideContent() {
+      this.showContent = false;
     },
     close() {
       this.isOpen = false;

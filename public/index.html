@@ -5,13 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>Efendi Menu</title>
+
+    <meta
+      property="og:title"
+      content="QR Меню ресторана Efendi"
+    />
+    <meta
+      property="og:description"
+      content="Efendi - самый вкусный ресторан турецкой кухни в Ташкенте"
+    />
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script src="https://api-maps.yandex.ru/2.1/?3e7930fe-d6cb-40aa-a554-38c9f4cfb8f5&lang=en_US" type="text/javascript">
+    </script>
+
+    <script>
+      ymaps.ready(init);
+      function init(){ 
+          // Creating the map.    
+          var myMap = new ymaps.Map("map", {
+              // The map center coordinates.
+              // Default order: “latitude, longitude”.
+              // To not manually determine the map center coordinates,
+              // use the Coordinate detection tool.
+              center: [41.302630, 69.288551],
+              // Zoom level. Acceptable values:
+              // from 0 (the entire world) to 19.
+              zoom: 17,
+            });
+            redCollection = new ymaps.GeoObjectCollection(null, {
+            preset: 'islands#redIcon'
+        }),
+            myMap.geoObjects.add(new ymaps.Placemark([41.3025555, 69.2878000], {
+            balloonContent: '<strong>crocodile\'s nose</strong> color',
+            iconCaption: 'Efendi Restaurant - 1'
+        }, {
+            preset: 'islands#redDotIconWithCaption'
+        }))
+
+          var myMap2 = new ymaps.Map("map-2", {
+              // The map center coordinates.
+              // Default order: “latitude, longitude”.
+              // To not manually determine the map center coordinates,
+              // use the Coordinate detection tool.
+              center: [41.327882, 69.269219],
+              // Zoom level. Acceptable values:
+              // from 0 (the entire world) to 19.
+              zoom: 17,
+            });
+            redCollection = new ymaps.GeoObjectCollection(null, {
+            preset: 'islands#redIcon'
+        }),
+            myMap.geoObjects.add(new ymaps.Placemark([41.327882, 69.269219], {
+            balloonContent: '<strong>crocodile\'s nose</strong> color',
+            iconCaption: 'Efendi Restaurant - 2'
+        }, {
+            preset: 'islands#redDotIconWithCaption'
+        }))
+      }
+
+    </script>
   </body>
 </html>
