@@ -8,10 +8,10 @@
         <div>
           <img
             class="object-cover w-full mb-1 bg-yellow-400 rounded-xl"
-            src="../assets/shorva1.webp"
+            :src="`/images/${category}/${category}_${id}.webp`"
             alt="food"
           />
-          <h2 class="my-3 text-lg font-medium text-gray-600">
+          <h2 class="my-3 text-lg font-medium text-gray-600 capitalize">
             {{ product.name_tr && product.name_tr.toLowerCase() }}
           </h2>
         </div>

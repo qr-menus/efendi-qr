@@ -21,14 +21,15 @@
               </div>
               <div>
                 <select
-                  v-model="selectedLang"
+                  :value="$store.state.locale"
                   name="language"
                   class="block py-1 pl-4 text-base bg-gray-100 border-none rounded-md focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
+                  @change="changeLocale"
                 >
                   <option
                     v-for="lang in langOptions"
                     :key="lang.text"
-                    v-bind:value="lang.text"
+                    :value="lang.value"
                   >
                     {{ lang.text }}
                   </option>
@@ -44,7 +45,6 @@
             :offset="130"
             class="flex items-center px-4 py-2 space-x-2 overflow-x-auto my-nav"
             @itemchanged="onItemChanged"
-            v-if="selectedLang == 'Tr/Ru'"
           >
             <a
               :ref="`link-${key}`"
@@ -53,7 +53,7 @@
               :href="`#${key}`"
               class="flex-shrink-0 px-3 py-2 text-sm font-medium leading-4 rounded-full scrollactive-item"
             >
-              {{ item.name_ru }}
+              {{ item[$options.filters.locale("name")] }}
             </a>
           </scrollactive>
         </div>
@@ -64,8 +64,8 @@
         :id="key"
         class="px-4 pb-4 mb-4"
       >
-        <h2 class="my-2 text-xl font-black text-left">
-          {{ category.name_ru }}
+        <h2 class="my-3 text-xl font-black text-left">
+          {{ category[$options.filters.locale("name")] }}
         </h2>
         <div
           class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-4 gap-y-8"
@@ -95,21 +95,28 @@ export default {
   computed: {
     ...mapState({
       categories: (state) => state.categories,
+      locale: (state) => state.locale,
     }),
-    filtered() {
-      return this.items.filter((item) =>
-        item.name.toLowerCase().includes(this.searchQuery.toLowerCase())
-      );
+    getField() {
+      return (field) => {
+        const obj = this.collection[this.$options.filters.locale(field)];
+        return obj && obj.toLowerCase();
+      };
     },
   },
   data() {
     return {
       searchQuery: "",
-      selectedLang: "Tr/Ru",
-      langOptions: [{ text: "Tr/Ru" }, { text: "Tr/En" }],
+      langOptions: [
+        { text: "Tr/Ru", value: "ru" },
+        { text: "Tr/En", value: "en" },
+      ],
     };
   },
   methods: {
+    changeLocale(event) {
+      this.$store.commit("setLocale", event.target.value);
+    },
     onItemChanged(e, curr, lastActive) {
       if (e) {
         const categories = Object.keys(this.categories)

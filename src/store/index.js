@@ -7,8 +7,14 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     categories: data,
+    locale: localStorage.getItem("locale") || "ru",
   },
-  mutations: {},
+  mutations: {
+    setLocale(state, locale) {
+      state.locale = locale;
+      localStorage.setItem("locale", locale);
+    },
+  },
   actions: {},
   modules: {},
 });
