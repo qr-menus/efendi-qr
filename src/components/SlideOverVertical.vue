@@ -104,12 +104,18 @@ export default {
   methods: {
     toggle() {
       this.isOpen = !this.isOpen;
+      if (this.isOpen) {
+        document.body.classList.add("overflow-hidden");
+      } else {
+        document.body.classList.remove("overflow-hidden");
+      }
     },
     hideContent() {
       this.showContent = false;
     },
     close() {
       this.isOpen = false;
+      document.body.classList.remove("overflow-hidden");
     },
   },
 };
