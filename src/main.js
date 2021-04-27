@@ -5,6 +5,7 @@ import router from "./router";
 import store from "./store";
 import VueScrollactive from "vue-scrollactive";
 import "./utils/localeFilter";
+import "./utils/clickOutside";
 
 Vue.config.productionTip = false;
 Vue.use(VueScrollactive);
