@@ -120,7 +120,7 @@
             ref="scrollContainer"
             active-class="active"
             style="scroll-behavior: smooth; transition-duration: 0.5s"
-            :offset="130"
+            :offset="120"
             class="flex items-center px-4 py-2 mx-auto space-x-2 overflow-x-auto max-w-7xl my-nav"
             @itemchanged="onItemChanged"
           >
@@ -140,9 +140,9 @@
         v-for="(category, key) in categories"
         :key="key"
         :id="key"
-        class="px-4 pb-4 mx-auto mb-4 max-w-7xl"
+        class="px-4 pt-3 pb-4 mx-auto mb-4 max-w-7xl"
       >
-        <h2 class="my-3 text-xl font-black text-left">
+        <h2 class="mb-3 text-xl font-black text-left">
           {{ category[$options.filters.locale("name")] }}
         </h2>
         <div
@@ -216,24 +216,26 @@ export default {
             return { ...prev, ...curr };
           }, {});
 
-        const currCategory = curr.href.split("#")[1];
-        const lastActiveCategory = lastActive.href.split("#")[1];
+        if (curr && lastActive) {
+          const currCategory = curr.href.split("#")[1];
+          const lastActiveCategory = lastActive.href.split("#")[1];
 
-        if (categories[currCategory] > categories[lastActiveCategory]) {
-          this.$refs["scrollContainer"].$el.scrollLeft += curr.offsetWidth;
-        } else {
-          this.$refs["scrollContainer"].$el.scrollLeft -= curr.offsetWidth;
+          if (categories[currCategory] > categories[lastActiveCategory]) {
+            this.$refs["scrollContainer"].$el.scrollLeft += curr.offsetWidth;
+          } else {
+            this.$refs["scrollContainer"].$el.scrollLeft -= curr.offsetWidth;
+          }
         }
       }
     },
   },
   mounted() {
-    this.$nextTick(() => {
-      const firstLinkArr = this.$refs[
-        `link-${Object.keys(this.categories)[0]}`
-      ];
-      firstLinkArr[0].click();
-    });
+    // this.$nextTick(() => {
+    //   const firstLinkArr = this.$refs[
+    //     `link-${Object.keys(this.categories)[0]}`
+    //   ];
+    //   firstLinkArr[0].click();
+    // });
   },
 };
 </script>

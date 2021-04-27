@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slot name="trigger" :onClick="toggle"></slot>
+    <slot name="trigger" :onClick="open"></slot>
     <section
       v-show="isOpen"
       class="fixed inset-0 overflow-hidden"
@@ -101,17 +101,27 @@ export default {
       showContent: false,
     };
   },
+  watch: {
+    $route: {
+      handler(value) {
+        // eslint-disable-next-line no-extra-boolean-cast
+        if (!Boolean(value.query.modalOpened)) {
+          this.showContent = false;
+        }
+      },
+    },
+  },
   methods: {
-    toggle() {
-      this.isOpen = !this.isOpen;
-      if (this.isOpen) {
-        document.body.classList.add("overflow-hidden");
-      } else {
-        document.body.classList.remove("overflow-hidden");
-      }
+    open() {
+      this.isOpen = true;
+      document.body.classList.add("overflow-hidden");
+      this.$router.push({
+        ...this.$route,
+        query: { modalOpened: true },
+      });
     },
     hideContent() {
-      this.showContent = false;
+      this.$router.push({ ...this.$route, query: {} });
     },
     close() {
       this.isOpen = false;
