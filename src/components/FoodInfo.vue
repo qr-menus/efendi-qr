@@ -27,7 +27,7 @@
           >
         </h2>
       </div>
-      <div class="flex items-center mb-5">
+      <!-- <div class="flex items-center mb-5">
         <button
           @click="$emit('close', close)"
           class="w-full p-3 font-medium text-white bg-yellow-500 rounded-lg"
@@ -35,7 +35,7 @@
           <span v-if="$store.state.locale == 'ru'"> НАЗАД</span>
           <span v-else> CLOSE</span>
         </button>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
