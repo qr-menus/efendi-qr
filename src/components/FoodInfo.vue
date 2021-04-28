@@ -2,7 +2,7 @@
   <div class="w-full">
     <img
       class="object-cover object-center w-full bg-yellow-400"
-      :src="`/images/${category}/${category}_${id}.webp`"
+      :src="`/images/${category}/${product.id}.webp`"
       alt=""
     />
     <div class="p-5 text-left">
