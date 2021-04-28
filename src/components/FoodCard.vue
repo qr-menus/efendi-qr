@@ -8,7 +8,7 @@
         <div>
           <img
             class="object-cover w-full mb-1 bg-yellow-400 rounded-xl"
-            :src="`/images/${category}/${category}_${id}.webp`"
+            :src="`/images/${category}/${product.id}.webp`"
             alt="food"
           />
           <h2 class="my-3 text-lg font-medium text-gray-600 capitalize">
