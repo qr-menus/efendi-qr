@@ -1224,9 +1224,9 @@
       {
         "id": "dessert_12",
         "image_name": "7C0A9389",
-        "name_tr": "ПИДЕ С ФИСТАШКАМИ І ПИДЕ С ГРЕЦКИМ ОРЕХОМ",
-        "name_ru": "ПИДЕ С ФИСТАШКАМИ І ПИДЕ С ГРЕЦКИМ ОРЕХОМ",
-        "name_en": "ПИДЕ С ФИСТАШКАМИ І ПИДЕ С ГРЕЦКИМ ОРЕХОМ",
+        "name_tr": "Fıstıklı CEVİZLİ PİDE",
+        "name_ru": "Fıstıklı CEVİZLİ PİDE / ПИДЕ С ФИСТАШКАМИ И С ГРЕЦКИМ ОРЕХОМ",
+        "name_en": "Fıstıklı CEVİZLİ PİDE / PIDE WITH PISTACHI AND WALNUT",
         "price_1": "60 000",
         "ingredients_ru": "",
         "ingredients_en": ""
@@ -1285,9 +1285,7 @@
         "name_ru": "BAKLAVA HOVUÇ DILIMI",
         "name_en": "BAKLAVA HOVUÇ DILIMI",
         "price_1": "23 000",
-        "ingredients_ru": "С МОРОЖЕНЫМ - 33 000"
-      },
-      {
+        "ingredients_ru": "С МОРОЖЕНЫМ - 33 000",
         "ingredients_en": "WITH ICE CREAM 33 000"
       }
     ]
