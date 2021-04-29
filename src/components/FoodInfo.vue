@@ -1,10 +1,49 @@
 <template>
   <div class="w-full">
-    <img
-      class="object-cover object-center w-full bg-yellow-400"
-      :src="`/images/${category}/${category}_${id}.webp`"
-      alt=""
-    />
+    <div class="relative">
+      <img
+        class="object-cover object-center w-full bg-yellow-400"
+        :src="`/images/${category}/${product.id}.webp`"
+        alt=""
+      />
+      <button
+        @click.stop="
+          isInFavourites ? removeFromFavourites() : addToFavourites()
+        "
+        class="absolute bottom-3 right-3 rounded-md text-white focus:outline-none"
+      >
+        <span class="sr-only">Close panel</span>
+
+        <svg
+          v-if="isInFavourites"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-10 w-10"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        <svg
+          v-else
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-10 w-10"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+          />
+        </svg>
+      </button>
+    </div>
     <div class="p-5 text-left">
       <h2 class="text-2xl font-black capitalize">
         {{ getField("name") }}
@@ -41,6 +80,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   props: {
     product: {
@@ -62,14 +102,30 @@ export default {
     };
   },
   computed: {
+    ...mapState({
+      favourites: (state) => state.favourites,
+    }),
     getField() {
       return (field) => {
         const obj = this.product[this.$options.filters.locale(field)];
         return obj && obj.toLowerCase();
       };
     },
+    isInFavourites() {
+      return this.favourites.some(
+        (favourite) => favourite.name_tr === this.product.name_tr
+      );
+    },
+  },
+  methods: {
+    addToFavourites() {
+      if (this.isInFavourites) return;
+      this.$store.commit("addToFavourites", this.product);
+    },
+    removeFromFavourites() {
+      if (!this.isInFavourites) return;
+      this.$store.commit("removeFromFavourites", this.product);
+    },
   },
 };
 </script>
-
-<style></style>

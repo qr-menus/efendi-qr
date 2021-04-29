@@ -97,20 +97,6 @@
                     </div>
                   </template>
                 </BaseModal>
-                <!-- <select
-                  :value="$store.state.locale"
-                  name="language"
-                  class="block py-1 pl-4 text-base bg-gray-100 border-none rounded-md focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
-                  @change="changeLocale"
-                >
-                  <option
-                    v-for="lang in langOptions"
-                    :key="lang.text"
-                    :value="lang.value"
-                  >
-                    {{ lang.text }}
-                  </option>
-                </select> -->
                 <LanguageDropdown :items="langOptions">
                   <template #trigger="{ click }">
                     <button
@@ -141,6 +127,60 @@
                     </button>
                   </template>
                 </LanguageDropdown>
+                <!-- <SlideOver>
+                  <template #trigger="{ onClick }">
+                    <button
+                      @click.stop="onClick"
+                      class="relative flex items-center bg-white rounded-md text-primary hover:text-red-500 focus:outline-none"
+                    >
+                      <span class="sr-only">Close panel</span>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-8 w-8"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                        />
+                      </svg>
+                    </button>
+                  </template>
+
+                  <template #default="{ close }">
+                    <div
+                      v-if="!favourites.length"
+                      class="flex flex-col h-full items-center justify-center"
+                    >
+                      <img
+                        src="/images/favourites.svg"
+                        class="w-1/2 object-cover mb-5"
+                      />
+                      <h3 class="text-xl font-bold text-gray-700 mb-3">
+                        Добавьте блюдо из меню
+                      </h3>
+                      <button
+                        @click="close"
+                        class="bg-yellow-400 text-sm font-semibold text-gray-900 px-3 py-2 rounded hover:bg-yellow-300 focus:outline-none"
+                      >
+                        Перейти в меню
+                      </button>
+                    </div>
+                    <div v-else class="flex flex-col space-y-3 px-2">
+                      <FavouriteItem
+                        v-for="(product, $productIndex) in favourites"
+                        :key="`product-${$productIndex}`"
+                        :id="$productIndex + 1"
+                        :product="product"
+                      />
+                    </div>
+                  </template>
+                </SlideOver> -->
               </div>
             </div>
           </div>
@@ -197,6 +237,8 @@
         >qrmenus.uz</a
       >
     </div>
+
+    <FoodCart v-if="favouritesOn && favourites.length" />
   </div>
 </template>
 
@@ -204,7 +246,7 @@
 import LanguageDropdown from "./components/LanguageDropdown.vue";
 import FoodCard from "./components/FoodCard.vue";
 import BaseModal from "./components/BaseModal.vue";
-// import FavouriteItem from "./components/FavouriteItem.vue";
+import FoodCart from "./components/FoodCart.vue";
 import { mapState } from "vuex";
 
 export default {
@@ -212,10 +254,11 @@ export default {
     LanguageDropdown,
     FoodCard,
     BaseModal,
-    // FavouriteItem,
+    FoodCart,
   },
   computed: {
     ...mapState({
+      favourites: (state) => state.favourites,
       categories: (state) => state.categories,
       locale: (state) => state.locale,
     }),
@@ -228,6 +271,7 @@ export default {
   },
   data() {
     return {
+      favouritesOn: false,
       searchQuery: "",
       langOptions: [
         { text: "Tr/Ru", value: "ru" },

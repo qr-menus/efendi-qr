@@ -89,7 +89,7 @@
                 </div>
                 <div class="relative flex-1 px-2 mt-2 sm:px-6">
                   <!-- Replace with your content -->
-                  <slot></slot>
+                  <slot :close="hideContent"></slot>
                   <!-- /End replace -->
                 </div>
               </div>
