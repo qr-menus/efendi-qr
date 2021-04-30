@@ -63,9 +63,9 @@
                 class="h-full max-w-2xl overflow-x-hidden bg-white rounded-t-xl"
               >
                 <div class="relative">
-                  <div
+                  <!-- <div
                     @click.stop="hideContent"
-                    class="absolute z-10 cursor-pointer top-2 right-2"
+                    class="absolute z-10 cursor-pointer bottom-2 right-2"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@
                         clip-rule="evenodd"
                       />
                     </svg>
-                  </div>
+                  </div> -->
                   <!-- Replace with your content -->
                   <slot name="default" :close="hideContent"></slot>
                   <!-- /End replace -->
