@@ -14,7 +14,7 @@
                   <template #trigger="{ click }">
                     <button
                       type="button"
-                      class="inline-flex justify-center w-full rounded-md shadow-sm px-4 py-2 bg-gray-200 text-sm font-medium text-gray-700 hover:bg-gray-100 focus:outline-none"
+                      class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-md shadow-sm hover:bg-gray-100 focus:outline-none"
                       id="menu-button"
                       aria-expanded="true"
                       aria-haspopup="true"
@@ -25,7 +25,7 @@
                       }}
                       <!-- Heroicon name: solid/chevron-down -->
                       <svg
-                        class="-mr-1 ml-2 h-5 w-5"
+                        class="w-5 h-5 ml-2 -mr-1"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
@@ -75,7 +75,7 @@
           {{ category[$options.filters.locale("name")] }}
         </h2>
         <div
-          class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-4 gap-y-8"
+          class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8"
         >
           <FoodCard
             v-for="(product, $productIndex) in category.products"

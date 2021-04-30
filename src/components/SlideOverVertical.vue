@@ -3,7 +3,7 @@
     <slot name="trigger" :onClick="open"></slot>
     <section
       v-show="isOpen"
-      class="fixed inset-0 overflow-hidden z-20"
+      class="fixed inset-0 z-20 overflow-hidden"
       aria-labelledby="slide-over-title"
       role="dialog"
       aria-modal="true"
@@ -69,7 +69,7 @@
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="w-10 h-10"
+                      class="w-12 h-12"
                       viewBox="0 0 20 20"
                       fill="#fefefe"
                     >
