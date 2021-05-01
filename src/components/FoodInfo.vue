@@ -83,6 +83,69 @@
           >
         </h2>
       </div>
+      <div v-if="favouritesOn" class="flex space-x-3">
+        <template v-if="!isInFavourites">
+          <div class="flex">
+            <button
+              class="text-yellow-500 bg-gray-100 rounded-l pl-2 pr-1"
+              @click="decrement"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <div
+              class="flex justify-center items-center bg-gray-100 text-gray-700 font-semibold w-10 px-2"
+            >
+              {{ count }}
+            </div>
+            <button
+              class="text-yellow-500 bg-gray-100 rounded-r pr-2 pl-1"
+              @click="increment"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+          <button
+            @click="addToFavourites"
+            class="w-full p-3 font-semibold text-white bg-yellow-500 rounded-lg"
+          >
+            <span>Добавить в корзину</span>
+          </button>
+        </template>
+        <button
+          v-else
+          type="button"
+          class="w-full p-3 font-semibold text-white bg-gray-300 rounded-lg"
+          @click="$emit('close')"
+        >
+          <span>Уже в корзине</span>
+        </button>
+      </div>
       <!-- <div class="flex items-center mb-5">
         <button
           @click="$emit('close', close)"
@@ -116,11 +179,13 @@ export default {
   data() {
     return {
       liked: false,
+      count: 1,
     };
   },
   computed: {
     ...mapState({
       favourites: (state) => state.favourites,
+      favouritesOn: (state) => state.favouritesOn,
     }),
     getField() {
       return (field) => {
@@ -135,9 +200,20 @@ export default {
     },
   },
   methods: {
+    decrement() {
+      this.count = this.count > 1 ? this.count - 1 : 1;
+    },
+    increment() {
+      this.count++;
+    },
     addToFavourites() {
       if (this.isInFavourites) return;
-      this.$store.commit("addToFavourites", this.product);
+      this.$store.commit("addToFavourites", {
+        ...this.product,
+        count: this.count,
+      });
+      this.$emit("close");
+      this.count = 1;
     },
     removeFromFavourites() {
       if (!this.isInFavourites) return;

@@ -120,6 +120,7 @@ export default {
       favourites: (state) => state.favourites,
       categories: (state) => state.categories,
       locale: (state) => state.locale,
+      favouritesOn: (state) => state.favouritesOn,
     }),
     getField() {
       return (field) => {
@@ -130,7 +131,6 @@ export default {
   },
   data() {
     return {
-      favouritesOn: false,
       searchQuery: "",
       langOptions: [
         { text: "Tr/Ru", value: "ru" },

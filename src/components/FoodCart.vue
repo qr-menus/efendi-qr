@@ -29,13 +29,7 @@
               Обслуживание (15%):
             </span>
             <span class="font-bold text-xl text-gray-800"
-              >{{
-                favourites.reduce(
-                  (prev, curr) => +curr.price_1.replace(" ", "") + prev,
-                  0
-                ) * 0.15
-              }}
-              сум</span
+              >{{ servicePrice }} сум</span
             >
           </div>
           <div class="flex py-3">
@@ -43,13 +37,7 @@
               Общая стоимость:
             </span>
             <span class="font-bold text-xl text-gray-800"
-              >{{
-                favourites.reduce(
-                  (prev, curr) => +curr.price_1.replace(" ", "") + prev,
-                  0
-                )
-              }}
-              сум</span
+              >{{ totalPrice }} сум</span
             >
           </div>
         </div>
@@ -66,10 +54,31 @@ import FavouriteItem from "./FavouriteItem.vue";
 export default {
   name: "FoodCart",
   components: { CartSlideOver, FavouriteItem },
+  data() {
+    return {
+      servicePortion: 0.15,
+    };
+  },
   computed: {
     ...mapState({
       favourites: (state) => state.favourites,
     }),
+    servicePrice() {
+      return (
+        this.favourites.reduce(
+          (prev, curr) => +curr.price_1 * curr.count + prev,
+          0
+        ) * this.servicePortion
+      );
+    },
+    totalPrice() {
+      return (
+        this.favourites.reduce(
+          (prev, curr) => +curr.price_1 * curr.count + prev,
+          0
+        ) + this.servicePrice
+      );
+    },
   },
 };
 </script>
