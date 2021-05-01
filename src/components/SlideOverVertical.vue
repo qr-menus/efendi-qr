@@ -3,7 +3,7 @@
     <slot name="trigger" :onClick="open"></slot>
     <section
       v-show="isOpen"
-      class="fixed inset-0 overflow-hidden z-20"
+      class="fixed inset-0 z-20 overflow-hidden"
       aria-labelledby="slide-over-title"
       role="dialog"
       aria-modal="true"
@@ -63,13 +63,13 @@
                 class="h-full max-w-2xl overflow-x-hidden bg-white rounded-t-xl"
               >
                 <div class="relative">
-                  <div
+                  <!-- <div
                     @click.stop="hideContent"
-                    class="absolute z-10 cursor-pointer top-2 right-2"
+                    class="absolute z-10 cursor-pointer bottom-2 right-2"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="w-10 h-10"
+                      class="w-12 h-12"
                       viewBox="0 0 20 20"
                       fill="#fefefe"
                     >
@@ -79,7 +79,7 @@
                         clip-rule="evenodd"
                       />
                     </svg>
-                  </div>
+                  </div> -->
                   <!-- Replace with your content -->
                   <slot name="default" :close="hideContent"></slot>
                   <!-- /End replace -->
