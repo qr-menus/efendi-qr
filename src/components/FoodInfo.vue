@@ -7,7 +7,7 @@
         alt=""
       />
       <div
-        @click="$emit('close', close)"
+        @click="$emit('close')"
         class="absolute z-10 cursor-pointer bottom-2 right-2"
       >
         <svg
