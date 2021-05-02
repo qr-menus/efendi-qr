@@ -2,7 +2,7 @@
   <CartSlideOver>
     <template #trigger="{ onClick }">
       <div
-        class="fixed bottom-5 left-1/2 -ml-32 w-64 bg-primary rounded-full flex flex-col items-center justify-center cursor-pointer py-4 px-3"
+        class="fixed flex flex-col items-center justify-center w-64 px-3 py-4 -ml-32 rounded-full cursor-pointer bottom-5 left-1/2 bg-primary"
         @click="onClick"
       >
         <p class="font-bold text-white">
@@ -11,10 +11,12 @@
       </div>
     </template>
     <template #default="{}">
-      <div class="flex flex-col h-full w-full space-y-4 px-4 pt-5 pb-10">
-        <h2 class="text-left text-gray-700 text-xl font-bold">Корзина</h2>
-        <hr class="mb-4" />
-        <div class="flex flex-col space-y-3">
+      <div class="flex flex-col w-full h-full">
+        <div class="sticky top-0 w-full px-4 pt-5 bg-white rounded-t-xl">
+          <h2 class="text-xl font-bold text-left text-gray-700">Корзина</h2>
+          <hr class="my-2" />
+        </div>
+        <div class="flex flex-col px-4 pb-2 space-y-3">
           <FavouriteItem
             v-for="(product, $productIndex) in favourites"
             :key="`product-${$productIndex}`"
@@ -23,20 +25,22 @@
           />
         </div>
 
-        <div class="divide-y divide-dashed divide-gray-400">
-          <div class="flex pb-3">
-            <span class="font-bold text-lg text-gray-500 mr-3">
+        <div
+          class="sticky bottom-0 px-4 pt-3 pb-8 bg-white divide-y divide-gray-400 divide-dashed"
+        >
+          <div class="flex items-center justify-between pb-3">
+            <span class="mr-3 font-semibold text-gray-500">
               Обслуживание (15%):
             </span>
-            <span class="font-bold text-xl text-gray-800"
+            <span class="text-xl font-black text-gray-700"
               >{{ servicePrice }} сум</span
             >
           </div>
-          <div class="flex py-3">
-            <span class="font-bold text-lg text-gray-500 mr-3">
+          <div class="flex items-center justify-between py-2">
+            <span class="mr-3 font-semibold text-gray-500">
               Общая стоимость:
             </span>
-            <span class="font-bold text-xl text-gray-800"
+            <span class="text-xl font-black text-gray-700"
               >{{ totalPrice }} сум</span
             >
           </div>

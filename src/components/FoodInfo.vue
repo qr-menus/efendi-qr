@@ -87,12 +87,12 @@
         <template v-if="!isInFavourites">
           <div class="flex">
             <button
-              class="text-yellow-500 bg-gray-100 rounded-l pl-2 pr-1"
+              class="pl-2 pr-1 text-yellow-500 bg-gray-100 rounded-l focus:outline-none"
               @click="decrement"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
+                class="w-6 h-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -106,17 +106,17 @@
               </svg>
             </button>
             <div
-              class="flex justify-center items-center bg-gray-100 text-gray-700 font-semibold w-10 px-2"
+              class="flex items-center justify-center w-10 px-2 font-semibold text-gray-700 bg-gray-100"
             >
               {{ count }}
             </div>
             <button
-              class="text-yellow-500 bg-gray-100 rounded-r pr-2 pl-1"
+              class="pl-1 pr-2 text-yellow-500 bg-gray-100 rounded-r focus:outline-none"
               @click="increment"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
+                class="w-6 h-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
