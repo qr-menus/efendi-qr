@@ -3,7 +3,7 @@
     <slot name="trigger" :onClick="open"></slot>
     <section
       v-show="isOpen"
-      class="fixed inset-0 overflow-hidden"
+      class="fixed inset-0 z-20 overflow-hidden"
       aria-labelledby="slide-over-title"
       role="dialog"
       aria-modal="true"

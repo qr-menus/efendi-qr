@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <nav class="sticky top-0 bg-white">
+      <nav class="sticky top-0 z-10 bg-white">
         <div class="flex items-center px-4 mx-auto border-b max-w-7xl">
           <div class="relative w-full rounded-md">
             <div class="flex items-center justify-between">

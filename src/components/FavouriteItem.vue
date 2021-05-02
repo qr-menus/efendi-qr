@@ -13,7 +13,7 @@
             />
             <div class="text-left">
               <h2
-                class="text-lg font-semibold text-gray-500 capitalize line-clamp-2"
+                class="text-lg font-semibold leading-6 text-gray-500 capitalize line-clamp-2"
               >
                 <!-- {{ getField("name") }} -->
                 {{ product.name_tr && product.name_tr.toLowerCase() }}
