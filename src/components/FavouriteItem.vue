@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="flex justify-between items-center space-x-3 cursor-pointer rounded-lg shadow p-1 pr-2"
+      class="flex items-center justify-between p-1 pr-2 space-x-3 rounded-lg shadow cursor-pointer"
     >
       <SlideOverVertical>
         <template #trigger="{ onClick }">
@@ -13,7 +13,7 @@
             />
             <div class="text-left">
               <h2
-                class="font-semibold text-lg text-gray-500 capitalize line-clamp-2"
+                class="text-lg font-semibold text-gray-500 capitalize line-clamp-2"
               >
                 <!-- {{ getField("name") }} -->
                 {{ product.name_tr && product.name_tr.toLowerCase() }}
@@ -35,7 +35,7 @@
       <div class="flex">
         <button
           v-if="product.count === 1"
-          class="text-yellow-500 bg-gray-100 rounded-l py-3 pl-2 pr-1 focus:outline-none"
+          class="py-3 pl-2 pr-1 text-yellow-500 bg-gray-100 rounded-l focus:outline-none"
           @click="removeFromFavourites"
         >
           <svg
@@ -55,7 +55,7 @@
         </button>
         <button
           v-else
-          class="text-yellow-500 bg-gray-100 rounded-l py-3 px-2 focus:outline-none"
+          class="px-2 py-3 text-yellow-500 bg-gray-100 rounded-l focus:outline-none"
           @click="decrement"
         >
           <svg
@@ -75,7 +75,7 @@
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
+            class="w-5 h-5"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -87,17 +87,17 @@
           </svg>
         </button>
         <div
-          class="flex justify-center items-center bg-gray-100 text-gray-700 font-semibold text-sm w-7"
+          class="flex items-center justify-center text-sm font-semibold text-gray-700 bg-gray-100 w-7"
         >
           {{ product.count }}
         </div>
         <button
-          class="text-yellow-500 bg-gray-100 rounded-r py-3 pr-2 pl-1 focus:outline-none"
+          class="py-3 pl-1 pr-2 text-yellow-500 bg-gray-100 rounded-r focus:outline-none"
           @click="increment"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
+            class="w-5 h-5"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -116,6 +116,7 @@
 <script>
 import SlideOverVertical from "./SlideOverVertical.vue";
 import FoodInfo from "./FoodInfo";
+import { mapState } from "vuex";
 export default {
   name: "FavouriteItem",
   props: {
@@ -133,6 +134,9 @@ export default {
     FoodInfo,
   },
   computed: {
+    ...mapState({
+      favourites: (state) => state.favourites,
+    }),
     getField() {
       return (field) => {
         const obj = this.product[this.$options.filters.locale(field)];
@@ -149,6 +153,9 @@ export default {
     },
     removeFromFavourites() {
       this.$store.commit("removeFromFavourites", this.product);
+      if (!this.favourites.length) {
+        document.body.classList.remove("overflow-hidden");
+      }
     },
   },
 };
