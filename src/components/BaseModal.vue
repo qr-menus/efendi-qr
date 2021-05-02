@@ -95,7 +95,7 @@ export default {
     },
     close() {
       this.isOpen = false;
-      document.body.classList.remove("overflow-h/idden");
+      document.body.classList.remove("overflow-hidden");
     },
   },
 };
