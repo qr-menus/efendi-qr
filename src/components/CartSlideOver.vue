@@ -60,7 +60,8 @@
           >
             <div
               v-show="showContent"
-              class="w-full h-full max-w-2xl max-h-screen overflow-x-hidden overflow-y-auto bg-white rounded-t-xl"
+              class="w-full h-full max-w-2xl overflow-x-hidden overflow-y-auto bg-white rounded-t-xl"
+              style="max-height: 90vh"
             >
               <button @click="hideContent" class="absolute z-10 top-3 right-3">
                 <svg
