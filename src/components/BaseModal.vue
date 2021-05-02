@@ -88,12 +88,14 @@ export default {
   methods: {
     open() {
       this.isOpen = true;
+      document.body.classList.add("overflow-hidden");
     },
     hideContent() {
       this.showContent = false;
     },
     close() {
       this.isOpen = false;
+      document.body.classList.remove("overflow-h/idden");
     },
   },
 };
