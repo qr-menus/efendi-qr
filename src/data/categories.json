@@ -13,7 +13,7 @@
         "ingredients_ru": "СВЕКЛА, КВАШЕННАЯ КАПУСТА, СОЛЕННЫЕ ОГУРЦЫ",
         "ingredients_en": "BEETS, SAUERKRAUT PICKLES",
         "price_05": "12000",
-        "price_1": "18 000"
+        "price_1": "18000"
       },
       {
         "id": "salat_2",
@@ -24,7 +24,7 @@
         "ingredients_ru": "МАРИНОВАННЫЕ ГРИБЫ, ОГУРЦЫ, ОЛИВКИ, СЫР",
         "ingredients_en": "MARINATED MUSHROOMS, CUCUMBER CLIVES CHEESE",
         "price_05": "18000",
-        "price_1": "25 000"
+        "price_1": "25000"
       },
       {
         "id": "salat_3",
@@ -35,7 +35,7 @@
         "ingredients_ru": "СВЕЖИЕ ОГУРЦЫ, ПОМИДОРЫ, ЗЕЛЕНЬ, ОЛИВКИ, ФЕТАКИ",
         "ingredients_en": "FRESH CUCUMBER, TOMATOES, GREENS OLIVES FETAKI",
         "price_05": "18000",
-        "price_1": "25 000"
+        "price_1": "25000"
       },
       {
         "id": "salat_4",
@@ -46,7 +46,7 @@
         "ingredients_ru": "МЯСО, ЯЙЦА, КАРТОФЕЛЬ, МОРКОВЬ, ГОРОШЕК, МАЙОНЕЗ",
         "ingredients_en": "MEAT, EGGS, POTATOES, CARROTS PEAS, MAYONNAISE",
         "price_05": "18000",
-        "price_1": "25 000"
+        "price_1": "25000"
       },
       {
         "id": "salat_5",
@@ -57,7 +57,7 @@
         "ingredients_ru": "КУРИНОЕ МЯСО. ГРИБЫ, ОГУРЕЦ, КУКУРУЗА, ГОРОШЕК",
         "ingredients_en": "CHICKEN MEATMUSHROOMS. CUCUMBER CORN, PEAS ",
         "price_05": "18000",
-        "price_1": "25 000"
+        "price_1": "25000"
       },
       {
         "id": "salat_6",
@@ -68,7 +68,7 @@
         "ingredients_ru": "",
         "ingredients_en": "",
         "price_05": "18000",
-        "price_1": "25 000"
+        "price_1": "25000"
       },
       {
         "id": "salat_7",
@@ -79,7 +79,7 @@
         "ingredients_ru": "СВЕЖИЕ ОГУРЦЫ ПОМИДОРЫ КРАСНАЯ КАПУСТА, МОРКОВЬ, ЗЕЛЕНЬ, ЛИМОН, ОЛИВКИ",
         "ingredients_en": "FRESH CUCUMBER, TOMATOES, CARROTS, RED CABBAGE, GREENS, LEMON",
         "price_05": "18000",
-        "price_1": "25 000"
+        "price_1": "25000"
       },
       {
         "id": "salat_8",
@@ -90,7 +90,7 @@
         "ingredients_ru": "МЯСО, ПОМИДОРЫ, ОГУРЦЫ, КОРЕЙСКАЯ СОЛЬ, СОЯ",
         "ingredients_en": "MEAT, TOMATOES, CUCUMBERS, KOREAN SALT SOY",
         "price_05": "23000",
-        "price_1": "30 000"
+        "price_1": "30000"
       },
       {
         "id": "salat_9",
@@ -101,7 +101,7 @@
         "ingredients_ru": "ГОЛУБЦЫ ИЗ ВИНОГРАДНЫХ ЛИСТЬЕВ",
         "ingredients_en": "STUFFED GRAPE LEAVES",
         "price_05": "17000",
-        "price_1": "25 000"
+        "price_1": "25000"
       },
       {
         "id": "salat_10",
@@ -112,7 +112,7 @@
         "ingredients_ru": "КИСЛОЕ МОЛОКО, ОГУРЦЫ, МЯТА",
         "ingredients_en": "YOGHURT, CUCUMBER, RED BELL PEPPERS NANE",
         "price_05": "23000",
-        "price_1": "35 000"
+        "price_1": "35000"
       },
       {
         "id": "salat_11",
@@ -123,7 +123,7 @@
         "ingredients_ru": "СВЕЖИЕ ОГУРЦЫ, ПОМИДОРЫ ЛУК, ЗЕЛЕНЫ, ЛИМОН",
         "ingredients_en": "FRESH CUCUMBER, TOMATOES, ONIONS, GREENS LEMON",
         "price_05": "",
-        "price_1": "19 000"
+        "price_1": "19000"
       },
       {
         "id": "salat_12",
@@ -134,7 +134,7 @@
         "ingredients_ru": "БАКЛАЖАНЫ ЗЕЛЕНЫЙ И КРАСНЫЙ ПЕРЕЦ, ПОМИДОРЫ. ЛУК",
         "ingredients_en": "ECOPLANTS GREEN AND RED BELL PEPPERS, TOMATOES ONIONS",
         "price_05": "15000",
-        "price_1": "27 000"
+        "price_1": "27000"
       },
       {
         "id": "salat_13",
@@ -145,7 +145,7 @@
         "ingredients_ru": "",
         "ingredients_en": "",
         "price_05": "12000",
-        "price_1": "17 000"
+        "price_1": "17000"
       },
       {
         "id": "salat_14",
@@ -156,7 +156,7 @@
         "ingredients_ru": "СВЕЖИЕ ОГУРЦЫ. ПОМИДОРЫ КРАСНАЯ, КАПУСТА, МОРКОВЬ, ЗЕЛЕНЫ",
         "ingredients_en": "FRESH CUCUMBERS, TOMATOES, RED CABBAGE CARROTS, GREENS",
         "price_05": "18000",
-        "price_1": "25 000"
+        "price_1": "25000"
       },
       {
         "id": "salat_15",
@@ -167,7 +167,7 @@
         "ingredients_ru": "СВЕЖИЕ ПОМИДОРЫ, БОЛГАРСКИЙ, ПЕРЕЦ, ЛУК, ЧЕСНОК, ЗЕЛЕНЬ",
         "ingredients_en": "FRESH TOMATOES, BELL PEPPER, ONION GARLIC, GREENERY",
         "price_05": "18000",
-        "price_1": "25 000"
+        "price_1": "25000"
       },
       {
         "id": "salat_16",
@@ -176,7 +176,7 @@
         "name_ru": "XAYDARI SALATASI / ХАЙДАРИ САЛАТ",
         "name_en": "XAYDARI SALAD",
         "ingredients_ru": "СУЗМА, КАЙМАК, БАКЛАЖАН, МАСЛО СЛИВ, МАСЛО ОЛИВ",
-        "price_1": "25 000"
+        "price_1": "25000"
       },
       {
         "id": "salat_17",
@@ -187,7 +187,7 @@
         "ingredients_ru": "СВЕЖИЕ ОГУРЦЫ, ПОМИДОРЫ, КРАСНАЯ КАПУСТА, КУКУРУЗА, ЛИСТЬЯ САЛАТА, ЛИМОН",
         "ingredients_en": "FRESH CUCUMBER, TOMATOES, RED CABBAGE, GREENS, CORN, LEMON",
         "price_05": "20 000",
-        "price_1": "30 000"
+        "price_1": "30000"
       },
       {
         "id": "salat_18",
@@ -198,7 +198,7 @@
         "ingredients_ru": "СВЕЖИЕ ОГУРЦЫ, ПОМИДОРЫ, ЗЕЛЕНЬ",
         "ingredients_en": "FRESH CUCUMBER, TOMATOES, GREENS",
         "price_05": "20 000",
-        "price_1": "30 000"
+        "price_1": "30000"
       },
       {
         "id": "salat_19",
@@ -206,7 +206,7 @@
         "name_tr": "TRIO (SUZMA, EZMA, SUZMA)",
         "name_ru": "TRIO (SUZMA, EZMA, SUZMA) / ТРИО",
         "name_en": "TRIO (SUZMA, EZMA, SUZMA)",
-        "price_1": "15 000"
+        "price_1": "15000"
       },
       {
         "id": "salat_20",
@@ -215,7 +215,7 @@
         "name_ru": "SEZAR SALATASI / ЦЕЗАРЬ",
         "name_en": "SEZAR SALATASI / CAESAR SALAD",
         "ingredients_ru": "КУРИНОЕ МЯСО, ПОМИДОР, СУХАРИКИ, СЫР ПАРМЕЗАН, СОУС \"ЦЕЗАРЬ\"",
-        "price_1": "40 000"
+        "price_1": "40000"
       }
     ]
   },
@@ -232,7 +232,7 @@
         "name_en": "MERCIMEK ÇORBASI / LЕNTІL SOUP",
         "ingredients_ru": "ПОДАЕТСЯ С ЛИМОНОМ",
         "price_05": "18000",
-        "price_1": "27 000",
+        "price_1": "27000",
         "ingredients_en": ""
       },
       {
@@ -243,7 +243,7 @@
         "name_en": "YAYLA",
         "ingredients_ru": "РИС, КИСЛОЕ МОЛОКО, НАНЕ",
         "price_05": "15000",
-        "price_1": "21 000",
+        "price_1": "21000",
         "ingredients_en": "RICE, YOGURT AND NANE"
       },
       {
@@ -254,7 +254,7 @@
         "name_en": "DIL ÇORBASI / KALAPACHA",
         "ingredients_ru": "СУП ИЗ ЯЗЫКА",
         "price_05": "20000",
-        "price_1": "29 000",
+        "price_1": "29000",
         "ingredients_en": "SOUP OF BEEF TONGUE"
       },
       {
@@ -265,7 +265,7 @@
         "name_en": "KELLE PACA ORIGINAL ÇORBASI",
         "ingredients_ru": "",
         "price_05": "",
-        "price_1": "40 000",
+        "price_1": "40000",
         "ingredients_en": ""
       },
       {
@@ -276,7 +276,7 @@
         "name_en": "TAVUK ÇORBA / CHICKEN SOUP",
         "ingredients_ru": "КУРИНОЕ ФИЛЕ, ШАХРИЯ, КИСЛОЕ МОЛОКО, ЯЙЦО",
         "price_05": "18000",
-        "price_1": "25 000",
+        "price_1": "25000",
         "ingredients_en": "CHICKEN FILLET, YOGURT, EGG"
       },
       {
@@ -287,7 +287,7 @@
         "name_en": "EZOGELIN ÇORBASI / EZOGELIN SOUPMENEMEN",
         "ingredients_ru": "ИЗ ЧЕЧЕВИЦЫ (КРАСНЫЙ) ПОДАЕТСЯ С ЛИМОНОМ",
         "price_05": "18000",
-        "price_1": "25 000",
+        "price_1": "25000",
         "ingredients_en": ""
       },
       {
@@ -298,7 +298,7 @@
         "name_en": "IŞCEMBE ÇORBASI / ІКSHEMBE",
         "ingredients_ru": "СУП ИЗ ТРЕБУХИ И КИСЛОГО МОЛОКА",
         "price_05": "18000",
-        "price_1": "29000",
+        "price_1": "2900",
         "ingredients_en": "TRIPE SOUP WITH YOGURT"
       },
       {
@@ -309,7 +309,7 @@
         "name_en": "DUYUN",
         "ingredients_ru": "СУП ИЗ МЯСА И КИСЛОГОМОЛОКА",
         "price_05": "15000",
-        "price_1": "22 000",
+        "price_1": "22000",
         "ingredients_en": "SOUP WITH MILK AND YOGURT"
       },
       {
@@ -320,7 +320,7 @@
         "name_en": "KUZU INCIK HAŞLAMA / MUTTON SOUP",
         "ingredients_ru": "СУП ИЗ БАРАНИНЫ С КАРТОШКОЙ И МОРКОВЬЮ",
         "price_05": "",
-        "price_1": "40 000",
+        "price_1": "40000",
         "ingredients_en": "LAMB SOUP WITH POTATOES AND CARROTS"
       },
       {
@@ -331,7 +331,7 @@
         "name_en": "IZMIR KÖFTE",
         "ingredients_ru": "ГОВЯЖИЙ ФАРШ СО СПЕЦИЯМИ",
         "price_05": "30000",
-        "price_1": "45 000",
+        "price_1": "45000",
         "ingredients_en": "CHOPPED BEEF MEAT WITH SPICES"
       },
       {
@@ -342,7 +342,7 @@
         "name_en": "ETLI NOHUT",
         "ingredients_ru": "ГОРОХ, МЯСО, ЛУК И ТОМАТЫ",
         "price_05": "25000",
-        "price_1": "38 000",
+        "price_1": "38000",
         "ingredients_en": "MEAT, ONIONS AND TOMATOES"
       },
       {
@@ -353,7 +353,7 @@
         "name_en": "TAS KEBAB",
         "ingredients_ru": "ГОВЯДИНА, КАРТОФЕЛЬ, ПОМИДОРЫ И ПЕРЕЦ",
         "price_05": "27000",
-        "price_1": "40 000",
+        "price_1": "40000",
         "ingredients_en": "BEEF, POTATOES, TOVATOES AND PEPPERS"
       },
       {
@@ -364,7 +364,7 @@
         "name_en": "TAVUK HAŞLАМА / CHICKEN SOUP",
         "ingredients_ru": "КУРИНОЕ МЯСО, КАРТОФЕЛЬ, МОРКОВЬ",
         "price_05": "25000",
-        "price_1": "37 000",
+        "price_1": "37000",
         "ingredients_en": "CHICKEN, POTATOES AND CARROTS"
       },
       {
@@ -375,7 +375,7 @@
         "name_en": "KURU FASULYE / BEANS SOUP",
         "ingredients_ru": "БЕЛАЯ ФАСОЛЬ МЯСО, ЛУК И ТОМАТЫ",
         "price_05": "25000",
-        "price_1": "38 000",
+        "price_1": "38000",
         "ingredients_en": "WHITE BEANS, MEAT ONIONS AND TOMATOES"
       }
     ]
@@ -395,7 +395,7 @@
         "ingredients_ru": "КЛАССИЧЕСКИЙ С СЫРОМ",
         "ingredients_en": "CLASSICAL WITH CHEESE",
         "price_05": "19000",
-        "price_1": "26 000"
+        "price_1": "26000"
       },
       {
         "id": "breakfast_2",
@@ -406,7 +406,7 @@
         "ingredients_ru": "ЯИЧНИЦА С ТУРЕЦКИМИ КОЛБАСКАМИ",
         "ingredients_en": "SCRAMBLED EGES WITH TURKISH SAUSAGE",
         "price_05": "",
-        "price_1": "29 000"
+        "price_1": "29000"
       },
       {
         "id": "breakfast_3",
@@ -417,7 +417,7 @@
         "ingredients_ru": "ОМЛЕТ, ТУШЕНОЕ МЯСО",
         "ingredients_en": "OMELETTE, BRAISED MEAT",
         "price_05": "",
-        "price_1": "29 000"
+        "price_1": "29000"
       },
       {
         "id": "breakfast_4",
@@ -428,7 +428,7 @@
         "ingredients_ru": "ЯИЧНИЦА, ТУШЕНОЕ МЯСО, ПОМИДОРЫ И БОЛГАРСКИЙ ПЕРЕЦ",
         "ingredients_en": "SCRAMBLED EGES, BRAISED MEAT, TOMATO, BELL PAPER",
         "price_05": "",
-        "price_1": "35 000"
+        "price_1": "35000"
       },
       {
         "id": "breakfast_5",
@@ -450,7 +450,7 @@
         "ingredients_ru": "ВАРЕНОЕ ЯЙЦО, СЛИВКИ. СЛИВОЧНОЕ МАСЛО, СЫР. БРЫНЗА, ОЛИВКИ, ДЖЕМ, ПОМИДОРЫ, ОГУРЦЫ, ХЛЕБ, ТУРЕЦКИЙ ЧАЙ",
         "ingredients_en": "BOILED EGG, CREAM, BUTTER, CHEESE, WHITE CHEESE OLIVES JAM, TOMATOES, CUCUMBERS, BREAD, TURKISH TEA",
         "price_05": "",
-        "price_1": "40 000"
+        "price_1": "40000"
       },
       {
         "id": "breakfast_7",
@@ -461,7 +461,7 @@
         "ingredients_ru": "ЯИЧНИЦА С ТУРЕЦКОЙ ПАСТИРМОЙ",
         "ingredients_en": "SCRAMBLED EGGS WITH TURKISH BACON",
         "price_05": "",
-        "price_1": "29 000"
+        "price_1": "29000"
       },
       {
         "id": "breakfast_8",
@@ -472,7 +472,7 @@
         "ingredients_ru": "ГЛАЗУНЬЯ ИЗ 2 ЯИЦ",
         "ingredients_en": "",
         "price_05": "",
-        "price_1": "20 000"
+        "price_1": "20000"
       }
     ]
   },
@@ -490,7 +490,7 @@
         "ingredients_ru": "КЕРАМИТ КУРИНОЕ МЯСОС ОВОЩАМИ, ЗАПЕЧЕННОЕ В ТАНДЫРЕ",
         "ingredients_en": "CHICKEN MEAT AND VEGETABLES IN TRADITIONAL ASAN CLAY OVEN - TANDOOR",
         "price_05": "50000",
-        "price_1": "55 000 с сыром"
+        "price_1": "55000 с сыром"
       },
       {
         "id": "ceramit_2",
@@ -501,7 +501,7 @@
         "ingredients_ru": "ГОВЯДИНА С ОВОЩАМИ, ЗАПЕЧЕННАЯ В ТАНДЫРЕ",
         "ingredients_en": "MEAT WITH VEGETABLES IN TRADITIONAL ASIAN CLAY OVEN - TANDOOR",
         "price_05": "60000",
-        "price_1": "65 000 с сыром"
+        "price_1": "65000 с сыром"
       },
       {
         "id": "ceramit_3",
@@ -512,7 +512,7 @@
         "ingredients_ru": "МЯСНОЙ ФАРШ С ОВОЩАМИ",
         "ingredients_en": "",
         "price_05": "",
-        "price_1": "57 000"
+        "price_1": "57000"
       },
       {
         "id": "ceramit_4",
@@ -523,7 +523,7 @@
         "ingredients_ru": "ГРИБЫ С ОВОЩАМИ",
         "ingredients_en": "",
         "price_05": "",
-        "price_1": "40 000"
+        "price_1": "40000"
       }
     ]
   },
@@ -539,7 +539,7 @@
         "name_tr": "KARIŞIK DÖNER",
         "name_ru": "KARIŞIK DÖNER / АССОРТИ ДОНЕР",
         "name_en": "KARIŞIK DÖNER / ASSORTED DONER",
-        "price_1": "53 000",
+        "price_1": "53000",
         "price_05": ""
       },
       {
@@ -548,7 +548,7 @@
         "name_tr": "DÖNER BURGER",
         "name_ru": "DÖNER BURGER / ДОНЕР БУРГЕР",
         "name_en": "DONAR BURGER",
-        "price_1": "23 000",
+        "price_1": "23000",
         "price_05": ""
       },
       {
@@ -557,7 +557,7 @@
         "name_tr": "DÖNER DURUM",
         "name_ru": "DÖNER DURUM / ДОНЕР ДУРУМ",
         "name_en": "DОNЕR DURUM",
-        "price_1": "33 000",
+        "price_1": "33000",
         "price_05": ""
       },
       {
@@ -566,7 +566,7 @@
         "name_tr": "ET ISKANDER KEBAB",
         "name_ru": "ET ISKANDER KEBAB / МЯСНОЙ ИСКАНДЕР КЕБАБ",
         "name_en": "ET ISKANDER KEBAB / BEEF ISKANDER KEBAB",
-        "price_1": "59 000",
+        "price_1": "59000",
         "price_05": "42000"
       },
       {
@@ -575,7 +575,7 @@
         "name_tr": "TAVUK DÖNER",
         "name_ru": "TAVUK DÖNER / КУРИНЫЙ ДОНЕР",
         "name_en": "TAVUK DÖNER / CHICKEN DONER",
-        "price_1": "43 000",
+        "price_1": "43000",
         "price_05": "30000"
       },
       {
@@ -584,7 +584,7 @@
         "name_tr": "TAVUK ISKANDER KEBAB",
         "name_ru": "TAVUK ISKANDER KEBAB / КУРИНЫЙ ИСКАНДЕР КЕБАБ",
         "name_en": "TAVUK ISKANDER KEBAB / CHICKEN ISKANDER KEBAB",
-        "price_1": "48 000",
+        "price_1": "48000",
         "price_05": "33000"
       },
       {
@@ -593,7 +593,7 @@
         "name_tr": "ET DÖNЕR",
         "name_ru": "ET DÖNЕR / МЯСНОЙ ДОНЕР",
         "name_en": "ET DÖNЕR / BEEF DONER",
-        "price_1": "54 000",
+        "price_1": "54000",
         "price_05": "38000"
       },
       {
@@ -602,7 +602,8 @@
         "name_tr": "TAVUK DURUM",
         "name_ru": "TAVUK DURUM / КУРИНЫЙ ДУРУМ",
         "name_en": "TAVUK DURUM / CHICKEN DURUM",
-        "price_1": "33 000"
+        "price_1": "33000",
+        "price_05": ""
       },
       {
         "id": "donar_9",
@@ -610,7 +611,8 @@
         "name_tr": "TAVUK BURGER",
         "name_ru": "TAVUK BURGER / КУРИНЫЙ БУРГЕР",
         "name_en": "TAVUK BURGER / CHICKEN BURGER",
-        "price_1": "23 000"
+        "price_1": "23000",
+        "price_05": ""
       }
     ]
   },
@@ -628,7 +630,7 @@
         "ingredients_ru": "ЛУК, БОЛГАРСКИЙ , ПОМИДОРЫ",
         "ingredients_en": "ONION, BULGARIAN PEPPER, TOMATOS",
         "price_05": "13000",
-        "price_1": "20 000"
+        "price_1": "20000"
       },
       {
         "id": "garnir_2",
@@ -639,7 +641,7 @@
         "ingredients_ru": "МАСЛО, СЛИВКИ, МЕД, ВАРЕНЬЕ",
         "ingredients_en": "BUTTER. CREAM.HONEY, JAM",
         "price_05": "",
-        "price_1": "25 000"
+        "price_1": "25000"
       },
       {
         "id": "garnir_3",
@@ -650,7 +652,7 @@
         "ingredients_ru": "МАСЛО, СЛИВКИ, МЕД",
         "ingredients_en": "BUTTER CREAM, HONEY",
         "price_05": "",
-        "price_1": "20 000"
+        "price_1": "20000"
       },
       {
         "id": "garnir_4",
@@ -661,7 +663,7 @@
         "ingredients_ru": "",
         "ingredients_en": "",
         "price_05": "10000",
-        "price_1": "15 000"
+        "price_1": "15000"
       },
       {
         "id": "garnir_5",
@@ -672,7 +674,7 @@
         "ingredients_ru": "РИС, ШАХРИЯ",
         "ingredients_en": "",
         "price_05": "13000",
-        "price_1": "20 000"
+        "price_1": "20000"
       }
     ]
   },
@@ -689,7 +691,7 @@
         "name_en": "SARMA BEYTI / BEEF KEBAB",
         "ingredients_ru": "МЯСА БАРАНИНЫ ЗАВЕРНУТОЕ В ЛАВАШЕ С ТАМАТОМ",
         "ingredients_en": "LAMB MEAT WITH GREENS WRAPPED IN PITA",
-        "price_1": "60 000",
+        "price_1": "60000",
         "price_05": ""
       },
       {
@@ -700,7 +702,7 @@
         "name_en": "KARIŞIK EFENDI KEBAB (2 KISILIK) / ASSORTED EFENDI KEBAB (FOR 2 PERSDNS)",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "175 000",
+        "price_1": "175000",
         "price_05": ""
       },
       {
@@ -711,7 +713,7 @@
         "name_en": "ADANA KEBAB | URFA KEBAB /GROUND SKEWERS",
         "ingredients_ru": "МОЛОТЫЙ ОСТРЫЙ НЕОСТРЫЙ ШАШЛЫК (ГОВЯДИНА/БАРАНИНА)",
         "ingredients_en": "GROUND-MEAT HOT SPICY/NOT SPICY KEBAB (BEEF/LAMB)",
-        "price_1": "50 000",
+        "price_1": "50000",
         "price_05": ""
       },
       {
@@ -722,7 +724,7 @@
         "name_en": "KARIŞIK EFENDI KEBAB (1 KISILIK) / ASSORTED EFENDI KEBAB (FOR 1 PERSONS)",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "95 000",
+        "price_1": "95000",
         "price_05": ""
       },
       {
@@ -733,7 +735,7 @@
         "name_en": "ET SIS",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "69 000",
+        "price_1": "69000",
         "price_05": ""
       },
       {
@@ -744,7 +746,7 @@
         "name_en": "ІNЕGÖL",
         "ingredients_ru": "КОТЛЕТЫ ИЗ БАРАНИНЫ/ГОВЯДИНЫ",
         "ingredients_en": "LAMB/BEEF MEATBALLS",
-        "price_1": "50 000",
+        "price_1": "50000",
         "price_05": "35000"
       },
       {
@@ -755,7 +757,7 @@
         "name_en": "EFENDI KÖFTЕ / EFENDI MEATBALLS",
         "ingredients_ru": "КОТЛЕТЫ ИЗ БАРАНИНЫ НА МАНГАЛЕ",
         "ingredients_en": "LAMB MEATBALLS ON THE GRILL",
-        "price_1": "50 000",
+        "price_1": "50000",
         "price_05": "35000"
       },
       {
@@ -766,7 +768,7 @@
         "name_en": "PATLICAN KEBAB / KEBAB WITH EGGPLANT AND MEAT",
         "ingredients_ru": "ГОВЯДИНА. БАКЛАЖАНЫ С ГАРНИРОМ",
         "ingredients_en": "BEEF. EGGPLANT, TOMATOES",
-        "price_1": "50 000",
+        "price_1": "50000",
         "price_05": ""
       },
       {
@@ -777,7 +779,7 @@
         "name_en": "ET COP SIS",
         "ingredients_ru": "ГОВЯЖИЙ ШАШЛЫК НА ШПАЖКАХ",
         "ingredients_en": "",
-        "price_1": "69 000",
+        "price_1": "69000",
         "price_05": ""
       },
       {
@@ -788,7 +790,7 @@
         "name_en": "MANTARLI KEBAB",
         "ingredients_ru": "ШАМПИНЬОНЫ, МЯСО ИЗ ГАРНИР",
         "ingredients_en": "",
-        "price_1": "50 000",
+        "price_1": "50000",
         "price_05": ""
       },
       {
@@ -799,7 +801,7 @@
         "name_en": "KUZU SIS",
         "ingredients_ru": "ГОВЯЖИЙ ШАШЛЫК",
         "ingredients_en": "",
-        "price_1": "69 000",
+        "price_1": "69000",
         "price_05": ""
       },
       {
@@ -810,7 +812,7 @@
         "name_en": "KUZU PERZOLA",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "75 000",
+        "price_1": "75000",
         "price_05": ""
       },
       {
@@ -821,7 +823,7 @@
         "name_en": "TAVUK FILE MANGALDA / FILLE OF CHICKEN ON THE GRILL",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "50 000",
+        "price_1": "50000",
         "price_05": ""
       },
       {
@@ -832,7 +834,7 @@
         "name_en": "TAVUK PERZOLA / CHICKEN PERZULA",
         "ingredients_ru": "КУРИНЫЕ НОЖКИ С ГАРНИРОМ",
         "ingredients_en": "CHICKEN LEGS WITH SIDE DISH",
-        "price_1": "50 000",
+        "price_1": "50000",
         "price_05": "30000"
       },
       {
@@ -843,7 +845,7 @@
         "name_en": "TAVUK ŞIŞ / CHICKEN SHISH KEBAB",
         "ingredients_ru": "КУРИНЫЙ ШАШЛЫК С ПЕР30ЛЫ СОЧНЫЙ",
         "ingredients_en": "",
-        "price_1": "50 000",
+        "price_1": "50000",
         "price_05": ""
       },
       {
@@ -854,7 +856,7 @@
         "name_en": "TAVUK KÖFTЕ / CHIKEN ON THE GRILL",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "48 000",
+        "price_1": "48000",
         "price_05": ""
       },
       {
@@ -865,7 +867,7 @@
         "name_en": "SEBZELI KEBAB / VEGETABLE KEBAB",
         "ingredients_ru": "ШАШЛЫК ИЗ ОВОЩЕЙ",
         "ingredients_en": "POTATOES, CARROTS. EGGPLANT",
-        "price_1": "30 000",
+        "price_1": "30000",
         "price_05": ""
       },
       {
@@ -876,7 +878,7 @@
         "name_en": "TAVUK ÇOP ŞIŞ / CHICKEN KEBAB ON SKEWERS",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "43 000",
+        "price_1": "43000",
         "price_05": "27000"
       },
       {
@@ -887,7 +889,7 @@
         "name_en": "TAVUK SIS / CHICKEN SHISH KEBAB",
         "ingredients_ru": "КУРИНОЕ ФИЛЕ С ГАРНИРОМ",
         "ingredients_en": "CHICKEN FILLET WITH SIDE DISH",
-        "price_1": "50 000",
+        "price_1": "50000",
         "price_05": ""
       },
       {
@@ -898,7 +900,7 @@
         "name_en": "KANAT / CHICKEN WINGS",
         "ingredients_ru": "КУРИНЫЕ КРЫЛЫШКИ С ГАРНИРОМ",
         "ingredients_en": "SERVED WITH SIDE DISH",
-        "price_1": "45 000",
+        "price_1": "45000",
         "price_05": ""
       },
       {
@@ -907,8 +909,8 @@
         "name_tr": "KARISIK COP SIS",
         "name_ru": "KARISIK COP SIS / СМЕШАННЫЙ ШАШЛЫК НА ШПАЖКАХ",
         "name_en": "KARISIK COP SIS / MIX KEBAB ON SKEWERS",
-        "price_1": "45 000",
-        "price_05": "69 000"
+        "price_1": "45000",
+        "price_05": "69000"
       }
     ]
   },
@@ -937,7 +939,7 @@
         "ingredients_ru": "ФАРШИЗ БАРАНИНЫ ТОМАТЫ. РЕПЧАТЫЙ ЛУК",
         "ingredients_en": "MINCED LAMB MINCEMEAT, TOMATOES, ONION",
         "price_05": "",
-        "price_1": "25 000"
+        "price_1": "25000"
       },
       {
         "id": "pizza_3",
@@ -959,7 +961,7 @@
         "ingredients_ru": "",
         "ingredients_en": "",
         "price_05": "",
-        "price_1": "45 000"
+        "price_1": "45000"
       },
       {
         "id": "pizza_5",
@@ -970,7 +972,7 @@
         "ingredients_ru": "",
         "ingredients_en": "",
         "price_05": "",
-        "price_1": "50 000"
+        "price_1": "50000"
       },
       {
         "id": "pizza_6",
@@ -981,7 +983,7 @@
         "ingredients_ru": "ФАРШИЗ БАРАНИНЫ, ЯЙЦА. ПОМИДОРЫ СЫР",
         "ingredients_en": "LAMB MINCEMEAT, EGGS, TOMATOES. CHEESE",
         "price_05": "",
-        "price_1": "50 000"
+        "price_1": "50000"
       },
       {
         "id": "pizza_7",
@@ -992,7 +994,7 @@
         "ingredients_ru": "",
         "ingredients_en": "SEASONAL VEGETABLES",
         "price_05": "",
-        "price_1": "40 000"
+        "price_1": "40000"
       },
       {
         "id": "pizza_8",
@@ -1003,7 +1005,7 @@
         "ingredients_ru": "БАРАНИЕ МЯСО, ПОМИДОРЫ, БОЛГАРСКИЙ ПЕРЕЦ",
         "ingredients_en": "BEEF, TOMATOES, BULGARIAN PAPER",
         "price_05": "",
-        "price_1": "50 000"
+        "price_1": "50000"
       },
       {
         "id": "pizza_9",
@@ -1014,7 +1016,7 @@
         "ingredients_ru": "ФАРШ ИЗ БАРАНИНЫ ОВОЩИ, ЗЕЛЕНЬ",
         "ingredients_en": "MINCED LAMB, VEGETABLES, HERBS",
         "price_05": "",
-        "price_1": "45 000"
+        "price_1": "45000"
       },
       {
         "id": "pizza_10",
@@ -1025,7 +1027,7 @@
         "ingredients_ru": "ГОВЯДИНА С СЫРОМ ЗАПЕЧЕННАЯ В ТАНДЫРЕ",
         "ingredients_en": "BEEF WITH CHEESE NA IN TRADITIONAL ASIAN CLAY OVEN - TANDOOR",
         "price_05": "",
-        "price_1": "59 000"
+        "price_1": "59000"
       },
       {
         "id": "pizza_11",
@@ -1036,7 +1038,7 @@
         "ingredients_ru": "ПИДЕ С СЫРОМ, ЗАЛИТАЯМЕДОВЫМ СИРОПОМ",
         "ingredients_en": "SWEET PIZZA WITH CHEESE, EGGS, BATHED IN HONEY SYRUP",
         "price_05": "",
-        "price_1": "45 000"
+        "price_1": "45000"
       }
     ]
   },
@@ -1053,7 +1055,7 @@
         "name_en": "TAVUK SAÇ TAVA / CHICKEN WITH VEGETABLES",
         "ingredients_ru": "КУРИНОЕ МЯСО С ОВОЩАМИ И РИСОМ",
         "ingredients_en": "ROASTED CHICKEN WITH VEGETABLES AND RICE",
-        "price_1": "50 000"
+        "price_1": "50000"
       },
       {
         "id": "sactava_2",
@@ -1063,7 +1065,8 @@
         "name_en": "ET SAÇ TAVA / MEAT WITH VEGETABLES",
         "ingredients_ru": "ЖАРЕНОЕ МЯСОС ОВОЩАМИ И РИСОЛ",
         "ingredients_en": "ROASTED MEAT WITH VEGETABLES AND RICE",
-        "price_1": "70 000"
+        "price_05": "",
+        "price_1": "70000"
       },
       {
         "id": "sactava_3",
@@ -1073,7 +1076,8 @@
         "name_en": "BALIK / FISH",
         "ingredients_ru": "ЖАРЕННЫЙ СУДАК С ГАРНИРОМ",
         "ingredients_en": "FRIED PERCH WITH GARNISH",
-        "price_1": "55 000"
+        "price_05": "",
+        "price_1": "55000"
       },
       {
         "id": "sactava_4",
@@ -1083,7 +1087,8 @@
         "name_en": "SEBZELI SAÇ TAVA / VEGETABLE AND RICE",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "45 000"
+        "price_05": "",
+        "price_1": "45000"
       },
       {
         "id": "sactava_5",
@@ -1093,7 +1098,8 @@
         "name_en": "İÇLI KÖFTE / ICHLI KOFTE",
         "ingredients_ru": "ГОВЯДИНА, БАРАНИНА",
         "ingredients_en": "",
-        "price_1": "25 000"
+        "price_05": "",
+        "price_1": "25000"
       },
       {
         "id": "sactava_6",
@@ -1103,7 +1109,8 @@
         "name_en": "KARIŞIK SAÇ TAVA",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "60 000"
+        "price_05": "",
+        "price_1": "60000"
       }
     ]
   },
@@ -1118,7 +1125,8 @@
         "name_tr": "ÇIKOLATALI KEK",
         "name_ru": "ÇIKOLATALI KEK / ШОКОЛАДНЫЙ КЕКС",
         "name_en": "ÇIKOLATALI KEK / CHOKOLATE CAKE",
-        "price_1": "20 000",
+        "price_05": "",
+        "price_1": "20000",
         "ingredients_ru": "",
         "ingredients_en": ""
       },
@@ -1128,7 +1136,8 @@
         "name_tr": "REVANIYE KAZANDIBI",
         "name_ru": "REVANIYE KAZANDIBI / РЕВАНИ",
         "name_en": "REVANIYE KAZANDIBI / REVANIYE",
-        "price_1": "20 000",
+        "price_05": "",
+        "price_1": "20000",
         "ingredients_ru": "МАННАЯ КРУПА, САХАР, ОРЕХ",
         "ingredients_en": ""
       },
@@ -1138,7 +1147,8 @@
         "name_tr": "REVANIYE",
         "name_ru": "REVANIYE / REVANIYE",
         "name_en": "REVANIYE",
-        "price_1": "20 000",
+        "price_05": "",
+        "price_1": "20000",
         "ingredients_ru": "МАННАЯ КРУПА, САХАР, ОРЕХ",
         "ingredients_en": "CHOUX PASTRY, BLACK/WHITE CHOCOLATE BOILED, CONDENSED MILK, BUTTER."
       },
@@ -1148,7 +1158,8 @@
         "name_tr": "DONDURMA",
         "name_ru": "DONDURMA / MOPOЖЕHOE",
         "name_en": "DONDURMA / ICE CREAM",
-        "price_1": "10 000",
+        "price_05": "",
+        "price_1": "10000",
         "ingredients_ru": "",
         "ingredients_en": ""
       },
@@ -1158,7 +1169,8 @@
         "name_tr": "AYVA TATLISI",
         "name_ru": "AYVA TATLISI / ПЕЧЕННАЯ АЙВА",
         "name_en": "AYVA TATLISI / BAKED QUINCE",
-        "price_1": "20 000",
+        "price_05": "",
+        "price_1": "20000",
         "ingredients_ru": "СЛАДОСТЬ ИЗ АЙНЫ",
         "ingredients_en": ""
       },
@@ -1168,7 +1180,8 @@
         "name_tr": "BAKLAVA DURUM",
         "name_ru": "BAKLAVA DURUM / ТУРЕЦКАЯ ПАХЛАВА",
         "name_en": "BAKLAVA DURUM",
-        "price_1": "23 000",
+        "price_05": "",
+        "price_1": "23000",
         "ingredients_ru": "",
         "ingredients_en": "HE SWEETNESS OF THE QUINCE"
       },
@@ -1178,7 +1191,8 @@
         "name_tr": "ŞEKER PARE",
         "name_ru": "ŞEKER PARE / ШЕКЕР ПАРЕ",
         "name_en": "SHEKER PARE",
-        "price_1": "20 000",
+        "price_05": "",
+        "price_1": "20000",
         "ingredients_ru": "МАННАЯ КРУПА, САХАР",
         "ingredients_en": ""
       },
@@ -1188,7 +1202,8 @@
         "name_tr": "КАВАK TATLISI",
         "name_ru": "КАВАK TATLISI / ПЕЧЕННАЯ ТЫКВА",
         "name_en": "КАВАK TATLISI / BAKED PUMKIN",
-        "price_1": "20 000",
+        "price_05": "",
+        "price_1": "20000",
         "ingredients_ru": "СЛАДОСТЬ ИЗ ТЫКВЫ",
         "ingredients_en": "SEMOLINA, SUGAR, NUTS"
       },
@@ -1197,7 +1212,8 @@
         "name_tr": "TULUMBA",
         "name_ru": "ТУЛУМБА",
         "name_en": "TULUMBA",
-        "price_1": "20 000",
+        "price_05": "",
+        "price_1": "20000",
         "ingredients_ru": "TECTO B CYPONE",
         "ingredients_en": ""
       },
@@ -1207,7 +1223,8 @@
         "name_tr": "SUTLAÇ",
         "name_ru": "SUTLAÇ / ТУРЕЦКИЙ ПУДИНГ",
         "name_en": "SUTLAÇ / TURKISH PUDDING",
-        "price_1": "20 000",
+        "price_05": "",
+        "price_1": "20000",
         "ingredients_ru": "МОЛОКО, РИС, САХАР",
         "ingredients_en": ""
       },
@@ -1217,7 +1234,8 @@
         "name_tr": "KATMER",
         "name_ru": "KATMEP",
         "name_en": "KATMER",
-        "price_1": "45 000",
+        "price_05": "",
+        "price_1": "45000",
         "ingredients_ru": "ТЕСТО С ФИСТАШКАМИ В САХАРНОМ СИРОПЕ ",
         "ingredients_en": "MILK, RICE, SUGAR"
       },
@@ -1227,7 +1245,8 @@
         "name_tr": "Fıstıklı CEVİZLİ PİDE",
         "name_ru": "Fıstıklı CEVİZLİ PİDE / ПИДЕ С ФИСТАШКАМИ И С ГРЕЦКИМ ОРЕХОМ",
         "name_en": "Fıstıklı CEVİZLİ PİDE / PIDE WITH PISTACHI AND WALNUT",
-        "price_1": "60 000",
+        "price_05": "",
+        "price_1": "60000",
         "ingredients_ru": "",
         "ingredients_en": ""
       },
@@ -1237,7 +1256,8 @@
         "name_tr": "KUNEFE",
         "name_ru": "KUNEFE / КЮНАФЕ",
         "name_en": "KUNEFE",
-        "price_1": "45 000",
+        "price_05": "",
+        "price_1": "45000",
         "ingredients_ru": "СЫР С ФИСТАШКАМИ В САХАРНОМ СИРОПЕ",
         "ingredients_en": ""
       },
@@ -1247,7 +1267,8 @@
         "name_tr": "BAKLAVA MIDYA",
         "name_ru": "BAKLAVA MIDYA / МИДЯ ПАХЛАВА",
         "name_en": "BAKLAVA MIDYA",
-        "price_1": "23 000",
+        "price_05": "",
+        "price_1": "23000",
         "ingredients_ru": "1 ПОРЦИЯ - 2 ШТУК",
         "ingredients_en": ""
       },
@@ -1257,7 +1278,8 @@
         "name_tr": "BAKLAVA MARAŞ",
         "name_ru": "BAKLAVA MARAŞ",
         "name_en": "BAKLAVA MARAŞ",
-        "price_1": "23 000",
+        "price_05": "",
+        "price_1": "23000",
         "ingredients_ru": "1 ПОРЦИЯ - 2 ШТУК"
       },
       {
@@ -1266,7 +1288,8 @@
         "name_tr": "BAKLAVA PRENSES",
         "name_ru": "BAKLAVA PRENSES",
         "name_en": "BAKLAVA PRENSES",
-        "price_1": "23 000",
+        "price_05": "",
+        "price_1": "23000",
         "ingredients_ru": "1 ПОРЦИЯ - 2 ШТУК"
       },
       {
@@ -1275,7 +1298,8 @@
         "name_tr": "BAKLAVA ŞOBET",
         "name_ru": "BAKLAVA ŞOBET",
         "name_en": "BAKLAVA ŞOBET",
-        "price_1": "23 000",
+        "price_05": "",
+        "price_1": "23000",
         "ingredients_ru": "1 ПОРЦИЯ - 2 ШТУК"
       },
       {
@@ -1284,7 +1308,8 @@
         "name_tr": "BAKLAVA HOVUÇ DILIMI",
         "name_ru": "BAKLAVA HOVUÇ DILIMI",
         "name_en": "BAKLAVA HOVUÇ DILIMI",
-        "price_1": "23 000",
+        "price_05": "",
+        "price_1": "23000",
         "ingredients_ru": "С МОРОЖЕНЫМ - 33 000",
         "ingredients_en": "WITH ICE CREAM 33 000"
       }
@@ -1301,7 +1326,8 @@
         "name_tr": "AFGAN EKMEK",
         "name_ru": "AFGAN EKMEK / АФГАНСКИЙ ХЛЕБ",
         "name_en": "AFGAN EKMEK",
-        "price_1": "25 000"
+        "price_05": "",
+        "price_1": "25000"
       },
       {
         "id": "bread_2",
@@ -1309,7 +1335,8 @@
         "name_tr": "EFENDI LAVAŞ EKMEK",
         "name_ru": "EFENDI LAVAŞ EKMEK / ЭФЕНДИ ЛАВАШ ХЛЕБ",
         "name_en": "EFENDI LAVAŞ EKMEK / EFENDI PITA",
-        "price_1": "15 000"
+        "price_05": "",
+        "price_1": "15000"
       },
       {
         "id": "bread_3",
@@ -1317,7 +1344,8 @@
         "name_tr": "EFENDI EKMEK",
         "name_ru": "EFENDI EKMEK / ФИРМЕННЫЙ ХЛЕБ ОТ ЭФЕНДИ",
         "name_en": "EFENDI EKMEK / BAKED BREAD EFENDI",
-        "price_1": "7 000"
+        "price_05": "",
+        "price_1": "7000"
       }
     ]
   }

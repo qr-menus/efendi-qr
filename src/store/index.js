@@ -25,11 +25,22 @@ export default new Vuex.Store({
       })
     ),
     locale: localStorage.getItem("locale") || "ru",
+    favouritesOn: true,
   },
   mutations: {
     setLocale(state, locale) {
       state.locale = locale;
       localStorage.setItem("locale", locale);
+    },
+    increment(state, productId) {
+      state.favourites = state.favourites.map((item) =>
+        item.id === productId ? { ...item, count: item.count + 1 } : item
+      );
+    },
+    decrement(state, productId) {
+      state.favourites = state.favourites.map((item) =>
+        item.id === productId ? { ...item, count: item.count - 1 } : item
+      );
     },
     addToFavourites(state, payload) {
       state.favourites.push(payload);

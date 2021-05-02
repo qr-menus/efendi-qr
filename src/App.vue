@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <nav class="sticky top-0 bg-white">
+      <nav class="sticky top-0 z-10 bg-white">
         <div class="flex items-center px-4 mx-auto border-b max-w-7xl">
           <div class="relative w-full rounded-md">
             <div class="flex items-center justify-between">
@@ -120,6 +120,7 @@ export default {
       favourites: (state) => state.favourites,
       categories: (state) => state.categories,
       locale: (state) => state.locale,
+      favouritesOn: (state) => state.favouritesOn,
     }),
     getField() {
       return (field) => {
@@ -130,7 +131,6 @@ export default {
   },
   data() {
     return {
-      favouritesOn: false,
       searchQuery: "",
       langOptions: [
         { text: "Tr/Ru", value: "ru" },
