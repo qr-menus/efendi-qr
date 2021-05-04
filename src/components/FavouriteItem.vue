@@ -8,7 +8,7 @@
           <div @click="onClick" class="flex items-center space-x-2">
             <img
               class="object-cover w-20 h-20 bg-yellow-400 rounded-lg"
-              :src="`/images/${product.category}/${product.category}_${id}.webp`"
+              :src="`/images/${product.category}/${product.id}.webp`"
               alt="food"
             />
             <div class="text-left">
