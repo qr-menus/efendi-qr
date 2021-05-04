@@ -30,7 +30,7 @@
         >
           <div class="flex items-center justify-between pb-3">
             <span class="mr-3 font-semibold text-gray-500">
-              Обслуживание (15%):
+              Обслуживание (10%):
             </span>
             <span class="text-xl font-black text-gray-700"
               >{{ servicePrice }} сум</span
@@ -60,7 +60,7 @@ export default {
   components: { CartSlideOver, FavouriteItem },
   data() {
     return {
-      servicePortion: 0.15,
+      servicePortion: 0.1,
     };
   },
   computed: {
