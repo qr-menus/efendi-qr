@@ -2,7 +2,7 @@
   <CartSlideOver>
     <template #trigger="{ onClick }">
       <div
-        class="fixed flex flex-col items-center justify-center w-64 px-3 py-4 -ml-32 rounded-full cursor-pointer bottom-5 left-1/2 bg-primary"
+        class="fixed flex flex-col items-center justify-center w-56 p-3 rounded-full cursor-pointer -ml-28 bottom-5 left-1/2 bg-primary"
         @click="onClick"
       >
         <p class="font-bold text-white">
