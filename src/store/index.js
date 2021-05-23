@@ -36,11 +36,13 @@ export default new Vuex.Store({
       state.favourites = state.favourites.map((item) =>
         item.id === productId ? { ...item, count: item.count + 1 } : item
       );
+      localStorage.setItem("favourites", JSON.stringify(state.favourites));
     },
     decrement(state, productId) {
       state.favourites = state.favourites.map((item) =>
         item.id === productId ? { ...item, count: item.count - 1 } : item
       );
+      localStorage.setItem("favourites", JSON.stringify(state.favourites));
     },
     addToFavourites(state, payload) {
       state.favourites.push(payload);
@@ -50,6 +52,7 @@ export default new Vuex.Store({
       state.favourites = state.favourites.filter(
         (favourite) => favourite.name_tr !== payload.name_tr
       );
+      localStorage.setItem("favourites", JSON.stringify(state.favourites));
     },
   },
   actions: {},
