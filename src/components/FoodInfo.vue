@@ -23,43 +23,6 @@
           />
         </svg>
       </div>
-      <!-- <button
-        @click.stop="
-          isInFavourites ? removeFromFavourites() : addToFavourites()
-        "
-        class="absolute text-white rounded-md bottom-3 right-3 focus:outline-none"
-      >
-        <span class="sr-only">Close panel</span>
-
-        <svg
-          v-if="isInFavourites"
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-10 h-10"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-            clip-rule="evenodd"
-          />
-        </svg>
-        <svg
-          v-else
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-10 h-10"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-          />
-        </svg>
-      </button> -->
     </div>
     <div class="p-5 text-left">
       <h2 class="text-2xl font-black capitalize">
@@ -85,51 +48,7 @@
       </div>
       <div v-if="favouritesOn" class="flex space-x-3">
         <template v-if="!isInFavourites">
-          <div class="flex">
-            <button
-              class="pl-2 pr-1 text-yellow-500 bg-gray-100 rounded-l focus:outline-none"
-              @click="decrement"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-            <div
-              class="flex items-center justify-center w-10 px-2 font-semibold text-gray-700 bg-gray-100"
-            >
-              {{ count }}
-            </div>
-            <button
-              class="pl-1 pr-2 text-yellow-500 bg-gray-100 rounded-r focus:outline-none"
-              @click="increment"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          </div>
+          <FoodCount :count.sync="count" />
           <button
             @click="addToFavourites"
             class="w-full p-3 font-semibold text-white bg-yellow-500 rounded-lg"
@@ -146,22 +65,16 @@
           <span>Уже в корзине</span>
         </button>
       </div>
-      <!-- <div class="flex items-center mb-5">
-        <button
-          @click="$emit('close', close)"
-          class="w-full p-3 font-medium text-white bg-yellow-500 rounded-lg"
-        >
-          <span v-if="$store.state.locale == 'ru'"> НАЗАД</span>
-          <span v-else> CLOSE</span>
-        </button>
-      </div> -->
     </div>
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
+import FoodCount from "./FoodCount";
+
 export default {
+  components: { FoodCount },
   props: {
     product: {
       type: Object,
@@ -200,12 +113,6 @@ export default {
     },
   },
   methods: {
-    decrement() {
-      this.count = this.count > 1 ? this.count - 1 : 1;
-    },
-    increment() {
-      this.count++;
-    },
     addToFavourites() {
       if (this.isInFavourites) return;
       this.$store.commit("addToFavourites", {
