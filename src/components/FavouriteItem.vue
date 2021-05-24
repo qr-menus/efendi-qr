@@ -114,7 +114,7 @@
 </template>
 
 <script>
-import SlideOverVertical from "./SlideOverVertical.vue";
+import SlideOverVertical from "./core/SlideOverVertical.vue";
 import FoodInfo from "./FoodInfo";
 import { mapState } from "vuex";
 export default {
