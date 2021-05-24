@@ -36,7 +36,7 @@
 
 <script>
 import FoodInfo from "./FoodInfo";
-import SlideOverVertical from "./SlideOverVertical.vue";
+import SlideOverVertical from "./core/SlideOverVertical.vue";
 export default {
   name: "FoodCard",
   components: { FoodInfo, SlideOverVertical },
