@@ -7,7 +7,7 @@
       >
         <div>
           <img
-            class="object-cover w-full mb-1 bg-yellow-400 rounded-xl"
+            class="object-cover w-full mb-1 bg-yellow-400 rounded-3xl"
             :src="`/images/${category}/${product.id}.webp`"
             alt="food"
           />
@@ -16,7 +16,7 @@
           </h2>
         </div>
         <h6
-          class="w-full py-3 font-black text-yellow-500 bg-gray-100 rounded-lg"
+          class="w-full py-3 font-black text-yellow-500 bg-gray-100 rounded-xl"
         >
           {{ product.price_1 }} sum
         </h6>

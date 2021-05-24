@@ -1348,5 +1348,206 @@
         "price_1": "7000"
       }
     ]
+  },
+  "drinks":{
+    "name_tr": "İçmek",
+    "name_ru": "Напитки",
+    "name_en": "Drinks",
+    "products": [
+      {
+        "id": "drinks_2",
+        "image_name": "ISAA1528",
+        "name_tr": "AYRAN",
+        "name_ru": "АЙРАН",
+        "name_en": "DRINK AYRAN",
+        "ingredients_ru": "0.25Л - 10 000, 0.5Л - 15 000, 1Л - 20 000, 1.5Л - 30 000 ",
+        "ingredients_en": "0.25L - 10 000, 0.5L - 15 000, 1L - 20 000, 1.5L - 30 000 ",
+        "price_05": "15 000",
+        "price_1": "20 000"
+    },
+    {
+        "id": "drinks_3",
+        "image_name": "7C0A9067",
+        "name_tr": "SALGAM SUYU",
+        "name_ru": "SALGAM SUYU",
+        "name_en": "SALGAM SUYU",
+        "price_1": "18 000"
+    },
+    {
+        "id": "drinks_4",
+        "image_name": "7C0A9063",
+        "name_tr": "BEYPAZZARI SUYU",
+        "name_ru": "BEYPAZZARI SUYU / ГАЗИРОВАННАЯ ВОДА",
+        "name_en": "BEYPAZZARI SUYU / SPARKLING WATER",
+        "price_1": "15 000"
+    },
+    {
+        "id": "drinks_5",
+        "image_name": "IMG_4112",
+        "name_tr": "ÇAY",
+        "name_ru": "ÇAY / ЧАЙ В ЧАЙНИКЕ",
+        "name_en": "ÇAY / TEA",
+        "ingredients_ru": "ПРОСТОЙ - 8000, С ЛИМОНОМ - 10 000,  ТУРЕЦКИЙ - 12 000",
+        "ingredients_en": "ORDINARY - 8000, WITH LEMON - 10 000,  TURKISH - 12 000",
+        "price_1": "12 000"
+    },
+    {
+        "id": "drinks_6",
+        "image_name": "7C0A9089",
+        "name_tr": "TÜRK ÇAYI",
+        "name_ru": "TÜRK ÇAYI / ТУРЕЦКИЙ ЧАЙ",
+        "name_en": "TÜRK ÇAYI / TURKISH TEA",
+        "price_1": "3 000"
+    },
+    {
+        "id": "drinks_7",
+        "image_name": "ISAA1499",
+        "name_tr": "BARJOMI",
+        "name_ru": "BARJOMI",
+        "name_en": "BARJOMI",
+        "price_1": "20 000"
+    },
+    {
+        "id": "drinks_9",
+        "image_name": "ISAA1497",
+        "name_tr": "CHARTAQ",
+        "name_ru": "CHARTAQ",
+        "name_en": "CHARTAQ",
+        "ingredients_ru": "0.3Л - 10 000, 0.5Л - 15 000 ",
+        "ingredients_en": "0.3L - 10 000, 0.5L - 15 000 ",
+        "price_05": "10 000",
+        "price_1": "15 000"
+    },
+    {
+        "id": "drinks_11",
+        "image_name": "ISAA1508",
+        "name_tr": "TÜRK KAHVESİ",
+        "name_ru": "TÜRK KAHVESİ / ТУРЕЦКЫЙ КОФЕ",
+        "name_en": "TÜRK KAHVESİ / TURKISH COFFEE",
+        "price_1": "15 000"
+    },
+    {
+        "id": "drinks_12",
+        "image_name": "ISAA1464",
+        "name_tr": "SADE KAHVESI",
+        "name_ru": "SADE KAHVESI / КОФЕ",
+        "name_en": "SADE KAHVESI / COFFEE",
+        "price_1": "8 000"
+    },
+    {
+        "id": "drinks_15",
+        "image_name": "ISAA1376",
+        "name_tr": "BIR DОGROSE SUYU",
+        "name_ru": "BIR DОGROSE SUYU / ШИПОВНИК",
+        "name_en": "BIR DОGROSE SUYU / DОGROSE",
+        "ingredients_ru": "0.25Л - 7 000, 1Л - 28 000",
+        "ingredients_en": "0.25L - 7 000, 1L - 28 000",
+        "price_05": "7 000",
+        "price_1": "28 000"
+    },
+    {
+        "id": "drinks_16",
+        "image_name": "ISA1494",
+        "name_tr": "COCA-COLA, FANTA, SPRITE",
+        "name_ru": "COCA-COLA, FANTA, SPRITE",
+        "name_en": "COCA-COLA, FANTA, SPRITE",
+        "ingredients_ru": "0.25Л - 7 000, 0.5Л - 10 000, 1Л - 13 000,  1.5Л - 15 000",
+        "ingredients_en": "0.25L - 7 000, 0.5L - 10 000, 1L - 13 000,  1.5L - 15 000",
+        "price_05": "10 000",
+        "price_1": "13 000"
+    },
+    {
+        "id": "drinks_17",
+        "name_tr": "SULAR ÇEŞİTLERİ",
+        "name_ru": "СОКИ АССОРТИМЕНТЕ (СОЧНАЯ ДОЛИНА)",
+        "name_en": "JUICES ASSORTMENT (СОЧНАЯ ДОЛИНА)",
+        "ingredients_ru": "0.25Л - 7 000, 1Л - 13 000 ",
+        "ingredients_en": "0.25L - 7 000, 1L - 13 000 ",
+        "price_05": "7 000",
+        "price_1": "13 000"
+    },
+    {
+        "id": "drinks_19",
+        "name_tr": "COMPOTE",
+        "name_ru": "КОМПОТ",
+        "name_en": "COMPOTE",
+        "ingredients_ru": "10 000, 20 000, 40 000, 50 000 ",
+        "ingredients_en": "10 000, 20 000, 40 000, 50 000 ",
+        "price_05": "10 000",
+        "price_1": "20 000"
+    },
+    {
+        "id": "drinks_20",
+        "image_name": "ISA1312",
+        "name_tr": "TARHUN IÇECEĞI",
+        "name_ru": "TARHUN IÇECEĞI / ТАРХУН НАПИТОК",
+        "name_en": "TARHUN IÇECEĞI",
+        "ingredients_ru": "0.4Л - 18 000, 1Л - 40 000, ",
+        "price_05": "18 000",
+        "price_1": "40 000"
+    },
+    {
+        "id": "drinks_21",
+        "image_name": "ISAA1294",
+        "name_tr": "SOĞUK ÇAY",
+        "name_ru": "SOĞUK ÇAY",
+        "name_en": "SOĞUK ÇAY / ICE TEA",
+        "ingredients_ru": "0.4Л - 18 000, 1Л - 40 000, ",
+        "price_05": "18 000",
+        "price_1": "40 000"
+    },
+    {
+        "id": "drinks_22",
+        "image_name": "ISAA1302",
+        "name_tr": "MOJİTO",
+        "name_ru": "MOJİTO / МОХИТО ",
+        "name_en": "MOJİTO / MOXITO",
+        "ingredients_ru": "0.4Л - 18 000, 1Л - 40 000, ",
+        "price_05": "18 000",
+        "price_1": "40 000"
+    },
+    {
+        "id": "drinks_23",
+        "image_name": "ISAA1321",
+        "name_tr": "LIMONLU LIMONATA",
+        "name_ru": "LIMONLU LIMONATA / ЛИМОННЫЙ ЛИМОНАД ",
+        "name_en": "LIMONLU LIMONATA / LEMON LEMONADE",
+        "ingredients_ru": "0.4Л - 18 000, 1Л - 40 000, ",
+        "price_05": "18 000",
+        "price_1": "40 000"
+    },
+    {
+        "id": "drinks_24",
+        "image_name": "ISAA1439",
+        "name_tr": "AMERİKANO",
+        "name_ru": "АМЕРИКАНО",
+        "name_en": "AMERICANO",
+        "price_1": "18 000"
+    },
+    {
+        "id": "drinks_25",
+        "image_name": "ISAA1455",
+        "name_tr": "LATTE",
+        "name_ru": "ЛАТТЕ",
+        "name_en": "LATTE",
+        "price_1": "18 000"
+    },
+    {
+        "id": "drinks_26",
+        "image_name": "ISAA1468",
+        "name_tr": "CAPPUCCİNO",
+        "name_ru": "КАПУЧИНО",
+        "name_en": "CAPPUCCINO",
+        "price_1": "18 000"
+    },
+    {
+        "id": "drinks_27",
+        "image_name": "ISAA1537",
+        "name_tr": "FRAPPUCCINO",
+        "name_ru": "ФРАППУЧИНО",
+        "name_en": "FRAPPUCCINO",
+        "price_1": "18 000"
+    }
+    ]
   }
 }
