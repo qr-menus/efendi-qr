@@ -7,16 +7,19 @@ import VueScrollactive from "vue-scrollactive";
 import "./utils/localeFilter";
 import "./utils/clickOutside";
 import YmapPlugin from "vue-yandex-maps";
+import VueCurrencyFilter from "vue-currency-filter";
 
-Vue.config.productionTip = false;
-Vue.use(VueScrollactive);
-Vue.use(YmapPlugin, settings);
-
-new Vue({
-  router,
-  store,
-  render: (h) => h(App),
-}).$mount("#app");
+const moneyConfig = {
+  // v-money config
+  decimal: ".",
+  thousands: ",",
+  precision: 0,
+  masked: false,
+  // currency filter config
+  thousandsSeparator: ",",
+  fractionCount: 0,
+  fractionSeparator: ".",
+};
 
 const settings = {
   apiKey: "3e7930fe-d6cb-40aa-a554-38c9f4cfb8f5",
@@ -24,3 +27,14 @@ const settings = {
   coordorder: "latlong",
   version: "2.1",
 };
+
+Vue.config.productionTip = false;
+Vue.use(VueScrollactive);
+Vue.use(YmapPlugin, settings);
+Vue.use(VueCurrencyFilter, moneyConfig);
+
+new Vue({
+  router,
+  store,
+  render: (h) => h(App),
+}).$mount("#app");

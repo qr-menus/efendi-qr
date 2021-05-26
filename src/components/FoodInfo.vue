@@ -49,7 +49,10 @@
         <FoodCount :count.sync="count" />
 
         <span v-if="product.portions" class="text-2xl font-black text-gray-800"
-          >{{ product.portions[selectedPortionIndex].price }} сум</span
+          >{{
+            product.portions[selectedPortionIndex].price | currency
+          }}
+          сум</span
         >
       </div>
       <div class="flex space-x-3">

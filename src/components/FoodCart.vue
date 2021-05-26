@@ -33,7 +33,7 @@
               Обслуживание (10%):
             </span>
             <span class="text-xl font-black text-gray-700"
-              >{{ servicePrice }} сум</span
+              >{{ servicePrice | currency }} сум</span
             >
           </div>
           <div class="flex items-center justify-between py-2">
@@ -41,7 +41,7 @@
               Общая стоимость:
             </span>
             <span class="text-xl font-black text-gray-700"
-              >{{ totalPrice }} сум</span
+              >{{ totalPrice | currency }} сум</span
             >
           </div>
         </div>

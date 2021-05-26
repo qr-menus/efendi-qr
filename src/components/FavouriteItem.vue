@@ -25,7 +25,7 @@
                 </span>
               </div>
               <h6 class="font-semibold text-gray-800">
-                {{ product.portion.price }} sum
+                {{ product.portion.price | currency }} sum
               </h6>
             </div>
           </div>

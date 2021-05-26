@@ -18,7 +18,8 @@
         <h6
           class="w-full py-3 font-black text-yellow-500 bg-gray-100 rounded-xl"
         >
-          {{ product.price_1 }} sum
+          {{ product.portions[0].price | currency }}
+          sum
         </h6>
       </div>
     </template>
