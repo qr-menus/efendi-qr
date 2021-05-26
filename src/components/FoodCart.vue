@@ -70,7 +70,7 @@ export default {
     servicePrice() {
       return (
         this.favourites.reduce(
-          (prev, curr) => +curr.price_1 * curr.count + prev,
+          (prev, curr) => +curr.portion.price * curr.count + prev,
           0
         ) * this.servicePortion
       );
@@ -78,7 +78,7 @@ export default {
     totalPrice() {
       return (
         this.favourites.reduce(
-          (prev, curr) => +curr.price_1 * curr.count + prev,
+          (prev, curr) => +curr.portion.price * curr.count + prev,
           0
         ) + this.servicePrice
       );
