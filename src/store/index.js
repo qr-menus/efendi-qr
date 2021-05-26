@@ -6,6 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    version: "0.1",
     favourites:
       (localStorage.getItem("favourites") &&
         JSON.parse(localStorage.getItem("favourites"))) ||
@@ -32,27 +33,40 @@ export default new Vuex.Store({
       state.locale = locale;
       localStorage.setItem("locale", locale);
     },
-    increment(state, productId) {
+    increment(state, product) {
       state.favourites = state.favourites.map((item) =>
-        item.id === productId ? { ...item, count: item.count + 1 } : item
+        item.id === product.id && item.portion.text === product.portion.text
+          ? { ...item, count: item.count + 1 }
+          : item
       );
       localStorage.setItem("favourites", JSON.stringify(state.favourites));
     },
-    decrement(state, productId) {
+    decrement(state, product) {
       state.favourites = state.favourites.map((item) =>
-        item.id === productId ? { ...item, count: item.count - 1 } : item
+        item.id === product.id && item.portion.text === product.portion.text
+          ? { ...item, count: item.count - 1 }
+          : item
       );
       localStorage.setItem("favourites", JSON.stringify(state.favourites));
     },
     addToFavourites(state, payload) {
       state.favourites.push(payload);
       localStorage.setItem("favourites", JSON.stringify(state.favourites));
+      localStorage.setItem("version", state.version);
     },
     removeFromFavourites(state, payload) {
       state.favourites = state.favourites.filter(
-        (favourite) => favourite.name_tr !== payload.name_tr
+        (favourite) =>
+          !(
+            favourite.name_tr === payload.name_tr &&
+            favourite.portion.text === payload.portion.text
+          )
       );
       localStorage.setItem("favourites", JSON.stringify(state.favourites));
+    },
+    clearCart(state) {
+      state.favourites = [];
+      localStorage.setItem("favourites", JSON.stringify([]));
     },
   },
   actions: {},

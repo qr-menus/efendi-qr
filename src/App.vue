@@ -87,7 +87,7 @@ export default {
           return [key, withFilteredProducts];
         })
         .filter(([, category]) => category.products.length);
-      // console.log(entries);
+
       return Object.fromEntries(entries);
     },
   },

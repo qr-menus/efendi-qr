@@ -28,34 +28,41 @@
       <h2 class="text-2xl font-black capitalize">
         {{ getField("name") }}
       </h2>
-      <p class="pr-2 my-4 overflow-y-auto text-gray-500 max-h-40 sm:max-h-64">
+      <p
+        class="pr-2 mt-4 mb-6 overflow-y-auto text-gray-500 max-h-40 sm:max-h-64"
+      >
         {{ getField("ingredients") }}
       </p>
-      <hr class="my-4" />
-      <div class="flex mb-4 space-x-2 font-bold md:text-lg">
-        <h2>
-          1x
-          <span class="text-xl text-yellow-500"
-            >- {{ product.price_1 }} sum</span
-          >
-        </h2>
-        <h2 v-if="product.price_05">
-          / 0.5x
-          <span class="text-xl text-yellow-500"
-            >- {{ product.price_05 }} sum</span
-          >
-        </h2>
+      <div class="flex mb-5 space-x-3 font-bold md:text-lg">
+        <span
+          v-for="(portion, index) in product.portions"
+          :key="`${product.name_tr}-${portion.text}`"
+          class="inline-flex items-center px-2.5 py-1.5 rounded-md text-base font-medium bg-gray-100 text-gray-800 cursor-pointer"
+          :class="{ 'border border-gray-700': index === selectedPortionIndex }"
+          @click="selectPortion(index)"
+        >
+          {{ portion.text }}
+        </span>
       </div>
-      <div v-if="favouritesOn" class="flex space-x-3">
-        <template v-if="!isInFavourites">
-          <FoodCount :count.sync="count" />
-          <button
-            @click="addToFavourites"
-            class="w-full p-3 font-semibold text-white bg-yellow-500 rounded-lg"
-          >
-            <span>Добавить в корзину</span>
-          </button>
-        </template>
+
+      <div class="flex items-center justify-between mb-5">
+        <FoodCount :count.sync="count" />
+
+        <span v-if="product.portions" class="text-2xl font-black text-gray-800"
+          >{{
+            product.portions[selectedPortionIndex].price | currency
+          }}
+          сум</span
+        >
+      </div>
+      <div class="flex space-x-3">
+        <button
+          v-if="!isInFavourites"
+          @click="addToFavourites"
+          class="w-full p-3 font-semibold text-white bg-yellow-500 rounded-lg"
+        >
+          <span>В корзинку</span>
+        </button>
         <button
           v-else
           type="button"
@@ -93,6 +100,7 @@ export default {
     return {
       liked: false,
       count: 1,
+      selectedPortionIndex: 0,
     };
   },
   computed: {
@@ -108,15 +116,23 @@ export default {
     },
     isInFavourites() {
       return this.favourites.some(
-        (favourite) => favourite.name_tr === this.product.name_tr
+        (favourite) =>
+          favourite.name_tr === this.product.name_tr &&
+          this.product.portions[this.selectedPortionIndex].text ===
+            favourite.portion.text
       );
     },
   },
+  created() {},
   methods: {
+    selectPortion(index) {
+      this.selectedPortionIndex = index;
+    },
     addToFavourites() {
       if (this.isInFavourites) return;
       this.$store.commit("addToFavourites", {
         ...this.product,
+        portion: this.product.portions[this.selectedPortionIndex],
         count: this.count,
       });
       this.$emit("close");

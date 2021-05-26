@@ -27,7 +27,7 @@
           :value="searchQuery"
           id="search"
           name="search"
-          class="block w-full bg-white border border-gray-300 rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
+          class="block w-full bg-white border border-gray-300 rounded-md py-2 pl-10 pr-3 placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-yellow-500 focus:border-yellow-500"
           placeholder="Поиск"
           type="search"
           @input="(event) => $emit('update:searchQuery', event.target.value)"
@@ -35,6 +35,7 @@
       </div>
     </div>
     <button
+      v-if="false"
       type="button"
       class="rounded-lg bg-yellow-400 p-1 focus:outline-none"
     >

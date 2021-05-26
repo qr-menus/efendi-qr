@@ -60,7 +60,7 @@
           >
             <div v-show="showContent" class="">
               <div
-                class="h-full max-w-2xl overflow-x-hidden bg-white rounded-t-xl"
+                class="h-full max-w-2xl overflow-x-hidden bg-white rounded-t-3xl"
               >
                 <div class="relative">
                   <!-- <div

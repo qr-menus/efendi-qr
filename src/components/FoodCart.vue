@@ -33,7 +33,7 @@
               Обслуживание (10%):
             </span>
             <span class="text-xl font-black text-gray-700"
-              >{{ servicePrice }} сум</span
+              >{{ servicePrice | currency }} сум</span
             >
           </div>
           <div class="flex items-center justify-between py-2">
@@ -41,7 +41,7 @@
               Общая стоимость:
             </span>
             <span class="text-xl font-black text-gray-700"
-              >{{ totalPrice }} сум</span
+              >{{ totalPrice | currency }} сум</span
             >
           </div>
         </div>
@@ -70,7 +70,7 @@ export default {
     servicePrice() {
       return (
         this.favourites.reduce(
-          (prev, curr) => +curr.price_1 * curr.count + prev,
+          (prev, curr) => +curr.portion.price * curr.count + prev,
           0
         ) * this.servicePortion
       );
@@ -78,7 +78,7 @@ export default {
     totalPrice() {
       return (
         this.favourites.reduce(
-          (prev, curr) => +curr.price_1 * curr.count + prev,
+          (prev, curr) => +curr.portion.price * curr.count + prev,
           0
         ) + this.servicePrice
       );

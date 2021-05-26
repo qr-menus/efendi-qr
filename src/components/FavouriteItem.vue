@@ -13,12 +13,20 @@
             />
             <div class="text-left">
               <h2
-                class="text-lg font-semibold leading-6 text-gray-500 capitalize line-clamp-2"
+                class="font-semibold text-gray-900 leading-6 capitalize line-clamp-1"
               >
                 <!-- {{ getField("name") }} -->
                 {{ product.name_tr && product.name_tr.toLowerCase() }}
               </h2>
-              <h6 class="font-bold text-gray-800">{{ product.price_1 }} sum</h6>
+              <div class="flex items-center space-x-1 mb-2">
+                <span class="h-2 w-2 bg-yellow-400 rounded-full"></span>
+                <span class="text-xs font-semibold text-gray-400">
+                  Порция: {{ product.portion.text }}
+                </span>
+              </div>
+              <h6 class="font-semibold text-gray-800">
+                {{ product.portion.price | currency }} sum
+              </h6>
             </div>
           </div>
         </template>
@@ -146,10 +154,10 @@ export default {
   },
   methods: {
     decrement() {
-      this.$store.commit("decrement", this.product.id);
+      this.$store.commit("decrement", this.product);
     },
     increment() {
-      this.$store.commit("increment", this.product.id);
+      this.$store.commit("increment", this.product);
     },
     removeFromFavourites() {
       this.$store.commit("removeFromFavourites", this.product);
