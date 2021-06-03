@@ -13,19 +13,19 @@
             />
             <div class="text-left">
               <h2
-                class="font-semibold text-gray-900 leading-6 capitalize line-clamp-1"
+                class="font-semibold leading-6 text-gray-900 capitalize line-clamp-1"
               >
                 <!-- {{ getField("name") }} -->
                 {{ product.name_tr && product.name_tr.toLowerCase() }}
               </h2>
-              <div class="flex items-center space-x-1 mb-2">
-                <span class="h-2 w-2 bg-yellow-400 rounded-full"></span>
+              <div class="flex items-center mb-2 space-x-1">
+                <span class="w-2 h-2 bg-yellow-400 rounded-full"></span>
                 <span class="text-xs font-semibold text-gray-400">
                   Порция: {{ product.portion.text }}
                 </span>
               </div>
               <h6 class="font-semibold text-gray-800">
-                {{ product.portion.price | currency }} sum
+                {{ (product.portion.price * product.count) | currency }} sum
               </h6>
             </div>
           </div>
