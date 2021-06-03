@@ -3,9 +3,9 @@
     <div>
       <nav class="sticky top-0 z-10 bg-white">
         <Topbar />
-        <Searchbar :searchQuery.sync="searchQuery" />
         <FoodCategories :categories="filtered" />
       </nav>
+      <Searchbar :searchQuery.sync="searchQuery" />
       <div
         v-for="(category, key) in filtered"
         :key="category.id"

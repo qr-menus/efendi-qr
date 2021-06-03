@@ -36,57 +36,57 @@
           ></div>
         </transition>
 
-        <div
-          class="absolute inset-x-0 bottom-0 flex items-end justify-center max-w-full"
-        >
-          <!--
-        Slide-over panel, show/hide based on slide-over state.
+        <div class="absolute inset-x-0 top-0 max-h-screen overflow-y-auto">
+          <div class="flex justify-center max-w-full p-3 pb-24">
+            <!--
+          Slide-over panel, show/hide based on slide-over state.
 
-        Entering: "transform transition ease-in-out duration-500 sm:duration-700"
-          From: "translate-x-full"
-          To: "translate-x-0"
-        Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
-          From: "translate-x-0"
-          To: "translate-x-full"
-      -->
-          <transition
-            enter-active-class="transition duration-300 ease-in-out transform sm:duration-700"
-            enter-class="translate-y-full"
-            enter-to-class="translate-y-0"
-            leave-active-class="transition duration-300 ease-in-out transform sm:duration-700"
-            leave-class="translate-y-0"
-            leave-to-class="translate-y-full"
-            @after-leave="close"
-          >
-            <div v-show="showContent" class="">
-              <div
-                class="h-full max-w-2xl overflow-x-hidden bg-white rounded-t-3xl"
-              >
-                <div class="relative">
-                  <!-- <div
-                    @click.stop="hideContent"
-                    class="absolute z-10 cursor-pointer bottom-2 right-2"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="w-12 h-12"
-                      viewBox="0 0 20 20"
-                      fill="#fefefe"
+          Entering: "transform transition ease-in-out duration-500 sm:duration-700"
+            From: "translate-x-full"
+            To: "translate-x-0"
+          Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
+            From: "translate-x-0"
+            To: "translate-x-full"
+        -->
+            <transition
+              enter-active-class="transition duration-300 ease-in-out transform sm:duration-700"
+              enter-class="translate-y-full"
+              enter-to-class="translate-y-0"
+              leave-active-class="transition duration-300 ease-in-out transform sm:duration-700"
+              leave-class="translate-y-0"
+              leave-to-class="translate-y-full"
+              @after-leave="close"
+            >
+              <div v-show="showContent" class="">
+                <div
+                  class="h-full max-w-2xl overflow-x-hidden bg-white rounded-lg"
+                >
+                  <div class="relative">
+                    <!-- <div
+                      @click.stop="hideContent"
+                      class="absolute z-10 cursor-pointer bottom-2 right-2"
                     >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </div> -->
-                  <!-- Replace with your content -->
-                  <slot name="default" :close="hideContent"></slot>
-                  <!-- /End replace -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-12 h-12"
+                        viewBox="0 0 20 20"
+                        fill="#fefefe"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </div> -->
+                    <!-- Replace with your content -->
+                    <slot name="default" :close="hideContent"></slot>
+                    <!-- /End replace -->
+                  </div>
                 </div>
               </div>
-            </div>
-          </transition>
+            </transition>
+          </div>
         </div>
       </div>
     </section>

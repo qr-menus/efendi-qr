@@ -3,8 +3,8 @@
     ref="scrollContainer"
     active-class="active"
     style="scroll-behavior: smooth; transition-duration: 0.5s"
-    :offset="185"
-    class="flex items-center px-4 py-2 mx-auto space-x-2 overflow-x-auto max-w-7xl"
+    :offset="135"
+    class="flex items-center px-4 py-3 mx-auto space-x-2 overflow-x-auto max-w-7xl"
     @itemchanged="onItemChanged"
   >
     <a
