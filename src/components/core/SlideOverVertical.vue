@@ -37,7 +37,7 @@
         </transition>
 
         <div class="absolute inset-x-0 top-0 max-h-screen overflow-y-auto">
-          <div class="flex justify-center max-w-full p-3 pb-24">
+          <div class="flex justify-center max-w-full p-2 pb-24">
             <!--
           Slide-over panel, show/hide based on slide-over state.
 
