@@ -2,7 +2,7 @@
   <SlideOverVertical>
     <template #trigger="{ onClick }">
       <div
-        class="flex flex-col items-center justify-between h-full cursor-pointer"
+        class="flex text-center flex-col items-center justify-between h-full cursor-pointer"
         @click="onClick"
       >
         <div>
@@ -12,7 +12,7 @@
             alt="food"
           />
           <h2 class="my-3 text-lg font-medium text-gray-600 capitalize">
-            {{ product.name_tr && product.name_tr.toLowerCase() }}
+            {{ getField("name") }}
           </h2>
         </div>
         <h6
@@ -39,7 +39,7 @@
 import FoodInfo from "./FoodInfo";
 import SlideOverVertical from "./core/SlideOverVertical.vue";
 export default {
-  name: "FoodCard",
+  name: "FoodCardVertical",
   components: { FoodInfo, SlideOverVertical },
   props: {
     product: {
@@ -53,6 +53,14 @@ export default {
     category: {
       type: String,
       required: true,
+    },
+  },
+  computed: {
+    getField() {
+      return (field) => {
+        const obj = this.product[this.$options.filters.locale(field)];
+        return obj && obj.toLowerCase();
+      };
     },
   },
 };

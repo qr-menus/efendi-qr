@@ -5,15 +5,24 @@
         class="fixed flex flex-col items-center justify-center w-56 p-3 rounded-full cursor-pointer -ml-28 bottom-5 left-1/2 bg-primary"
         @click="onClick"
       >
-        <p class="font-bold text-white">
+        <p v-if="$store.state.locale == 'ru'" class="font-bold text-white">
           Выбрано {{ favourites.length }} блюдо
+        </p>
+        <p v-else class="font-bold text-white">
+          Selected {{ favourites.length }} items
         </p>
       </div>
     </template>
     <template #default="{}">
       <div class="flex flex-col w-full h-full">
         <div class="sticky top-0 w-full px-4 pt-5 bg-white rounded-t-xl">
-          <h2 class="text-xl font-bold text-left text-gray-700">Корзина</h2>
+          <h2
+            v-if="$store.state.locale == 'ru'"
+            class="text-xl font-bold text-left text-gray-700"
+          >
+            Корзина
+          </h2>
+          <h2 v-else class="text-xl font-bold text-left text-gray-700">Cart</h2>
           <hr class="my-2" />
         </div>
         <div class="flex flex-col px-4 pb-2 space-y-3">
@@ -29,19 +38,41 @@
           class="sticky bottom-0 px-4 pt-3 pb-8 bg-white divide-y divide-gray-400 divide-dashed"
         >
           <div class="flex items-center justify-between pb-3">
-            <span class="mr-3 font-semibold text-gray-500">
+            <span
+              v-if="$store.state.locale == 'ru'"
+              class="mr-3 font-semibold text-gray-500"
+            >
               Обслуживание (10%):
             </span>
-            <span class="text-xl font-black text-gray-700"
+            <span v-else class="mr-3 font-semibold text-gray-500">
+              Service (10%):
+            </span>
+            <span
+              v-if="$store.state.locale == 'ru'"
+              class="text-xl font-black text-gray-700"
               >{{ servicePrice | currency }} сум</span
+            >
+            <span v-else class="text-xl font-black text-gray-700"
+              >{{ servicePrice | currency }} sum</span
             >
           </div>
           <div class="flex items-center justify-between py-2">
-            <span class="mr-3 font-semibold text-gray-500">
+            <span
+              v-if="$store.state.locale == 'ru'"
+              class="mr-3 font-semibold text-gray-500"
+            >
               Общая стоимость:
             </span>
-            <span class="text-xl font-black text-gray-700"
+            <span v-else class="mr-3 font-semibold text-gray-500">
+              Total cost:
+            </span>
+            <span
+              v-if="$store.state.locale == 'ru'"
+              class="text-xl font-black text-gray-700"
               >{{ totalPrice | currency }} сум</span
+            >
+            <span v-else class="text-xl font-black text-gray-700"
+              >{{ totalPrice | currency }} sum</span
             >
           </div>
         </div>

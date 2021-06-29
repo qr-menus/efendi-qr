@@ -27,6 +27,7 @@ export default new Vuex.Store({
     ),
     locale: localStorage.getItem("locale") || "ru",
     favouritesOn: true,
+    verticalCard: false,
   },
   mutations: {
     setLocale(state, locale) {
@@ -58,7 +59,7 @@ export default new Vuex.Store({
       state.favourites = state.favourites.filter(
         (favourite) =>
           !(
-            favourite.name_tr === payload.name_tr &&
+            favourite.name_ru === payload.name_ru &&
             favourite.portion.text === payload.portion.text
           )
       );

@@ -16,9 +16,19 @@
           {{ category[$options.filters.locale("name")] }}
         </h2>
         <div
+          v-if="verticalCard"
           class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8"
         >
-          <FoodCard
+          <FoodCardVertical
+            v-for="(product, $productIndex) in category.products"
+            :key="`product-${$productIndex}`"
+            :category="key"
+            :id="$productIndex + 1"
+            :product="product"
+          />
+        </div>
+        <div v-else>
+          <FoodCardHorizontal
             v-for="(product, $productIndex) in category.products"
             :key="`product-${$productIndex}`"
             :category="key"
@@ -46,7 +56,8 @@
 import Topbar from "./components/core/Topbar";
 import Searchbar from "./components/core/Searchbar";
 import FoodCategories from "./components/FoodCategories";
-import FoodCard from "./components/FoodCard";
+import FoodCardVertical from "./components/FoodCardVertical";
+import FoodCardHorizontal from "./components/FoodCardHorizontal";
 
 import FoodCart from "./components/FoodCart";
 import { mapState } from "vuex";
@@ -56,8 +67,8 @@ export default {
     Topbar,
     Searchbar,
     FoodCategories,
-    FoodCard,
-
+    FoodCardVertical,
+    FoodCardHorizontal,
     FoodCart,
   },
   computed: {
@@ -66,6 +77,7 @@ export default {
       categories: (state) => state.categories,
       locale: (state) => state.locale,
       favouritesOn: (state) => state.favouritesOn,
+      verticalCard: (state) => state.verticalCard,
     }),
     filtered() {
       const entries = Object.entries(this.categories)
@@ -101,12 +113,18 @@ export default {
 </script>
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 } /* TODO: refactor */
+
+.one-line-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
 .active {
   @apply bg-primary;
