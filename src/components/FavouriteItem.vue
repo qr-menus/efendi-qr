@@ -29,7 +29,13 @@
                   Portion: {{ product.portion.text }}
                 </span>
               </div>
-              <h6 class="font-semibold text-gray-800">
+              <h6
+                v-if="$store.state.locale == 'ru'"
+                class="font-semibold text-gray-800"
+              >
+                {{ (product.portion.price * product.count) | currency }} сум
+              </h6>
+              <h6 v-else class="font-semibold text-gray-800">
                 {{ (product.portion.price * product.count) | currency }} sum
               </h6>
             </div>
