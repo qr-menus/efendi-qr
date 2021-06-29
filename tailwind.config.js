@@ -4,7 +4,6 @@ module.exports = {
   purge: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx,vue}"],
   presets: [],
   darkMode: false, // or 'media' or 'class'
-  mode: "jit",
   theme: {
     screens: {
       sm: "640px",
