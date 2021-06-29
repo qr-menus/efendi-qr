@@ -49,10 +49,9 @@
         <FoodCount :count.sync="count" />
 
         <span v-if="product.portions" class="text-2xl font-black text-gray-800"
-          >{{
-            product.portions[selectedPortionIndex].price | currency
-          }}
-          сум</span
+          >{{ product.portions[selectedPortionIndex].price | currency }}
+          <span v-if="$store.state.locale == 'ru'"> сум </span>
+          <span v-else> sum </span></span
         >
       </div>
       <div class="flex space-x-3">
@@ -61,7 +60,8 @@
           @click="addToFavourites"
           class="w-full p-3 font-semibold text-white bg-yellow-500 rounded-lg"
         >
-          <span>В корзинку</span>
+          <span v-if="$store.state.locale == 'ru'">В корзинку</span>
+          <span v-else>Add to cart</span>
         </button>
         <button
           v-else
@@ -69,7 +69,8 @@
           class="w-full p-3 font-semibold text-white bg-gray-300 rounded-lg"
           @click="$emit('close')"
         >
-          <span>Уже в корзине</span>
+          <span v-if="$store.state.locale == 'ru'">Уже в корзине</span>
+          <span v-else>Already in cart</span>
         </button>
       </div>
     </div>

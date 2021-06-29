@@ -59,8 +59,8 @@ export default {
   data() {
     return {
       langOptions: [
-        { text: "Tr/Ru", value: "ru" },
-        { text: "Tr/En", value: "en" },
+        { text: "Ru", value: "ru" },
+        { text: "En", value: "en" },
       ],
     };
   },
