@@ -27,7 +27,7 @@ export default new Vuex.Store({
     ),
     locale: localStorage.getItem("locale") || "ru",
     favouritesOn: true,
-    verticalCard: false,
+    verticalCard: true,
   },
   mutations: {
     setLocale(state, locale) {

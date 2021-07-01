@@ -111,7 +111,7 @@ export default {
   methods: {},
 };
 </script>
-<style>
+<style lang="postcss">
 #app {
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -124,10 +124,5 @@ export default {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
-
-.active {
-  @apply bg-primary;
-  @apply text-white;
 }
 </style>
