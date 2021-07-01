@@ -90,9 +90,7 @@ export default {
     },
   },
   data() {
-    return {
-      verticalCard: (state) => state.verticalCard,
-    };
+    return {};
   },
   computed: {
     ...mapState({
