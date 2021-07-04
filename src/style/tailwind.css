@@ -5,6 +5,12 @@
 .bg-primary {
   background: #ED2024;
 }
+
+.active {
+  background: #ED2024;
+  color: #fff;
+}
+
 .text-primary {
   color: #ED2024;
 }
