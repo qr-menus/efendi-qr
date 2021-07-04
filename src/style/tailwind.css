@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-primary {
+  background: #ED2024;
+}
+.text-primary {
+  color: #ED2024;
+}
