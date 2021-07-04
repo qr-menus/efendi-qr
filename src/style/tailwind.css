@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .bg-primary {
   background: #ED2024;
 }
