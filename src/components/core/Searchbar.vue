@@ -6,7 +6,15 @@
       <label for="search" class="sr-only">Search</label>
       <div class="relative">
         <div
-          class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+          class="
+            absolute
+            inset-y-0
+            left-0
+            flex
+            items-center
+            pl-3
+            pointer-events-none
+          "
         >
           <!-- Heroicon name: solid/search -->
           <svg
@@ -28,7 +36,23 @@
           id="search"
           v-if="$store.state.locale == 'ru'"
           name="search"
-          class="block w-full py-2 pl-10 pr-3 placeholder-gray-500 bg-white border border-gray-300 rounded-md focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-yellow-500 focus:border-yellow-500"
+          class="
+            block
+            w-full
+            py-2
+            pl-10
+            pr-3
+            placeholder-gray-500
+            bg-white
+            border border-gray-300
+            rounded-md
+            focus:outline-none
+            focus:text-gray-900
+            focus:placeholder-gray-400
+            focus:ring-1
+            focus:ring-yellow-500
+            focus:border-yellow-500
+          "
           placeholder="Поиск"
           type="search"
           @input="(event) => $emit('update:searchQuery', event.target.value)"
@@ -38,7 +62,23 @@
           :value="searchQuery"
           id="search"
           name="search"
-          class="block w-full py-2 pl-10 pr-3 placeholder-gray-500 bg-white border border-gray-300 rounded-md focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-yellow-500 focus:border-yellow-500"
+          class="
+            block
+            w-full
+            py-2
+            pl-10
+            pr-3
+            placeholder-gray-500
+            bg-white
+            border border-gray-300
+            rounded-md
+            focus:outline-none
+            focus:text-gray-900
+            focus:placeholder-gray-400
+            focus:ring-1
+            focus:ring-yellow-500
+            focus:border-yellow-500
+          "
           placeholder="Search"
           type="search"
           @input="(event) => $emit('update:searchQuery', event.target.value)"
