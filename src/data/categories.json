@@ -226,7 +226,6 @@
             "text": "1x",
             "price": 35000
           }
-        
         ]
       },
       {
@@ -1235,7 +1234,7 @@
       },
       {
         "id": "garnir_5",
-        "image_name": "7C0A9148", 
+        "image_name": "7C0A9148",
         "name_tr": "PILAV",
         "name_ru": "РИС (ПЛОВ)",
         "name_en": "RICE",
@@ -1470,12 +1469,12 @@
         "name_en": "KUZU PERZOLA",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "100000",
+        "price_1": "130000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 100000
+            "price": 130000
           }
         ]
       },
@@ -2326,7 +2325,7 @@
       }
     ]
   },
-  "drinks":{
+  "drinks": {
     "name_tr": "İçmek",
     "name_ru": "Напитки",
     "name_en": "Drinks",
@@ -2353,8 +2352,8 @@
             "price": 15000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_3",
         "image_name": "7C0A9067",
         "name_tr": "SALGAM SUYU",
@@ -2368,8 +2367,8 @@
             "price": 23000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_4",
         "image_name": "7C0A9063",
         "name_tr": "BEYPAZZARI SUYU",
@@ -2383,8 +2382,8 @@
             "price": 20000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_5",
         "image_name": "IMG_4112",
         "name_tr": "ÇAY",
@@ -2400,8 +2399,8 @@
             "price": 10000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_6",
         "image_name": "7C0A9089",
         "name_tr": "TÜRK ÇAYI",
@@ -2415,8 +2414,8 @@
             "price": 5000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_7",
         "image_name": "ISAA1499",
         "name_tr": "BORJOMI",
@@ -2430,8 +2429,8 @@
             "price": 23000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_9",
         "image_name": "ISAA1497",
         "name_tr": "CHARTAQ",
@@ -2453,8 +2452,8 @@
             "price": 10000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_11",
         "image_name": "ISAA1508",
         "name_tr": "TÜRK KAHVESİ",
@@ -2468,8 +2467,8 @@
             "price": 20000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_12",
         "image_name": "ISAA1464",
         "name_tr": "SADE KAHVESI",
@@ -2483,8 +2482,8 @@
             "price": 15000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_15",
         "image_name": "ISAA1376",
         "name_tr": "BIR DОGROSE SUYU",
@@ -2501,8 +2500,8 @@
             "price": 36000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_16",
         "image_name": "ISA1494",
         "name_tr": "COCA-COLA, FANTA, SPRITE",
@@ -2524,8 +2523,8 @@
             "price": 8000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_17",
         "name_tr": "SULAR ÇEŞİTLERİ",
         "name_ru": "СОКИ АССОРТИМЕНТЕ (СОЧНАЯ ДОЛИНА)",
@@ -2546,8 +2545,8 @@
             "price": 7000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_19",
         "name_tr": "COMPOTE",
         "name_ru": "КОМПОТ",
@@ -2568,8 +2567,8 @@
             "price": 24000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_20",
         "image_name": "ISA1312",
         "name_tr": "TARHUN IÇECEĞI",
@@ -2590,8 +2589,8 @@
             "price": 22000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_21",
         "image_name": "ISAA1294",
         "name_tr": "SOĞUK ÇAY",
@@ -2612,8 +2611,8 @@
             "price": 18000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_22",
         "image_name": "ISAA1302",
         "name_tr": "MOJİTO",
@@ -2634,8 +2633,8 @@
             "price": 18000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_23",
         "image_name": "ISAA1321",
         "name_tr": "LIMONLU LIMONATA",
@@ -2656,8 +2655,8 @@
             "price": 20000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_24",
         "image_name": "ISAA1439",
         "name_tr": "AMERİKANO",
@@ -2671,8 +2670,8 @@
             "price": 15000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_25",
         "image_name": "ISAA1455",
         "name_tr": "LATTE",
@@ -2686,8 +2685,8 @@
             "price": 20000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_26",
         "image_name": "ISAA1468",
         "name_tr": "CAPPUCCİNO",
@@ -2701,8 +2700,8 @@
             "price": 20000
           }
         ]
-    },
-    {
+      },
+      {
         "id": "drinks_27",
         "image_name": "ISAA1537",
         "name_tr": "FRAPPUCCINO",
@@ -2716,7 +2715,7 @@
             "price": 30000
           }
         ]
-    }
+      }
     ]
   }
 }
