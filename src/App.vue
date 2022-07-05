@@ -108,12 +108,12 @@ export default {
       searchQuery: "",
     };
   },
-  methods: {},
 };
 </script>
+
 <style lang="postcss">
 #app {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;

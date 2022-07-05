@@ -30,7 +30,12 @@
         >
           <div
             v-show="isOpen"
-            class="absolute inset-0 transition-opacity bg-gray-500 bg-opacity-75"
+            class="
+              absolute
+              inset-0
+              transition-opacity
+              bg-gray-500 bg-opacity-75
+            "
             aria-hidden="true"
             @click="hideContent"
           ></div>
