@@ -29,7 +29,15 @@
         {{ getField("name") }}
       </h2>
       <p
-        class="pr-2 mt-4 mb-6 overflow-y-auto text-gray-500 max-h-40 sm:max-h-64"
+        class="
+          pr-2
+          mt-4
+          mb-6
+          overflow-y-auto
+          text-gray-500
+          max-h-40
+          sm:max-h-64
+        "
       >
         {{ getField("ingredients") }}
       </p>
@@ -37,11 +45,28 @@
         <span
           v-for="(portion, index) in product.portions"
           :key="`${product.name_tr}-${portion.text}`"
-          class="inline-flex items-center px-2.5 py-1.5 rounded-md text-base font-medium bg-gray-100 text-gray-800 cursor-pointer"
+          class="
+            inline-flex
+            items-center
+            px-2.5
+            py-1.5
+            rounded-md
+            text-base
+            font-medium
+            bg-gray-100
+            text-gray-800
+            cursor-pointer
+          "
           :class="{ 'border border-gray-700': index === selectedPortionIndex }"
           @click="selectPortion(index)"
         >
-          {{ portion.text }}
+          {{
+            $store.state.locale == "ru"
+              ? portion.text
+              : portion.text_en
+              ? portion.text_en
+              : portion.text
+          }}
         </span>
       </div>
 

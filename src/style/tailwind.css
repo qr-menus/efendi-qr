@@ -2,16 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .bg-primary {
-  background: #ED2024;
+  background: #ed2024;
 }
 
 .active {
-  background: #ED2024;
+  background: #ed2024;
   color: #fff;
 }
 
 .text-primary {
-  color: #ED2024;
+  color: #ed2024;
 }

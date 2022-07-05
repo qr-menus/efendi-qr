@@ -9,7 +9,17 @@
       aria-modal="true"
     >
       <div
-        class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0"
+        class="
+          flex
+          items-center
+          justify-center
+          min-h-screen
+          px-4
+          pt-4
+          pb-20
+          text-center
+          sm:block sm:p-0
+        "
       >
         <!--
       Background overlay, show/hide based on modal state.
@@ -66,7 +76,19 @@
         >
           <div
             v-if="showContent"
-            class="inline-block w-full overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-2xl"
+            class="
+              inline-block
+              w-full
+              overflow-hidden
+              text-left
+              align-bottom
+              transition-all
+              transform
+              bg-white
+              rounded-lg
+              shadow-xl
+              sm:my-8 sm:align-middle sm:max-w-2xl
+            "
           >
             <slot name="default" :close="hideContent"></slot>
           </div>
@@ -79,6 +101,13 @@
 <script>
 export default {
   name: "BaseModal",
+
+  props: {
+    page: {
+      required: true,
+    },
+  },
+
   data() {
     return {
       isOpen: false,
@@ -89,6 +118,10 @@ export default {
     open() {
       this.isOpen = true;
       document.body.classList.add("overflow-hidden");
+      this.$router.push({
+        ...this.$route,
+        query: { modalPage: this.page },
+      });
     },
     hideContent() {
       this.showContent = false;
@@ -96,6 +129,10 @@ export default {
     close() {
       this.isOpen = false;
       document.body.classList.remove("overflow-hidden");
+      this.$router.push({
+        ...this.$route,
+        query: null,
+      });
     },
   },
 };

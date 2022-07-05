@@ -8,6 +8,9 @@ import "./utils/localeFilter";
 import "./utils/clickOutside";
 import YmapPlugin from "vue-yandex-maps";
 import VueCurrencyFilter from "vue-currency-filter";
+import VueMask from "v-mask";
+import { ValidationProvider } from "vee-validate";
+import "./utils/validate";
 
 const moneyConfig = {
   // v-money config
@@ -15,7 +18,7 @@ const moneyConfig = {
   thousands: ",",
   precision: 0,
   masked: false,
-  // currency filter config
+  // currency filter configs
   thousandsSeparator: ",",
   fractionCount: 0,
   fractionSeparator: ".",
@@ -31,7 +34,10 @@ const settings = {
 Vue.config.productionTip = false;
 Vue.use(VueScrollactive);
 Vue.use(YmapPlugin, settings);
+Vue.use(VueMask);
 Vue.use(VueCurrencyFilter, moneyConfig);
+
+Vue.component("ValidationProvider", ValidationProvider);
 
 new Vue({
   router,

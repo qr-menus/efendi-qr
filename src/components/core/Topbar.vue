@@ -6,12 +6,29 @@
           <img class="w-16 h-16" src="../../assets/logo.svg" alt="" />
         </div>
         <div class="flex items-center space-x-2">
+          <Reviews />
+
           <AboutUs />
+
           <LanguageDropdown :items="langOptions">
             <template #trigger="{ click }">
               <button
                 type="button"
-                class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-md shadow-sm hover:bg-gray-100 focus:outline-none"
+                class="
+                  inline-flex
+                  justify-center
+                  w-full
+                  px-4
+                  py-2
+                  text-sm
+                  font-medium
+                  text-gray-700
+                  bg-gray-200
+                  rounded-md
+                  shadow-sm
+                  hover:bg-gray-100
+                  focus:outline-none
+                "
                 id="menu-button"
                 aria-expanded="true"
                 aria-haspopup="true"
@@ -44,12 +61,14 @@
 <script>
 import LanguageDropdown from "./LanguageDropdown";
 import AboutUs from "./AboutUs";
+import Reviews from "../reviews/Main.vue";
 import { mapState } from "vuex";
 
 export default {
   components: {
     LanguageDropdown,
     AboutUs,
+    Reviews,
   },
   computed: {
     ...mapState({

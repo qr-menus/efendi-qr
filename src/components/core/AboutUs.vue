@@ -1,13 +1,35 @@
 <template>
-  <BaseModal>
+  <BaseModal page="aboutUs">
     <template #trigger="{ open }">
-      <button
-        @click="open"
-        class="flex px-2 py-1 font-medium text-gray-800 rounded-md"
-      >
-        <span v-if="$store.state.locale == 'ru'">О нас</span>
-        <span v-else>About us</span>
-      </button>
+      <div class="flex space-x-2">
+        <button
+          @click="open"
+          class="flex items-center px-2 py-2 font-medium text-gray-800"
+        >
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 mr-1.5 text-primary"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          </span>
+          <!-- <span>{{ $store.state.locale == "ru" ? "О нас" : "About us" }}</span> -->
+        </button>
+      </div>
     </template>
     <template #default="{ close }">
       <div class="py-4">

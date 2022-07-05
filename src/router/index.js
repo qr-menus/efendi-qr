@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import App from "../App.vue";
 import store from "../store";
 
 Vue.use(VueRouter);
@@ -8,8 +8,8 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "App",
+    component: App,
     beforeEnter: (to, from, next) => {
       if (store.state.version !== localStorage.getItem("version")) {
         store.commit("clearCart");
