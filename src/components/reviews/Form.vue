@@ -122,7 +122,7 @@ export default {
       phone: "998",
       message: "",
     },
-    chat_id: -707998320,
+    chat_id: -1001691865706,
     BOT_API: "5563215767:AAH6OVeuUnzpe4hjrQiQgdzYdKO-cJmpORI",
     loading: false,
   }),
