@@ -2461,7 +2461,7 @@
         "id": "drinks_11",
         "image_name": "ISAA1508",
         "name_tr": "TÜRK KAHVESİ",
-        "name_ru": "ТУРЕЦКЫЙ КОФЕ",
+        "name_ru": "ТУРЕЦКИЙ КОФЕ",
         "name_en": "TURKISH COFFEE",
         "price_1": "20000",
         "portions": [
@@ -2495,12 +2495,17 @@
         "name_en": "DОGROSE",
         "ingredients_ru": "0.25Л - 9 000, 1Л - 36 000",
         "ingredients_en": "0.25L - 9 000, 1L - 36 000",
-        "price_05": "24000",
-        "price_1": "36000",
+        "price_05": "36000",
+        "price_1": "9000",
         "portions": [
           {
             "id": "1",
-            "text": "1x",
+            "text": "Стакан",
+            "price": 9000
+          },
+          {
+            "id": "1",
+            "text": "Графин",
             "price": 36000
           }
         ]
@@ -2562,13 +2567,18 @@
         "portions": [
           {
             "id": "1",
-            "text": "1x",
+            "text": "Графин",
             "price": 48000
           },
           {
             "id": "1",
-            "text": "0.5x",
+            "text": "Стакан 0.5",
             "price": 24000
+          },
+          {
+            "id": "1",
+            "text": "Стакан 0.25",
+            "price": 12000
           }
         ]
       },
@@ -2579,18 +2589,18 @@
         "name_ru": "ТАРХУН НАПИТОК",
         "name_en": "TARHUN IÇECEĞI",
         "ingredients_ru": "0.4Л - 22 000, 1Л - 60 000, ",
-        "price_05": "22000",
-        "price_1": "60000",
+        "price_05": "60000",
+        "price_1": "22000",
         "portions": [
           {
             "id": "1",
-            "text": "1x",
-            "price": 60000
+            "text": "Стакан",
+            "price": 22000
           },
           {
             "id": "1",
-            "text": "0.5x",
-            "price": 22000
+            "text": "Графин",
+            "price": 60000
           }
         ]
       },
@@ -2598,21 +2608,21 @@
         "id": "drinks_21",
         "image_name": "ISAA1294",
         "name_tr": "SOĞUK ÇAY",
-        "name_ru": "SOĞUK ÇAY",
+        "name_ru": "Айсти(SOĞUK ÇAY)",
         "name_en": "ICE TEA",
         "ingredients_ru": "0.4Л - 18 000, 1Л - 60 000, ",
-        "price_05": "18000",
-        "price_1": "60000",
+        "price_05": "60000",
+        "price_1": "18000",
         "portions": [
           {
             "id": "1",
-            "text": "1x",
-            "price": 60000
+            "text": "Стакан",
+            "price": 18000
           },
           {
             "id": "1",
-            "text": "0.5x",
-            "price": 18000
+            "text": "Графин",
+            "price": 60000
           }
         ]
       },
@@ -2623,18 +2633,18 @@
         "name_ru": "МОХИТО ",
         "name_en": "MOXITO",
         "ingredients_ru": "0.4Л - 18 000, 1Л - 40 000, ",
-        "price_05": "18000",
-        "price_1": "40000",
+        "price_05": "40000",
+        "price_1": "18000",
         "portions": [
           {
             "id": "1",
-            "text": "1x",
-            "price": 40000
+            "text": "Стакан",
+            "price": 18000
           },
           {
             "id": "1",
-            "text": "0.5x",
-            "price": 18000
+            "text": "Графин",
+            "price": 40000
           }
         ]
       },
@@ -2645,18 +2655,18 @@
         "name_ru": "ЛИМОННЫЙ ЛИМОНАД ",
         "name_en": "LEMON LEMONADE",
         "ingredients_ru": "0.4Л - 20 000, 1Л - 60 000, ",
-        "price_05": "20000",
-        "price_1": "60000",
+        "price_05": "60000",
+        "price_1": "20000",
         "portions": [
           {
             "id": "1",
-            "text": "1x",
-            "price": 60000
+            "text": "Стакан",
+            "price": 20000
           },
           {
             "id": "1",
-            "text": "0.5x",
-            "price": 20000
+            "text": "Графин",
+            "price": 60000
           }
         ]
       },
