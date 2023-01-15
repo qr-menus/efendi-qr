@@ -1,4 +1,4 @@
-import data from "../data/categories.json";
+import tempData from "../data/tempCategories.json";
 import Vue from "vue";
 import Vuex from "vuex";
 
@@ -6,23 +6,23 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    logo: tempData.logo,
+    favicon: tempData.favicon,
+    contacts: tempData.contacts,
     version: "0.1",
     favourites:
       (localStorage.getItem("favourites") &&
         JSON.parse(localStorage.getItem("favourites"))) ||
       [],
-    categories: Object.fromEntries(
-      Object.entries(data).map(([key, category]) => {
+    languages: tempData.languages,
+    tempCategories: Object.fromEntries(
+      Object.entries(tempData.branches[0].categories).map(([key, categories])=>{
         return [
           key,
           {
-            ...category,
-            products: category.products.map((product) => ({
-              ...product,
-              category: key,
-            })),
-          },
-        ];
+            ...categories,
+          }
+        ]
       })
     ),
     locale: localStorage.getItem("locale") || "ru",

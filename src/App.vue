@@ -3,17 +3,17 @@
     <div>
       <nav class="sticky top-0 z-10 bg-white">
         <Topbar />
-        <FoodCategories :categories="filtered" />
+        <FoodCategories :categories="tempFiltered" />
       </nav>
       <Searchbar :searchQuery.sync="searchQuery" />
       <div
-        v-for="(category, key) in filtered"
+        v-for="(category, key) in tempFiltered"
         :key="category.id"
-        :id="key"
+        :id="category.name.en"
         class="px-4 pt-3 pb-4 mx-auto mb-4 max-w-7xl"
       >
         <h2 class="mb-3 text-xl font-black text-left">
-          {{ category[$options.filters.locale("name")] }}
+          {{ category.name[$options.filters.locale()] }}
         </h2>
         <div
           v-if="verticalCard"
@@ -74,39 +74,40 @@ export default {
   computed: {
     ...mapState({
       favourites: (state) => state.favourites,
-      categories: (state) => state.categories,
       locale: (state) => state.locale,
       favouritesOn: (state) => state.favouritesOn,
       verticalCard: (state) => state.verticalCard,
+      favicon: (state) => state.favicon,
+      tempCategories: (state) => state.tempCategories,
     }),
-    filtered() {
-      const entries = Object.entries(this.categories)
-        .map(([key, category]) => {
-          const products = category.products.filter((product) => {
-            const { name_en, name_ru, name_tr } = product;
-            const productNamesJoined = [name_tr, name_en, name_ru]
-              .filter((item) => !!item)
-              .map((item) => item.toLowerCase())
-              .join(",");
+    tempFiltered(){
+      const entries = Object.entries(this.tempCategories).map(([key, categories])=>{
+        const products = categories.products.filter(product => {
+          const {en, ru} = product.name
+          const productNamesJoined = [en, ru].filter(item => !!item).map(item => item.toLowerCase()).join(",");
+          return productNamesJoined.includes(this.searchQuery.toLowerCase());
+        });
 
-            return productNamesJoined.includes(this.searchQuery.toLowerCase());
-          });
-          const withFilteredProducts = {
-            ...category,
-            products,
-          };
+        const withFilteredProducts = {
+          ...categories,
+          products,
+        };
 
-          return [key, withFilteredProducts];
-        })
-        .filter(([, category]) => category.products.length);
+        return [key, withFilteredProducts];
+      }).filter(([,categories]) => categories.products.length);
 
-      return Object.fromEntries(entries);
+      return Object.fromEntries(entries)
     },
   },
   data() {
     return {
       searchQuery: "",
     };
+  },
+  created() {
+    const favIcon = document.getElementById("favicon")
+    favIcon.href = this.favicon 
+    // console.log('tempFiltered: ',this.tempFiltered)
   },
 };
 </script>

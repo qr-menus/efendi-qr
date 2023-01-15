@@ -8,7 +8,7 @@
           <div @click="onClick" class="flex items-center space-x-2">
             <img
               class="object-cover w-20 h-20 bg-yellow-400 rounded-lg"
-              :src="`/images/${product.category}/${product.id}.webp`"
+              :src="product.image"
               alt="food"
             />
             <div class="text-left">
@@ -158,7 +158,7 @@ export default {
     }),
     getField() {
       return (field) => {
-        const obj = this.product[this.$options.filters.locale(field)];
+        const obj = this.product[field][this.$options.filters.locale(field)];
         return obj && obj.toLowerCase();
       };
     },

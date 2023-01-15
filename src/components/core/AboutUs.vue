@@ -34,9 +34,10 @@
     <template #default="{ close }">
       <div class="py-4">
         <h3 class="px-4 mb-2 text-lg font-bold">Контактные данные</h3>
+        <div v-for="contact in contacts" :key="contact.name">
         <hr />
         <div class="px-4 mt-4 mb-2 bg-white">
-          <h4 class="font-medium">Efendi Restaurant - 1</h4>
+          <h4 class="font-medium">{{contact.name}}</h4>
           <div class="flex items-center mt-1 mb-2 text-gray-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -48,53 +49,24 @@
                 d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
               />
             </svg>
-            (71) 233-15-02
+            {{contact.phone}}
           </div>
         </div>
         <yandex-map
           :settings="mapSettings"
           ymap-class="ymapClass"
-          :coords="[`41.302460`, `69.287750`]"
+          :coords="contact.coords"
           :zoom="17"
           :controls="controls"
         >
           <ymapMarker
             marker-id="1"
-            :coords="[`41.302460`, `69.287750`]"
+            :coords="contact.coords"
             type="Placemark"
             hint-content="Efendi Restaurant 1"
           ></ymapMarker>
         </yandex-map>
-        <div class="px-4 mt-4 mb-2 bg-white">
-          <h4 class="font-medium">Efendi Restaurant - 2</h4>
-          <div class="flex items-center mt-1 mb-2 text-gray-800">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-5 h-5 mr-2 text-primary"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
-              />
-            </svg>
-            (95) 177-09-93
-          </div>
         </div>
-        <yandex-map
-          :settings="mapSettings"
-          ymap-class="ymapClass"
-          :coords="[41.327882, 69.269219]"
-          :zoom="17"
-          :controls="controls"
-        >
-          <ymapMarker
-            marker-id="2"
-            :coords="[41.327882, 69.269219]"
-            type="Placemark"
-            hint-content="Efendi Restaurant 2"
-          ></ymapMarker>
-        </yandex-map>
         <div class="mt-4 text-center">
           Сделано с любовью
           <a
@@ -128,6 +100,7 @@
 <script>
 import BaseModal from "./BaseModal";
 import { yandexMap, ymapMarker } from "vue-yandex-maps";
+import { mapState } from "vuex";
 
 export default {
   components: {
@@ -146,7 +119,12 @@ export default {
       controls: ["fullscreenControl", "zoomControl"],
     };
   },
-  computed: {},
+  computed: {
+    ...mapState({
+        contacts: (state) => state.contacts,
+      }
+    )
+  },
   methods: {
     onClick(e) {
       console.log(e.get("coords"));

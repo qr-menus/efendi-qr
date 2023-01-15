@@ -31,7 +31,7 @@
       <img
         v-if="!showSuccess"
         class="w-1/3 mx-auto mb-4 mt-6"
-        src="../../assets/logo.svg"
+        :src="logo"
         alt="logo"
       />
 
@@ -114,6 +114,7 @@ import Review from "./Review.vue";
 import Form from "./Form.vue";
 // import ComplaintAndGratitude from "./ComplaintAndGratitude.vue";
 import SuccessMessage from "./../core/SuccessMessage.vue";
+import { mapState } from "vuex"
 
 export default {
   components: {
@@ -128,6 +129,11 @@ export default {
   data: () => ({
     showSuccess: false,
   }),
+  computed: {
+    ...mapState({
+      logo: (state) => state.logo
+    }),
+  },
 
   // methods: {
   //   goBack() {

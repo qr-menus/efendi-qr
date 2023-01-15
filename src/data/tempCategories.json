@@ -1,0 +1,87 @@
+{
+    "id": 1,
+    "name": "Efendi",
+    "subdomain": "efendi",
+    "logo": "https://efendi.qrmenus.uz/img/logo.c506012a.svg",
+    "favicon": "https://efendi.qrmenus.uz/favicon.ico",
+    "contacts": [
+      {
+        "name": "Efendi Restaurant 1",
+        "phone": "(71) 233-15-02",
+        "coords": [
+          41.30246,
+          69.28775
+        ]
+      },
+      {
+        "name": "Efendi Restaurant 2",
+        "phone": "(95) 177-09-93",
+        "coords": [
+          41.327882,
+          69.269219
+        ]
+      }
+    ],
+    "socials": null,
+    "languages": [
+      "en",
+      "ru"
+    ],
+    "created_at": "2023-01-03T08:51:52.000000Z",
+    "updated_at": "2023-01-08T11:19:18.000000Z",
+    "branches": [
+      {
+        "id": 1,
+        "vendor_id": 1,
+        "name": "Efendi Labzak",
+        "created_at": "2023-01-03T08:51:52.000000Z",
+        "updated_at": "2023-01-03T08:51:52.000000Z",
+        "categories": [
+          {
+            "id": 1,
+            "branch_id": 1,
+            "name": {
+              "en": "Salad",
+              "ru": "Салат"
+            },
+            "order": 1,
+            "created_at": "2023-01-03T08:51:52.000000Z",
+            "updated_at": "2023-01-03T08:51:52.000000Z",
+            "products": [
+              {
+                "id": 1,
+                "category_id": 1,
+                "name": {
+                  "en": "VEGETABLE SALAD",
+                  "ru": "ВИНЕГРЕТ"
+                },
+                "ingredients": {
+                  "en": "BEETS, SAUERKRAUT PICKLES",
+                  "ru": "СВЕКЛА, КВАШЕННАЯ КАПУСТА, СОЛЕННЫЕ ОГУРЦЫ"
+                },
+                "description": {
+                  "en": "en description",
+                  "ru": "ru description"
+                },
+                "display_price": 25000,
+                "portions": [
+                  {
+                    "text": "1x",
+                    "price": 25000
+                  },
+                  {
+                    "text": "0.5x",
+                    "price": 20000
+                  }
+                ],
+                "image": "https://efendi.qrmenus.uz/images/salat/salat_1.webp",
+                "is_active": true,
+                "created_at": "2023-01-03T08:51:52.000000Z",
+                "updated_at": "2023-01-03T08:51:52.000000Z"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
