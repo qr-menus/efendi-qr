@@ -73,17 +73,17 @@ export default {
   computed: {
     ...mapState({
       locale: (state) => state.locale,
-      logo: (state) => state.logo,
-      languages: (state) => state.languages,
+      logo: (state) => state.remoteData?.logo,
+      languages: (state) => state.remoteData?.languages,
     }),
 
     langOptions(){
       return this.languages.map(item => (
-        {  
-          text: item.charAt(0).toUpperCase() + item.slice(1),
-          value: item
-        }
-      )
+          {  
+            text: item.charAt(0).toUpperCase() + item.slice(1),
+            value: item
+          }
+        )
       )
     }
 

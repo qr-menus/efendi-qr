@@ -33,7 +33,18 @@
     </template>
     <template #default="{ close }">
       <div class="py-4">
-        <h3 class="px-4 mb-2 text-lg font-bold">Контактные данные</h3>
+        <h3 
+          v-if="$store.state.locale=='ru'" 
+          class="px-4 mb-2 text-lg font-bold"
+        >
+          Контактные данные
+        </h3>
+        <h3 
+          v-else 
+          class="px-4 mb-2 text-lg font-bold"
+        >
+          Contact Info
+        </h3>
         <div v-for="contact in contacts" :key="contact.name">
         <hr />
         <div class="px-4 mt-4 mb-2 bg-white">
@@ -68,7 +79,17 @@
         </yandex-map>
         </div>
         <div class="mt-4 text-center">
-          Сделано с любовью
+          <span 
+            v-if="$store.state.locale=='ru'"
+          >
+            Сделано с любовью
+          </span>
+          <span 
+            v-else
+          >
+            Made with love
+          </span>
+          <span style="color:red;font-size:20px">&hearts; </span>
           <a
             href="http://qrmenus.uz/"
             target="_blank"
@@ -121,7 +142,7 @@ export default {
   },
   computed: {
     ...mapState({
-        contacts: (state) => state.contacts,
+        contacts: (state) => state.remoteData?.contacts,
       }
     )
   },

@@ -121,7 +121,7 @@ export default {
       this.$router.push({
         ...this.$route,
         query: { modalPage: this.page },
-      });
+      }).catch(err => {console.log(err)});
     },
     hideContent() {
       this.showContent = false;

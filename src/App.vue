@@ -2,12 +2,12 @@
   <div id="app">
     <div>
       <nav class="sticky top-0 z-10 bg-white">
-        <Topbar />
-        <FoodCategories :categories="tempFiltered" />
+        <Topbar v-if="name" />
+        <FoodCategories :categories="filtered" />
       </nav>
       <Searchbar :searchQuery.sync="searchQuery" />
       <div
-        v-for="(category, key) in tempFiltered"
+        v-for="(category, key) in filtered"
         :key="category.id"
         :id="category.name.en"
         class="px-4 pt-3 pb-4 mx-auto mb-4 max-w-7xl"
@@ -39,7 +39,17 @@
       </div>
     </div>
     <div class="py-4 text-center border-t">
-      Сделано с любовью
+      <span 
+            v-if="$store.state.locale=='ru'"
+          >
+            Сделано с любовью
+          </span>
+          <span 
+            v-else
+          >
+            Made with love
+          </span>
+          <span style="color:red;font-size:20px">&hearts; </span>
       <a
         href="http://qrmenus.uz/"
         target="_blank"
@@ -60,7 +70,7 @@ import FoodCardVertical from "./components/FoodCardVertical";
 import FoodCardHorizontal from "./components/FoodCardHorizontal";
 
 import FoodCart from "./components/FoodCart";
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
 
 export default {
   components: {
@@ -77,11 +87,12 @@ export default {
       locale: (state) => state.locale,
       favouritesOn: (state) => state.favouritesOn,
       verticalCard: (state) => state.verticalCard,
-      favicon: (state) => state.favicon,
-      tempCategories: (state) => state.tempCategories,
+      favicon: (state) => state.remoteData?.favicon,
+      categories: (state) => state.categories,
+      name: (state) => state.remoteData.name,
     }),
-    tempFiltered(){
-      const entries = Object.entries(this.tempCategories).map(([key, categories])=>{
+    filtered(){
+      const entries = Object.entries(this.categories).map(([key, categories])=>{
         const products = categories.products.filter(product => {
           const {en, ru} = product.name
           const productNamesJoined = [en, ru].filter(item => !!item).map(item => item.toLowerCase()).join(",");
@@ -104,10 +115,17 @@ export default {
       searchQuery: "",
     };
   },
-  created() {
+  methods: {
+    ...mapActions(["syncData"])
+  },
+ 
+  async created() {
+    window.location.host.split('.')[0] == 'localhost:8080' 
+    ? await this.syncData('efendi')
+    : await this.syncData(window.location.host.split('.')[0])
+
     const favIcon = document.getElementById("favicon")
     favIcon.href = this.favicon 
-    // console.log('tempFiltered: ',this.tempFiltered)
   },
 };
 </script>

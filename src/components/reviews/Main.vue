@@ -57,7 +57,17 @@
       <SuccessMessage v-if="showSuccess" @close="showSuccess = false" />
 
       <div v-if="!showSuccess" class="mb-6 -mt-2 text-center">
-        Сделано с любовью
+        <span 
+            v-if="$store.state.locale=='ru'"
+          >
+            Сделано с любовью
+          </span>
+          <span 
+            v-else
+          >
+            Made with love
+          </span>
+          <span style="color:red;font-size:20px">&hearts; </span>
         <a
           href="http://qrmenus.uz/"
           target="_blank"
@@ -131,7 +141,7 @@ export default {
   }),
   computed: {
     ...mapState({
-      logo: (state) => state.logo
+      logo: (state) => state.remoteData?.logo
     }),
   },
 

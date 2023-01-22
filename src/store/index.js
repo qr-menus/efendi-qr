@@ -1,33 +1,24 @@
-import tempData from "../data/tempCategories.json";
 import Vue from "vue";
 import Vuex from "vuex";
+import { loadData } from "../services/api/dataService";
+import { refactorJsonData } from "../services/utils";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    logo: tempData.logo,
-    favicon: tempData.favicon,
-    contacts: tempData.contacts,
+    remoteData: {},
+    categories: {},
     version: "0.1",
+    locale: localStorage.getItem("locale") || "ru",
+    favouritesOn: true,
+    verticalCard: true,
+    loading: false,
     favourites:
       (localStorage.getItem("favourites") &&
         JSON.parse(localStorage.getItem("favourites"))) ||
       [],
-    languages: tempData.languages,
-    tempCategories: Object.fromEntries(
-      Object.entries(tempData.branches[0].categories).map(([key, categories])=>{
-        return [
-          key,
-          {
-            ...categories,
-          }
-        ]
-      })
-    ),
-    locale: localStorage.getItem("locale") || "ru",
-    favouritesOn: true,
-    verticalCard: true,
+
   },
   mutations: {
     setLocale(state, locale) {
@@ -59,7 +50,7 @@ export default new Vuex.Store({
       state.favourites = state.favourites.filter(
         (favourite) =>
           !(
-            favourite.name_ru === payload.name_ru &&
+            favourite.name.ru === payload.name.ru &&
             favourite.portion.text === payload.portion.text
           )
       );
@@ -69,7 +60,39 @@ export default new Vuex.Store({
       state.favourites = [];
       localStorage.setItem("favourites", JSON.stringify([]));
     },
+
+
+    LOADING(state, loading){
+      state.loading = loading
+    },
+    REMOTE_DATA(state, data){
+      state.remoteData = data
+    },
+    CATEGORIES(state, data){
+      state.categories = data
+    }
   },
-  actions: {},
+  actions: {
+    syncData({commit}, payload){
+      commit("LOADING", true)
+      return new Promise((resolve, reject) => {
+        loadData(payload).then(response => {
+          if(response.status == 200){
+            commit("REMOTE_DATA", response.data)
+            commit("CATEGORIES", refactorJsonData(response.data))
+            resolve()
+          }else{
+            reject()
+          }
+        })
+        .catch(() => {
+          reject()
+        })
+        .finally(() => {
+          commit("LOADING", false)
+        })
+      })
+    }
+  },
   modules: {},
 });
