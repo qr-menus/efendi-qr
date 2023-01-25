@@ -120,9 +120,26 @@ export default {
   },
  
   async created() {
-    window.location.host.split('.')[0] == 'localhost:8080' 
-    ? await this.syncData('efendi')
-    : await this.syncData(window.location.host.split('.')[0])
+    //console.log(this.$route.path.split('/')[1])
+    const slug = this.$route.path.split('/')[1];
+    const subdomain = window.location.host.split('.')[0]; //getting subdomain {subdomain}.qrmenus.uz
+    let payload;
+    if (subdomain == 'localhost:8080') {
+      payload = {
+        subdomain: 'efendi', //this is required only for testing locally
+        slug
+      }
+    }else {
+      payload = {
+        subdomain,
+        slug
+      }
+      
+    }
+    await this.syncData(payload)
+    // subdomain == 'localhost:8080' 
+    // ? await this.syncData('efendi', slug) //this is required only for testing locally
+    // : await this.syncData(subdomain, slug) 
 
     const favIcon = document.getElementById("favicon")
     favIcon.href = this.favicon 

@@ -1,12 +1,17 @@
 export function refactorJsonData(data){
-    return Object.fromEntries(
-        Object.entries(data?.branches[0].categories).map(([key, categories]) => {
-          return [
-            key,
-            {
-              ...categories,
-            }
-          ]
-        })
-      )
+  let branchOrBranches = data?.branch;
+  //let slug = payload.slug;
+  //slug == '' ? slug = 'main': slug
+ // slug == '' ? branchOrBranches = data?.branches[0] : branchOrBranches = data?.branch
+  
+  return Object.fromEntries(
+    Object.entries(branchOrBranches.categories).map(([key, categories]) => {
+      return [
+        key,
+        {
+          ...categories,
+        }
+      ]
+    })
+  )
 }

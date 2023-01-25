@@ -78,15 +78,20 @@ export default new Vuex.Store({
       return new Promise((resolve, reject) => {
         loadData(payload).then(response => {
           if(response.status == 200){
-            commit("REMOTE_DATA", response.data)
-            commit("CATEGORIES", refactorJsonData(response.data))
-            resolve()
+            if(response.data?.branch != null) {
+              commit("REMOTE_DATA", response.data)
+              commit("CATEGORIES", refactorJsonData(response.data, payload))
+              resolve()
+            }else {
+              reject(`${payload.slug} branch was found!`)
+            }
+            
           }else{
-            reject()
+            reject("Something went wrong")
           }
         })
         .catch(() => {
-          reject()
+          reject("Failed to load response data")
         })
         .finally(() => {
           commit("LOADING", false)
