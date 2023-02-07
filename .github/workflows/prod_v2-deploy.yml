@@ -1,9 +1,9 @@
-name: Prod Deploy
+name: Prod_v2 Deploy
 
 on:
   push:
     branches:
-      - prod
+      - prod_v2
 
 jobs:
   deploy:
@@ -24,9 +24,9 @@ jobs:
       - name: Deploy
         uses: easingthemes/ssh-deploy@v2.1.4
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSHKEY }}
-          REMOTE_HOST: ${{ secrets.HOST }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          REMOTE_PORT: ${{ secrets.PORT }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSHKEY_MAC }}
+          REMOTE_HOST: ${{ secrets.HOST_MAC }}
+          REMOTE_USER: ${{ secrets.USERNAME_MAC }}
+          REMOTE_PORT: ${{ secrets.PORT_MAC }}
           SOURCE: "dist/"
-          TARGET: "/var/www/efendi/html"
+          TARGET: "/var/www/efendi_v2/html"
