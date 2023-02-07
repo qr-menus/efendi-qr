@@ -24,7 +24,7 @@ jobs:
       - name: Deploy
         uses: easingthemes/ssh-deploy@v2.1.4
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSHKEY_MAC }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSHKEY }}
           REMOTE_HOST: ${{ secrets.HOST_MAC }}
           REMOTE_USER: ${{ secrets.USERNAME_MAC }}
           REMOTE_PORT: ${{ secrets.PORT_MAC }}
