@@ -14,6 +14,7 @@ export default new Vuex.Store({
     favouritesOn: true,
     verticalCard: true,
     loading: false,
+    successMessageVisible: false,
     favourites:
       (localStorage.getItem("favourites") &&
         JSON.parse(localStorage.getItem("favourites"))) ||
@@ -70,7 +71,7 @@ export default new Vuex.Store({
     },
     CATEGORIES(state, data){
       state.categories = data
-    }
+    },
   },
   actions: {
     syncData({commit}, payload){
@@ -83,7 +84,7 @@ export default new Vuex.Store({
               commit("CATEGORIES", refactorJsonData(response.data, payload))
               resolve()
             }else {
-              reject(`${payload.slug} branch was found!`)
+              reject(`${payload.slug} branch was not found!`)
             }
             
           }else{
@@ -97,7 +98,7 @@ export default new Vuex.Store({
           commit("LOADING", false)
         })
       })
-    }
+    },
   },
   modules: {},
 });

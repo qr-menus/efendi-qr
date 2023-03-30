@@ -7,7 +7,8 @@
             for="name"
             class="block text-gray-700 text-sm mb-1 font-medium"
           >
-            Имя
+            {{ $store.state.locale=='ru' ? 'Имя' : 'Name' }}
+            <span class="text-red-600">*</span>
           </label>
           <input
             v-model="form.name"
@@ -22,8 +23,12 @@
 
         <div class="mt-4">
           <ValidationProvider rules="required|length:19" v-slot="{ errors }">
-            <label for="phone" class="block text-gray-700 text-sm font-medium">
-              Номер телефона
+            <label 
+              for="phone" 
+              class="block text-gray-700 text-sm font-medium"
+            >
+              {{ $store.state.locale=='ru' ? 'Номер телефона' : 'Phone number' }}
+              <span class="text-red-600">*</span>
             </label>
             <div class="mt-1">
               <input
@@ -49,7 +54,7 @@
               for="message"
               class="block text-gray-700 text-sm font-medium"
             >
-              Сообщение
+              {{ $store.state.locale=='ru' ? 'Сообщение' : 'Message' }}
             </label>
             <div class="mt-1">
               <textarea
@@ -64,7 +69,31 @@
             <span class="text-sm text-red-500">{{ errors[0] }}</span>
           </ValidationProvider>
         </div>
+        
+        <label 
+          class="block mt-4 text-gray-700 text-sm font-medium"
+        >
+          {{ $store.state.locale=='ru' ? 'Качество обслуживание' : 'Quality service' }}
+          <span class="text-red-600">*</span>
+        </label>
+        <div class="flex justify-center p-4">
+          <div v-for="reaction in reactions" :key="reaction.value">
+            <button
+              type="button"
+              :name="reaction.text"
+              class="p-2 m-3"
+              @click="selectEmoji(reaction)"
+            >
+              <div 
+                v-text="reaction.emoji" 
+                class="text-3xl icon-emoji"
+                :class="selectedReaction !== reaction.value && 'opacity-30'"
+              />
+            </button>
 
+          </div>
+        </div>
+        <div class="flex justify-center mb-4 overflow-auto">
         <button
           class="
             mt-4
@@ -75,16 +104,15 @@
             bg-primary
             text-white
             flex
-            space-x-2
             justify-center
             mx-auto
             disabled:opacity-75
           "
           type="submit"
-          :class="{ 'opacity-75': invalid }"
-          :disabled="invalid"
+          :class="{ 'opacity-60': invalid || !selectedReaction }"
+          :disabled="invalid || !selectedReaction"
         >
-          Подтвердить
+          {{ $store.state.locale=='ru' ? 'Подтвердить' : 'Confirm' }}
           <svg
             v-if="loading"
             class="animate-spin w-6 h-6 text-white"
@@ -96,6 +124,7 @@
             ></path>
           </svg>
         </button>
+        </div>
       </form>
     </ValidationObserver>
   </div>
@@ -117,11 +146,41 @@ export default {
   },
 
   data: () => ({
+    selectedReaction: null,
     form: {
       name: "",
       phone: "998",
       message: "",
     },
+    reactions: [
+      {
+        value: 1,
+        text: "Плохо",
+        emoji: "😠",
+      },
+      {
+        value: 2,
+        text: "Удовлетворительно",
+        emoji: "🙁",
+      },
+      {
+        value: 3,
+        text: "Хорошо",
+        emoji: "😊",
+      },
+      {
+        value: 4,
+        text: "Отлично",
+        emoji: "😄",
+      },
+      {
+        value: 5,
+        text: "Прекрасно",
+        emoji: "😍",
+      },
+    ],
+        
+
     chat_id: -1001691865706,
     BOT_API: "5563215767:AAH6OVeuUnzpe4hjrQiQgdzYdKO-cJmpORI",
     loading: false,
@@ -138,14 +197,12 @@ export default {
     content() {
       const reviewTypes = {
         review: "⭐️ Отзыв",
-        gratitude: "❤️ Благодарность",
-        complaint: "⚫️ Жалоба",
       };
-
-      const name = `👤 ${this.form.name}\n📞 ${this.form.phone}`;
-      const reviewType = reviewTypes[this.$route.query.page];
-      const message = `✉️ ${this.form.message}`;
-      const reviews = this.data ? `${this.data}\n` : "";
+      const givenReaction = this.reactions.filter((item) => item.value == this.selectedReaction)
+      const reviewType = reviewTypes.review;
+      const reviews = `Оценка: ${givenReaction[0]?.value} из 5 - (${ givenReaction[0]?.emoji } - ${ givenReaction[0]?.text})\n`;
+      const name = `👤 ${ this.form.name }\n📞 ${ this.form.phone }`;
+      const message = `✉️ ${ this.form.message }`;
 
       return `${reviewType}\n${reviews}\n${name}\n${message}`;
     },
@@ -162,21 +219,24 @@ export default {
     async request() {
       try {
         this.$emit("progress");
-
         await axios({
           method: "post",
           url: `https://api.telegram.org/bot${this.BOT_API}/sendMessage?chat_id=${this.chat_id}`,
           params: {
             text: this.content,
           },
-        });
+        })
       } catch (error) {
         console.log(error);
       }
-      this.loading = false;
-      this.$router.push({ query: { modalPage: "review" } });
-      this.$emit("showSuccess");
+      this.loading = false
+      this.$store.state.successMessageVisible = true
+      this.$router.push('/')
     },
+
+    selectEmoji(reaction){
+      this.selectedReaction = reaction.value
+    }
   },
 };
 </script>
