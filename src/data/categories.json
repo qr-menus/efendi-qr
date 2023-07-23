@@ -2542,13 +2542,12 @@
         "ingredients_en": "1L - 20 000 ",
     
         "price_1": "13000",
-        "portions":
+        "portions": [
           {
             "id": "1",
             "text": "1x",
             "price": 13000
-          },
-          
+          }
         ]
       },
       {
