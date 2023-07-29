@@ -29,12 +29,6 @@
             </span>
           </button> -->
         </div>
-
-        <div class="col-span-10">
-          <p class="text-2xl font-bold text-center">
-            {{ $store.state.locale=='ru' ? 'Оставьте отзыв' : 'Leave a comment' }}
-          </p>
-        </div>
       </div>
     </div>
     

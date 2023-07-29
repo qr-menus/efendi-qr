@@ -27,6 +27,8 @@
 
 <script>
 export default {
+  name: "SuccessMessagePopup",
+
   mounted() {
     setTimeout(() => {
       this.$emit("close");
