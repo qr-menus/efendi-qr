@@ -6,7 +6,7 @@
         {{ $store.state.locale=='ru' ? 'Выберите филиал' : 'Choose branch' }}
       </h2>
       <div class="w-full flex gap-4 justify-center mt-8 flex-wrap">
-        <button v-for="branch in branches" :key="branch.key" @click="changeBranch(branch.key)" 
+        <button v-for="branch in branches" :key="branch.key" @click="chooseBranch(branch.key)" 
         class="w-40 px-4 py-8 bg-red-500 rounded-lg hover:bg-red-600 text-white font-semibold md:text-lg"
         >
           {{ $store.state.locale=='ru' ? branch.title_ru : branch.title_en }}
@@ -266,7 +266,7 @@ export default {
   },
 
   methods: {
-    changeBranch(key) {
+    chooseBranch(key) {
       this.$router.push({ ...this.$router, query: { branch: key } });
     },
 
