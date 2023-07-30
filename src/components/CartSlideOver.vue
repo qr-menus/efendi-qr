@@ -26,7 +26,7 @@
           leave-active-class="duration-75 ease-in-out"
           leave-class="opacity-100"
           leave-to-class="opacity-0"
-          @after-enter="showContent = true"
+          @after-enter="revealContent"
         >
           <div
             v-show="isOpen"
@@ -63,22 +63,6 @@
               class="w-full h-full max-w-2xl overflow-x-hidden overflow-y-auto bg-white rounded-t-xl"
               style="max-height: 80vh"
             >
-              <button @click="hideContent" class="absolute z-10 top-3 right-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
               <slot name="default" :close="hideContent"></slot>
             </div>
           </transition>
@@ -90,10 +74,16 @@
 
 <script>
 export default {
+  name:"CartSlideOver",
+  props:{
+    showContent: {
+      required: true,
+      default: false
+    }
+  },
   data() {
     return {
       isOpen: false,
-      showContent: false,
     };
   },
   methods: {
@@ -102,7 +92,10 @@ export default {
       document.body.classList.add("overflow-hidden");
     },
     hideContent() {
-      this.showContent = false;
+      this.$emit("update:showContent", false)
+    },
+    revealContent() {
+      this.$emit('update:showContent', true)
     },
     close() {
       this.isOpen = false;

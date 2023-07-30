@@ -15,14 +15,20 @@
       </svg>
     </div>
 
-    <h2 class="text-primary mt-1.5 font-bold text-3xl">Отправлено!</h2>
+    <h2 class="text-primary mt-1.5 font-bold text-3xl">
+      {{ $store.state.locale=='ru' ? 'Отправлено!' : 'Sent!' }}
+    </h2>
 
-    <p class="text-gray-600 mt-3 text-lg">Спасибо за ваш отзыв!</p>
+    <p class="text-gray-600 mt-3 text-lg">
+      {{ $store.state.locale=='ru' ? 'Спасибо за ваш отзыв!' : 'Thanks for your feedback!' }}
+    </p>
   </div>
 </template>
 
 <script>
 export default {
+  name: "SuccessMessagePopup",
+
   mounted() {
     setTimeout(() => {
       this.$emit("close");

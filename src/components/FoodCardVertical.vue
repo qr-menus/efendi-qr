@@ -8,7 +8,7 @@
         <div>
           <img
             class="object-cover w-full mb-1 bg-yellow-400 rounded-3xl"
-            :src="`/images/${category}/${product.id}.webp`"
+            :src="product.image"
             alt="food"
           />
           <h2 class="my-3 text-lg font-medium text-gray-600 capitalize">
@@ -58,7 +58,7 @@ export default {
   computed: {
     getField() {
       return (field) => {
-        const obj = this.product[this.$options.filters.locale(field)];
+        const obj = this.product[field][this.$options.filters.locale(field)];
         return obj && obj.toLowerCase();
       };
     },

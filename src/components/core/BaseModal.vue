@@ -38,7 +38,7 @@
           leave-active-class="duration-200 ease-in"
           leave-class="opacity-100"
           leave-to-class="opacity-0"
-          @after-enter="showContent = true"
+          @after-enter="isOpen = true"
         >
           <div
             v-show="isOpen"
@@ -75,7 +75,7 @@
           @after-leave="close"
         >
           <div
-            v-if="showContent"
+            v-if="isOpen"
             class="
               inline-block
               w-full
@@ -106,33 +106,28 @@ export default {
     page: {
       required: true,
     },
+    openModal : {
+      value: false,
+    },
   },
 
   data() {
     return {
-      isOpen: false,
-      showContent: false,
+      isOpen: this.openModal,
     };
   },
   methods: {
     open() {
       this.isOpen = true;
       document.body.classList.add("overflow-hidden");
-      this.$router.push({
-        ...this.$route,
-        query: { modalPage: this.page },
-      });
     },
     hideContent() {
-      this.showContent = false;
+      this.isOpen = false;
+      this.$store.state.successMessageVisible = false
     },
     close() {
       this.isOpen = false;
       document.body.classList.remove("overflow-hidden");
-      this.$router.push({
-        ...this.$route,
-        query: null,
-      });
     },
   },
 };

@@ -3,7 +3,7 @@
     <div class="relative">
       <img
         class="object-cover object-center w-full bg-yellow-400"
-        :src="`/images/${category}/${product.id}.webp`"
+        :src="product.image"
         alt=""
       />
       <div
@@ -44,7 +44,7 @@
       <div class="flex mb-5 space-x-3 font-bold md:text-lg">
         <span
           v-for="(portion, index) in product.portions"
-          :key="`${product.name_tr}-${portion.text}`"
+          :key="`${product.name}-${portion.text}`"
           class="
             inline-flex
             items-center
@@ -119,7 +119,7 @@ export default {
     },
     category: {
       type: String,
-      required: true,
+      required: false,
     },
   },
   data() {
@@ -136,20 +136,19 @@ export default {
     }),
     getField() {
       return (field) => {
-        const obj = this.product[this.$options.filters.locale(field)];
+        const obj = this.product[field][this.$options.filters.locale(field)];
         return obj && obj.toLowerCase();
       };
     },
     isInFavourites() {
       return this.favourites.some(
         (favourite) =>
-          favourite.name_tr === this.product.name_tr &&
+          favourite.name.en === this.product.name.en &&
           this.product.portions[this.selectedPortionIndex].text ===
             favourite.portion.text
       );
     },
   },
-  created() {},
   methods: {
     selectPortion(index) {
       this.selectedPortionIndex = index;

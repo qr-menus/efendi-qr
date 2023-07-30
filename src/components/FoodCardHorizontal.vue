@@ -8,7 +8,7 @@
         <div>
           <img
             class="object-cover card-image w-16 bg-yellow-400 rounded-xl"
-            :src="`/images/${category}/${product.id}.webp`"
+            :src="product.image"
             alt="food"
           />
         </div>
@@ -61,7 +61,7 @@ export default {
   computed: {
     getField() {
       return (field) => {
-        const obj = this.product[this.$options.filters.locale(field)];
+        const obj = this.product[field][this.$options.filters.locale(field)];
         return obj && obj.toLowerCase();
       };
     },

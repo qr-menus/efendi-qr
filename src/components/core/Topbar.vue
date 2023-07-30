@@ -3,7 +3,7 @@
     <div class="relative w-full rounded-md">
       <div class="flex items-center justify-between">
         <div class="flex items-center space-x-4">
-          <img class="w-16 h-16" src="../../assets/logo.svg" alt="" />
+          <img class="w-16 h-16" :src="logo" alt="no logo" />
         </div>
         <div class="flex items-center space-x-2">
           <Reviews />
@@ -73,15 +73,20 @@ export default {
   computed: {
     ...mapState({
       locale: (state) => state.locale,
+      logo: (state) => state.remoteData?.logo,
+      languages: (state) => state.remoteData?.languages,
     }),
-  },
-  data() {
-    return {
-      langOptions: [
-        { text: "Ru", value: "ru" },
-        { text: "En", value: "en" },
-      ],
-    };
+
+    langOptions(){
+      return this.languages.map(item => (
+          {  
+            text: item.charAt(0).toUpperCase() + item.slice(1),
+            value: item
+          }
+        )
+      )
+    }
+
   },
 };
 </script>

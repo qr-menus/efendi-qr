@@ -8,12 +8,12 @@
     @itemchanged="onItemChanged"
   >
     <a
-      v-for="(item, key) in categories"
-      :key="item.name_ru"
-      :href="`#${key}`"
+      v-for="(item) in categories"
+      :key="item.name.en"
+      :href="`#${item.name.en}`"
       class="flex-shrink-0 px-3 py-2 font-medium leading-4 rounded-full scrollactive-item"
     >
-      {{ item[$options.filters.locale("name")] }}
+      {{ item.name[$options.filters.locale("name")] }}
     </a>
   </scrollactive>
 </template>
