@@ -18,9 +18,10 @@
     <div>
       <nav class="sticky top-0 z-10 bg-white">
         <Topbar v-if="name"/>
-        <FoodCategories :categories="filtered" />
+        <!-- <FoodCategories :categories="filtered" /> -->
       </nav>
-      <Searchbar :searchQuery.sync="searchQuery" />
+      <h2 class="text-xl font-bold text-center py-20 my-40">Сайт обновляется, спасибо за Ваше терпение!</h2>
+      <!-- <Searchbar :searchQuery.sync="searchQuery" />
       <div
         v-for="(category, key) in filtered"
         :key="category.id"
@@ -51,7 +52,7 @@
             :product="product"
           />
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="py-4 text-center border-t">
@@ -67,16 +68,16 @@
       >
     </div>
 
-    <FoodCart v-if="favouritesOn && favourites.length" />
+    <!-- <FoodCart v-if="favouritesOn && favourites.length" /> -->
   </div>
 </template>
 
 <script>
 import Topbar from "@/components/core/Topbar";
-import Searchbar from "@/components/core/Searchbar";
+// import Searchbar from "@/components/core/Searchbar";
 import FoodCategories from "@/components/FoodCategories";
-import FoodCardVertical from "@/components/FoodCardVertical";
-import FoodCardHorizontal from "@/components/FoodCardHorizontal";
+// import FoodCardVertical from "@/components/FoodCardVertical";
+// import FoodCardHorizontal from "@/components/FoodCardHorizontal";
 
 import BaseModal from "@/components/core/BaseModal";
 import SuccessMessage from "@/components/core/SuccessMessage.vue";
@@ -88,10 +89,10 @@ export default {
   name: "Main",
   components: {
     Topbar,
-    Searchbar,
+    // Searchbar,
     FoodCategories,
-    FoodCardVertical,
-    FoodCardHorizontal,
+    // FoodCardVertical,
+    // FoodCardHorizontal,
     FoodCart,
 
     BaseModal,
@@ -106,9 +107,32 @@ export default {
       favicon: (state) => state.remoteData?.favicon,
       categories: (state) => state.categories,
       name: (state) => state.remoteData.name,
-      successMessageVisible: (state) => state.successMessageVisible
+      successMessageVisible: (state) => state.successMessageVisible,
     }),
-    filtered(){
+    // filtered() {
+    //   const entries = Object.entries(this.categories)
+    //     .map(([key, category]) => {
+    //       const products = category.products.filter((product) => {
+    //         const { name_en, name_ru, name_tr } = product;
+    //         const productNamesJoined = [name_tr, name_en, name_ru]
+    //           .filter((item) => !!item)
+    //           .map((item) => item.toLowerCase())
+    //           .join(",");
+
+    //         return productNamesJoined.includes(this.searchQuery.toLowerCase());
+    //       });
+    //       const withFilteredProducts = {
+    //         ...category,
+    //         products,
+    //       };
+
+    //       return [key, withFilteredProducts];
+    //     })
+    //     .filter(([, category]) => category.products.length);
+
+    //   return Object.fromEntries(entries);
+    // },
+    filtered() {
       const entries = Object.entries(this.categories).map(([key, categories])=>{
         const products = categories.products.filter(product => {
           const {en, ru} = product.name
@@ -123,6 +147,8 @@ export default {
 
         return [key, withFilteredProducts];
       }).filter(([,categories]) => categories.products.length);
+
+      console.log({object: this.categories})
 
       return Object.fromEntries(entries)
     },
