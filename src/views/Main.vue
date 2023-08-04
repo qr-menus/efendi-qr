@@ -75,14 +75,14 @@
 <script>
 import Topbar from "@/components/core/Topbar";
 // import Searchbar from "@/components/core/Searchbar";
-import FoodCategories from "@/components/FoodCategories";
+// import FoodCategories from "@/components/FoodCategories";
 // import FoodCardVertical from "@/components/FoodCardVertical";
 // import FoodCardHorizontal from "@/components/FoodCardHorizontal";
 
 import BaseModal from "@/components/core/BaseModal";
 import SuccessMessage from "@/components/core/SuccessMessage.vue";
 
-import FoodCart from "@/components/FoodCart";
+// import FoodCart from "@/components/FoodCart";
 import { mapState } from "vuex";
 
 export default {
@@ -90,10 +90,10 @@ export default {
   components: {
     Topbar,
     // Searchbar,
-    FoodCategories,
+    // FoodCategories,
     // FoodCardVertical,
     // FoodCardHorizontal,
-    FoodCart,
+    // FoodCart,
 
     BaseModal,
     SuccessMessage,
