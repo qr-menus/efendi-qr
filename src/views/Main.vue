@@ -17,7 +17,8 @@
         <Topbar />
         <FoodCategories :categories="filtered" />
       </nav>
-      <Searchbar :searchQuery.sync="searchQuery" />
+      <h2 class="text-xl font-bold text-center py-20 my-40">Сайт обновляется, спасибо за Ваше терпение!</h2>
+      <!-- <Searchbar :searchQuery.sync="searchQuery" />
       <div
         v-for="(category, key) in filtered"
         :key="category.id"
@@ -48,7 +49,7 @@
             :product="product"
           />
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="py-4 text-center border-t">
       Сделано с любовью
@@ -60,7 +61,7 @@
       >
     </div>
 
-    <FoodCart v-if="favouritesOn && favourites.length" />
+    <!-- <FoodCart v-if="favouritesOn && favourites.length" /> -->
   </div>
 </template>
 
@@ -73,7 +74,7 @@ import FoodCardHorizontal from "@/components/FoodCardHorizontal";
 import BaseModal from "@/components/core/BaseModal";
 import SuccessMessage from "@/components/core/SuccessMessage.vue";
 
-import FoodCart from "@/components/FoodCart";
+// import FoodCart from "@/components/FoodCart";
 import { mapState } from "vuex";
 
 export default {
