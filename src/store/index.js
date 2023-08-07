@@ -25,6 +25,7 @@ export default new Vuex.Store({
         ];
       })
     ),
+    successMessageVisible: false,
     locale: localStorage.getItem("locale") || "ru",
     favouritesOn: true,
     verticalCard: true,
