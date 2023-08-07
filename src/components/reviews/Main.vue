@@ -2,9 +2,9 @@
   <BaseModal page="review">
     <template #trigger>
       <div class="flex space-x-2">
-        <button
+        <router-link
           v-if="$route.name !== 'Reviews'"
-          @click="$router.push('/reviews')"
+          to="/reviews"
           class="flex items-center px-2 py-2 font-medium text-gray-800"
         >
           <span
@@ -25,17 +25,17 @@
           </span>
 
           <span>{{ $store.state.locale == "ru" ? "Отзывы" : "Reviews" }}</span>
-        </button>
+        </router-link>
 
-        <button
+        <router-link
           v-else
-          @click="$router.push('/')"
+          to="/"
           class="flex items-center px-2 py-2 font-medium text-gray-800"
         >
           <span class="font-medium">
             {{ $store.state.locale=='ru' ? 'Меню' : 'Menu' }}
           </span>
-        </button>
+        </router-link>
       </div>
     </template>
   </BaseModal>
@@ -43,7 +43,6 @@
 
 <script>
 import BaseModal from "../core/BaseModal";
-import { mapState } from "vuex"
 
 export default {
   components: {
@@ -53,10 +52,5 @@ export default {
   data: () => ({
     showSuccess: false,
   }),
-  computed: {
-    ...mapState({
-      logo: (state) => state.remoteData?.logo
-    }),
-  },
 };
 </script>

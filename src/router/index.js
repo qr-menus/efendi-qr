@@ -34,7 +34,7 @@ const router = new VueRouter({
   routes,
   scrollBehavior() {
     // always scroll to top
-    return { top: 0 }
+    return { y: 0 };
   },
 });
 

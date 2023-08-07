@@ -7,7 +7,7 @@
       </h2>
       <div class="w-full flex gap-4 justify-center mt-8 flex-wrap">
         <button v-for="branch in branches" :key="branch.key" @click="changeBranch(branch.key)" 
-        class="w-40 px-4 py-8 bg-red-500 rounded-lg hover:bg-red-600 text-white font-semibold md:text-lg"
+        class="w-40 px-4 py-8 bg-red-600 rounded-lg hover:bg-red-500 text-white font-semibold md:text-lg"
         >
           {{ $store.state.locale=='ru' ? branch.title_ru : branch.title_en }}
         </button>
@@ -17,8 +17,11 @@
     <!-- Form -->
     <template v-else>
       <div class="mb-6">
-        <p class="text-2xl font-bold text-center">
+        <h2 class="text-2xl font-bold text-center">
           {{ $store.state.locale == 'ru' ? 'Оставьте отзыв' : 'Leave a comment' }}
+        </h2>
+        <p class="mt-2 font-medium text-center text-gray-500">
+          {{ $store.state.locale == 'ru' ? `Филиал "${currentBranchName.title_ru}"` : `Branch "${currentBranchName.title_en}"` }}
         </p>
       </div>
 
@@ -82,7 +85,9 @@
                   v-model="form.message"
                   id="message"
                   class="w-full py-2.5 px-2 border-2 rounded-lg"
-                  placeholder="Напишите ваши сообщения..."
+                  :placeholder="`${ $store.state.locale=='ru' ? 
+                                'Пишите свои пожелания, предложения или жалобу...' 
+                                : 'Write your wishes, suggestions or complaint'}`"
                   name="message"
                   rows="4"
                 ></textarea>
@@ -103,12 +108,12 @@
                 <button
                   type="button"
                   :name="reaction.text"
-                  class="p-2 m-3"
+                  class="p-4 m-3"
                   @click="grading.grade = reaction.value"
                 >
                   <div 
                     v-text="reaction.emoji" 
-                    class="text-3xl icon-emoji hover:opacity-100"
+                    class="text-5xl icon-emoji hover:opacity-100"
                     :class="grading.grade !== reaction.value && 'opacity-30'"
                   />
                 </button>
@@ -120,7 +125,7 @@
           <div class="flex justify-center mb-4 overflow-auto">
             <button
               class="
-                mt-4
+                my-4
                 py-2.5
                 w-full
                 font-medium
@@ -180,27 +185,17 @@ export default {
       {
         value: 1,
         text: "Плохо",
-        emoji: "😠",
+        emoji: "👎",
       },
       {
         value: 2,
-        text: "Удовлетворительно",
-        emoji: "🙁",
+        text: "Хорошо",
+        emoji: "🙂",
       },
       {
         value: 3,
-        text: "Хорошо",
-        emoji: "😊",
-      },
-      {
-        value: 4,
-        text: "Отлично",
-        emoji: "😄",
-      },
-      {
-        value: 5,
         text: "Прекрасно",
-        emoji: "😍",
+        emoji: "👍",
       },
     ],
     branches: [
@@ -254,6 +249,10 @@ export default {
   }),
 
   computed: {
+    currentBranchName() {
+      return this.branches.find(item => item.key === this.$route.query.branch)
+    },
+
     content() {
       const gradings = this.gradings.reduce((acc, curr) => {
         return acc += `${curr.title_ru}: ${this.reactions[curr.grade - 1]?.emoji || ''} ${this.reactions[curr.grade - 1]?.text || ''}\n`

@@ -19,7 +19,24 @@ export default new Vuex.Store({
       (localStorage.getItem("favourites") &&
         JSON.parse(localStorage.getItem("favourites"))) ||
       [],
-
+    categories: Object.fromEntries(
+      Object.entries(data).map(([key, category]) => {
+        return [
+          key,
+          {
+            ...category,
+            products: category.products.map((product) => ({
+              ...product,
+              category: key,
+            })),
+          },
+        ];
+      })
+    ),
+    locale: localStorage.getItem("locale") || "ru",
+    successMessageVisible: false,
+    favouritesOn: true,
+    verticalCard: true,
   },
   mutations: {
     setLocale(state, locale) {

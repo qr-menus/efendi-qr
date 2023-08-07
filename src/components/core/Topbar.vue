@@ -2,9 +2,9 @@
   <div class="flex items-center px-4 mx-auto border-b max-w-7xl">
     <div class="relative w-full rounded-md">
       <div class="flex items-center justify-between">
-        <div class="flex items-center space-x-4">
-          <img class="w-16 h-16" :src="logo" alt="no logo" />
-        </div>
+        <router-link to="/">
+          <img class="w-16 h-16" src="../../assets/logo.svg" alt="" />
+        </router-link>
         <div class="flex items-center space-x-2">
           <Reviews />
 
