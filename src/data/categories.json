@@ -2060,14 +2060,14 @@
         "name_tr": "BAKLAVA DURUM",
         "name_ru": "ТУРЕЦКАЯ ПАХЛАВА",
         "name_en": "BAKLAVA DURUM",
-        "price_1": "55000",
+        "price_1": "60000",
         "ingredients_ru": "",
         "ingredients_en": "HE SWEETNESS OF THE QUINCE",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 55000
+            "price": 60000
           }
         ]
       },
@@ -2077,14 +2077,14 @@
         "name_tr": "ŞEKER PARE",
         "name_ru": "ШЕКЕР ПАРЕ",
         "name_en": "SHEKER PARE",
-        "price_1": "40000",
+        "price_1": "50000",
         "ingredients_ru": "МАННАЯ КРУПА, САХАР",
         "ingredients_en": "",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 40000
+            "price": 50000
           }
         ]
       },
@@ -2195,14 +2195,14 @@
         "name_tr": "BAKLAVA MIDYA",
         "name_ru": "МИДЯ ПАХЛАВА",
         "name_en": "BAKLAVA MIDYA",
-        "price_1": "40000",
+        "price_1": "50000",
         "ingredients_ru": "1 ПОРЦИЯ - 2 ШТУК",
         "ingredients_en": "",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 40000
+            "price": 50000
           }
         ]
       },
@@ -2212,13 +2212,13 @@
         "name_tr": "BAKLAVA MARAŞ",
         "name_ru": "BAKLAVA MARAŞ",
         "name_en": "BAKLAVA MARAŞ",
-        "price_1": "40000",
+        "price_1": "50000",
         "ingredients_ru": "1 ПОРЦИЯ - 2 ШТУК",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 40000
+            "price": 50000
           }
         ]
       },
@@ -2228,13 +2228,13 @@
         "name_tr": "BAKLAVA PRENSES",
         "name_ru": "BAKLAVA PRENSES",
         "name_en": "BAKLAVA PRENSES",
-        "price_1": "40000",
+        "price_1": "50000",
         "ingredients_ru": "1 ПОРЦИЯ - 2 ШТУК",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 40000
+            "price": 50000
           }
         ]
       },
@@ -2244,13 +2244,13 @@
         "name_tr": "BAKLAVA ŞOBET",
         "name_ru": "BAKLAVA ŞOBET",
         "name_en": "BAKLAVA ŞOBET",
-        "price_1": "40000",
+        "price_1": "50000",
         "ingredients_ru": "1 ПОРЦИЯ - 2 ШТУК",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 40000
+            "price": 50000
           }
         ]
       },
@@ -2260,13 +2260,13 @@
         "name_tr": "BAKLAVA HOVUÇ DILIMI",
         "name_ru": "BAKLAVA HOVUÇ DILIMI",
         "name_en": "BAKLAVA HOVUÇ DILIMI",
-        "price_1": "65000",
+        "price_1": "75000",
         "portions": [
           {
             "id": "1",
             "text": "с мороженым",
             "text_en": "with ice-cream",
-            "price": 65000
+            "price": 75000
           }
         ]
       }
