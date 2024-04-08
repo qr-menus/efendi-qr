@@ -2260,13 +2260,13 @@
         "name_tr": "BAKLAVA HOVUÇ DILIMI",
         "name_ru": "BAKLAVA HOVUÇ DILIMI",
         "name_en": "BAKLAVA HOVUÇ DILIMI",
-        "price_1": "75000",
+        "price_1": "85000",
         "portions": [
           {
             "id": "1",
             "text": "с мороженым",
             "text_en": "with ice-cream",
-            "price": 75000
+            "price": 85000
           }
         ]
       }
