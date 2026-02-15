@@ -461,8 +461,8 @@
         "id": "soup_3",
         "name_tr": "DIL ÇORBASI",
         "name_ru": "КАЛАПАЧА",
-        "name_en": "KALAPACHA",
-        "ingredients_ru": "СУП С ЯЗЫКОМ",
+        "name_en": "TONGUE SOUP",
+        "ingredients_ru": "СУП ИЗ ЯЗЫКА",
         "ingredients_en": "SOUP OF BEEF TONGUE",
         "price_05": "50000",
         "price_1": "60000",
@@ -486,12 +486,12 @@
         "name_en": "KELLE PACA ORIGINAL ÇORBASI",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "70000",
+        "price_1": "80000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 70000
+            "price": 80000
           }
         ]
       },
@@ -524,18 +524,18 @@
         "name_en": "EZOGELIN SOUPMENEMEN",
         "ingredients_ru": "ИЗ ЧЕЧЕВИЦЫ (КРАСНЫЙ) ПОДАЕТСЯ С ЛИМОНОМ",
         "ingredients_en": "",
-        "price_05": "30000",
-        "price_1": "40000",
+        "price_05": "35000",
+        "price_1": "45000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 40000
+            "price": 45000
           },
           {
             "id": "2",
             "text": "0.5x",
-            "price": 30000
+            "price": 35000
           }
         ]
       },
@@ -546,18 +546,18 @@
         "name_en": "ІКSHEMBE",
         "ingredients_ru": "СУП ИЗ ТРЕБУХИ И КИСЛОГО МОЛОКА",
         "ingredients_en": "TRIPE SOUP WITH YOGURT",
-        "price_05": "40000",
-        "price_1": "50000",
+        "price_05": "45000",
+        "price_1": "55000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 50000
+            "price": 55000
           },
           {
             "id": "2",
             "text": "0.5x",
-            "price": 40000
+            "price": 45000
           }
         ]
       },
@@ -584,18 +584,18 @@
         "name_en": "IZMIR KÖFTE",
         "ingredients_ru": "ГОВЯЖИЙ ФАРШ СО СПЕЦИЯМИ",
         "ingredients_en": "CHOPPED BEEF MEAT WITH SPICES",
-        "price_05": "50000",
-        "price_1": "75000",
+        "price_05": "60000",
+        "price_1": "77000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 75000
+            "price": 77000
           },
           {
             "id": "2",
             "text": "0.5x",
-            "price": 50000
+            "price": 60000
           }
         ]
       },
@@ -606,7 +606,7 @@
         "name_en": "ETLI NOHUT",
         "ingredients_ru": "ГОРОХ, МЯСО, ЛУК И ТОМАТЫ",
         "ingredients_en": "MEAT, ONIONS AND TOMATOES",
-        "price_05": "45000",
+        "price_05": "50000",
         "price_1": "60000",
         "portions": [
           {
@@ -617,7 +617,7 @@
           {
             "id": "2",
             "text": "0.5x",
-            "price": 45000
+            "price": 50000
           }
         ]
       },
@@ -723,12 +723,12 @@
         "name_en": "SOCUKLU YUMURTA",
         "ingredients_ru": "ЯИЧНИЦА С ТУРЕЦКИМИ КОЛБАСКАМИ",
         "ingredients_en": "SCRAMBLED EGES WITH TURKISH SAUSAGE",
-        "price_1": "55000",
+        "price_1": "60000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 55000
+            "price": 60000
           }
         ]
       },
@@ -739,12 +739,12 @@
         "name_en": "KAVURMALI YUMURTALI",
         "ingredients_ru": "ОМЛЕТ, ТУШЕНОЕ МЯСО",
         "ingredients_en": "OMELETTE, BRAISED MEAT",
-        "price_1": "55000",
+        "price_1": "60000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 55000
+            "price": 60000
           }
         ]
       },
@@ -755,12 +755,12 @@
         "name_en": "KAVURMALI MENEMEN",
         "ingredients_ru": "ЯИЧНИЦА, ТУШЕНОЕ МЯСО, ПОМИДОРЫ И БОЛГАРСКИЙ ПЕРЕЦ",
         "ingredients_en": "SCRAMBLED EGES, BRAISED MEAT, TOMATO, BELL PAPER",
-        "price_1": "65000",
+        "price_1": "60000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 65000
+            "price": 60000
           }
         ]
       },
@@ -819,12 +819,12 @@
         "name_en": "2 EGGS OVER MEDIUM",
         "ingredients_ru": "ГЛАЗУНЬЯ ИЗ 2 ЯИЦ",
         "ingredients_en": "",
-        "price_1": "35000",
+        "price_1": "40000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 35000
+            "price": 40000
           }
         ]
       }
@@ -925,12 +925,12 @@
         "name_en": "ASSORTED DONER",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "95000",
+        "price_1": "110000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 95000
+            "price": 110000
           }
         ]
       },
@@ -941,12 +941,12 @@
         "name_en": "DONAR BURGER",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "50000",
+        "price_1": "57000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 50000
+            "price": 57000
           }
         ]
       },
@@ -1061,12 +1061,12 @@
         "name_en": "CHICKEN DURUM",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "55000",
+        "price_1": "73000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 55000
+            "price": 73000
           }
         ]
       },
@@ -1077,12 +1077,12 @@
         "name_en": "CHICKEN BURGER",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "40000",
+        "price_1": "57000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 40000
+            "price": 57000
           }
         ]
       }
