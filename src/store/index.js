@@ -7,6 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     version: "0.1",
+    assetVersion: "1.0", // Update this to bust cache (e.g., "1.1", "2.0")
     favourites:
       (localStorage.getItem("favourites") &&
         JSON.parse(localStorage.getItem("favourites"))) ||

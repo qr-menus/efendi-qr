@@ -8,7 +8,7 @@
           <div @click="onClick" class="flex items-center space-x-2">
             <img
               class="object-cover w-20 h-20 bg-yellow-400 rounded-lg"
-              :src="`/images/${product.category}/${product.id}.webp`"
+              :src="getImageUrl(product.category, product.id)"
               alt="food"
             />
             <div class="text-left">
@@ -136,6 +136,7 @@
 import SlideOverVertical from "./core/SlideOverVertical.vue";
 import FoodInfo from "./FoodInfo";
 import { mapState } from "vuex";
+import { getImageUrl } from "../utils/assetVersion";
 export default {
   name: "FavouriteItem",
   props: {
@@ -164,6 +165,7 @@ export default {
     },
   },
   methods: {
+    getImageUrl,
     decrement() {
       this.$store.commit("decrement", this.product);
     },

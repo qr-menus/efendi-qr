@@ -3,7 +3,7 @@
     <div class="relative">
       <img
         class="object-cover object-center w-full bg-yellow-400"
-        :src="`/images/${category}/${product.id}.webp`"
+        :src="getImageUrl(category, product.id)"
         alt=""
       />
       <div
@@ -105,6 +105,7 @@
 <script>
 import { mapState } from "vuex";
 import FoodCount from "./FoodCount";
+import { getImageUrl } from "../utils/assetVersion";
 
 export default {
   components: { FoodCount },
@@ -151,6 +152,7 @@ export default {
   },
   created() {},
   methods: {
+    getImageUrl,
     selectPortion(index) {
       this.selectedPortionIndex = index;
     },

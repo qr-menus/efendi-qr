@@ -8,7 +8,7 @@
         <div>
           <img
             class="object-cover card-image w-16 bg-yellow-400 rounded-xl"
-            :src="`/images/${category}/${product.id}.webp`"
+            :src="getImageUrl(category, product.id)"
             alt="food"
           />
         </div>
@@ -41,6 +41,7 @@
 <script>
 import FoodInfo from "./FoodInfo";
 import SlideOverVertical from "./core/SlideOverVertical.vue";
+import { getImageUrl } from "../utils/assetVersion";
 export default {
   name: "FoodCardHorizontal",
   components: { FoodInfo, SlideOverVertical },
@@ -65,6 +66,9 @@ export default {
         return obj && obj.toLowerCase();
       };
     },
+  },
+  methods: {
+    getImageUrl,
   },
 };
 </script>

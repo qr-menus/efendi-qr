@@ -154,9 +154,9 @@
       },
       {
         "id": "salat_8",
-        "name_tr": "DOLMA | ETLI DOLMA",
-        "name_ru": "ДОЛМА | МЯСНАЯ ДОЛМА",
-        "name_en": "DOLMA | ETLI DOLMA",
+        "name_tr": "DOLMA ",
+        "name_ru": "ДОЛМА ",
+        "name_en": "DOLMA",
         "ingredients_ru": "ГОЛУБЦЫ ИЗ ВИНОГРАДНЫХ ЛИСТЬЕВ",
         "ingredients_en": "STUFFED GRAPE LEAVES",
         "price_05": "30000",
@@ -213,18 +213,18 @@
         "name_en": "EGGPLANT SALAD",
         "ingredients_ru": "БАКЛАЖАНЫ ЗЕЛЕНЫЙ И КРАСНЫЙ ПЕРЕЦ, ПОМИДОРЫ. ЛУК",
         "ingredients_en": "ECOPLANTS GREEN AND RED BELL PEPPERS, TOMATOES ONIONS",
-        "price_05": "35000",
-        "price_1": "55000",
+        "price_05": "45000",
+        "price_1": "65000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 55000
+            "price": 65000
           },
           {
             "id": "2",
             "text": "0.5x",
-            "price": 35000
+            "price": 45000
           }
         ]
       },
@@ -301,12 +301,12 @@
         "name_en": "XAYDARI SALAD",
         "ingredients_ru": "СУЗМА, КАЙМАК, БАКЛАЖАН, МАСЛО СЛИВ, МАСЛО ОЛИВ",
         "ingredients_en": "",
-        "price_1": "30000",
+        "price_1": "45000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 30000
+            "price": 45000
           }
         ]
       },
@@ -317,12 +317,12 @@
         "name_en": "GREEN SALAD",
         "ingredients_ru": "СВЕЖИЕ ОГУРЦЫ, ПОМИДОРЫ, ЗЕЛЕНЬ",
         "ingredients_en": "FRESH CUCUMBER, TOMATOES, GREENS",
-        "price_1": "45000",
+        "price_1": "65000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 45000
+            "price": 65000
           }
         ]
       },
@@ -349,12 +349,12 @@
         "name_en": "CAESAR SALAD",
         "ingredients_ru": "КУРИНОЕ МЯСО, ПОМИДОР, СУХАРИКИ, СЫР ПАРМЕЗАН, СОУС \"ЦЕЗАРЬ\"",
         "ingredients_en": "",
-        "price_1": "60000",
+        "price_1": "75000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 60000
+            "price": 75000
           }
         ]
       },
@@ -462,20 +462,20 @@
         "name_tr": "DIL ÇORBASI",
         "name_ru": "КАЛАПАЧА",
         "name_en": "KALAPACHA",
-        "ingredients_ru": "СУП ИЗ ЯЗЫКА",
+        "ingredients_ru": "СУП С ЯЗЫКОМ",
         "ingredients_en": "SOUP OF BEEF TONGUE",
-        "price_05": "45000",
-        "price_1": "55000",
+        "price_05": "50000",
+        "price_1": "60000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 55000
+            "price": 60000
           },
           {
             "id": "2",
             "text": "0.5x",
-            "price": 45000
+            "price": 50000
           }
         ]
       },
@@ -787,12 +787,12 @@
         "name_en": "CLASSIC BREAKFAST",
         "ingredients_ru": "ВАРЕНОЕ ЯЙЦО, СЛИВКИ. СЛИВОЧНОЕ МАСЛО, СЫР. БРЫНЗА, ОЛИВКИ, ДЖЕМ, ПОМИДОРЫ, ОГУРЦЫ, ХЛЕБ, ТУРЕЦКИЙ ЧАЙ",
         "ingredients_en": "BOILED EGG, CREAM, BUTTER, CHEESE, WHITE CHEESE OLIVES JAM, TOMATOES, CUCUMBERS, BREAD, TURKISH TEA",
-        "price_1": "70000",
+        "price_1": "80000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 70000
+            "price": 80000
           }
         ]
       },
