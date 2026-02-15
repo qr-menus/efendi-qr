@@ -1361,12 +1361,12 @@
         "name_en": "KEBAB WITH EGGPLANT AND MEAT",
         "ingredients_ru": "ГОВЯДИНА. БАКЛАЖАНЫ С ГАРНИРОМ",
         "ingredients_en": "BEEF. EGGPLANT, TOMATOES",
-        "price_1": "110000",
+        "price_1": "105000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 110000
+            "price": 105000
           }
         ]
       },
@@ -1393,12 +1393,12 @@
         "name_en": "MANTARLI KEBAB",
         "ingredients_ru": "ШАМПИНЬОНЫ, МЯСО ИЗ ГАРНИР",
         "ingredients_en": "",
-        "price_1": "95000",
+        "price_1": "105000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 95000
+            "price": 105000
           }
         ]
       },
@@ -1409,12 +1409,12 @@
         "name_en": "KUZU SIS",
         "ingredients_ru": "ШАШЛЫК ИЗ БАРАНИНЫ",
         "ingredients_en": "",
-        "price_1": "140000",
+        "price_1": "143000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 140000
+            "price": 143000
           }
         ]
       },
@@ -1615,7 +1615,7 @@
       {
         "id": "kebab_23",
         "name_tr": "KAŞARLI KÖFTE",
-        "name_ru": "КЁФТЕ C СЫРOM",
+        "name_ru": "КЁФТЕ C СЫРOМ",
         "name_en": "KOFTA WITH KASHAR CHEESE",
         "ingredients_ru": "",
         "ingredients_en": "",
@@ -1674,18 +1674,18 @@
         "name_en": "CERAMIT TAVUK PIZZA «COMBINED» LARGE",
         "ingredients_ru": "ГОВЯДИНА, ТОМАТЫ, КУКУРУЗА, ОЛИВКИ ГРИБЫ, СЫР",
         "ingredients_en": "BEEF, TOMATOES, OLVES, MUSHROOMS, CHEESE",
-        "price_05": "100000",
-        "price_1": "125000",
+        "price_05": "110000",
+        "price_1": "135000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 125000
+            "price": 135000
           },
           {
             "id": "2",
             "text": "0.5x",
-            "price": 100000
+            "price": 110000
           }
         ]
       },
@@ -1696,12 +1696,12 @@
         "name_en": "LAKHMAJUN",
         "ingredients_ru": "ФАРШИЗ БАРАНИНЫ ТОМАТЫ. РЕПЧАТЫЙ ЛУК",
         "ingredients_en": "MINCED LAMB MINCEMEAT, TOMATOES, ONION",
-        "price_1": "40000",
+        "price_1": "50000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 40000
+            "price": 50000
           }
         ]
       },
@@ -1756,12 +1756,12 @@
         "name_en": "CHEESE PIDE",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "75000",
+        "price_1": "85000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 75000
+            "price": 85000
           }
         ]
       },
@@ -1784,8 +1784,8 @@
       {
         "id": "pizza_7",
         "name_tr": "ETLI KARIŞIK PIDE",
-        "name_ru": "МЯСНАЯ ПИЦЦА",
-        "name_en": "MEAT PIZZA",
+        "name_ru": "МЯСНАЯ ПИДЕ",
+        "name_en": "MEAT PIDE",
         "ingredients_ru": "ФАРШИЗ БАРАНИНЫ, ЯЙЦА. ПОМИДОРЫ СЫР",
         "ingredients_en": "LAMB MINCEMEAT, EGGS, TOMATOES. CHEESE",
         "price_1": "120000",
@@ -1800,16 +1800,16 @@
       {
         "id": "pizza_8",
         "name_tr": "KARIŞIK PIDE",
-        "name_ru": "ОВОЩНАЯ ПИЦЦА",
+        "name_ru": "ОВОЩНАЯ ПИДЕ",
         "name_en": "KARIŞIK PIDE",
         "ingredients_ru": "",
         "ingredients_en": "SEASONAL VEGETABLES",
-        "price_1": "95000",
+        "price_1": "105000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 95000
+            "price": 105000
           }
         ]
       },
@@ -1820,12 +1820,12 @@
         "name_en": "KUSH BASH",
         "ingredients_ru": "БАРАНИЕ МЯСО, ПОМИДОРЫ, БОЛГАРСКИЙ ПЕРЕЦ",
         "ingredients_en": "BEEF, TOMATOES, BULGARIAN PAPER",
-        "price_1": "95000",
+        "price_1": "110000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 95000
+            "price": 110000
           }
         ]
       },
@@ -1868,12 +1868,12 @@
         "name_en": "OIL PIDE",
         "ingredients_ru": "ПИДЕ С СЫРОМ, ЗАЛИТАЯ МЕДОВЫМ СИРОПОМ",
         "ingredients_en": "SWEET PIZZA WITH CHEESE, EGGS, BATHED IN HONEY SYRUP",
-        "price_1": "80000",
+        "price_1": "100000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 80000
+            "price": 100000
           }
         ]
       }
@@ -1891,12 +1891,12 @@
         "name_en": "CHICKEN WITH VEGETABLES",
         "ingredients_ru": "КУРИНОЕ МЯСО С ОВОЩАМИ И РИСОМ",
         "ingredients_en": "ROASTED CHICKEN WITH VEGETABLES AND RICE",
-        "price_1": "95000",
+        "price_1": "105000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 95000
+            "price": 105000
           }
         ]
       },
@@ -1907,12 +1907,12 @@
         "name_en": "MEAT WITH VEGETABLES",
         "ingredients_ru": "ЖАРЕНОЕ МЯСОС ОВОЩАМИ И РИСОЛ",
         "ingredients_en": "ROASTED MEAT WITH VEGETABLES AND RICE",
-        "price_1": "135000",
+        "price_1": "160000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 135000
+            "price": 160000
           }
         ]
       },
@@ -1923,12 +1923,12 @@
         "name_en": "KARIŞIK SAÇ TAVA",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "130000",
+        "price_1": "155000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 130000
+            "price": 155000
           }
         ]
       },
@@ -1939,12 +1939,12 @@
         "name_en": "VEGETABLE AND RICE",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "75000",
+        "price_1": "85000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 75000
+            "price": 85000
           }
         ]
       },
@@ -2414,12 +2414,12 @@
         "name_en": "SPARKLING WATER",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "8000",
+        "price_1": "25000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 8000
+            "price": 25000
           }
         ]
       },
@@ -2446,12 +2446,12 @@
         "name_en": "TURKISH TEA",
         "ingredients_ru": "",
         "ingredients_en": "",
-        "price_1": "85000",
+        "price_1": "5000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 85000
+            "price": 5000
           }
         ]
       },
@@ -2476,20 +2476,20 @@
         "name_tr": "CHARTAQ",
         "name_ru": "CHARTAQ",
         "name_en": "CHARTAQ",
-        "ingredients_ru": "0.3Л - 13 000, 0.5Л - 18 000 ",
-        "ingredients_en": "0.3L - 13 000, 0.5L - 18 000 ",
-        "price_05": "13000",
-        "price_1": "18000",
+        "ingredients_ru": "0.3Л - 20 000, 0.5Л - 25 000 ",
+        "ingredients_en": "0.3L - 20 000, 0.5L - 25 000 ",
+        "price_05": "20000",
+        "price_1": "25000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 18000
+            "price": 25000
           },
           {
             "id": "2",
             "text": "0.5x",
-            "price": 13000
+            "price": 20000
           }
         ]
       },
@@ -2509,22 +2509,7 @@
           }
         ]
       },
-      {
-        "id": "drinks_9",
-        "name_tr": "SADE KAHVESI",
-        "name_ru": "КОФЕ",
-        "name_en": "COFFEE",
-        "ingredients_ru": "",
-        "ingredients_en": "",
-        "price_1": "35000",
-        "portions": [
-          {
-            "id": "1",
-            "text": "1x",
-            "price": 35000
-          }
-        ]
-      },
+    
       {
         "id": "drinks_10",
         "name_tr": "BIR DОGROSE SUYU",
@@ -2587,23 +2572,23 @@
       },
       {
         "id": "drinks_13",
-        "name_tr": "COMPOTE",
-        "name_ru": "КОМПОТ",
-        "name_en": "COMPOTE",
-        "ingredients_ru": "0.4Л - 24 000, 1Л - 60 000",
-        "ingredients_en": "0.4L - 24 000, 1L - 60 000",
-        "price_05": "24000",
-        "price_1": "60000",
+        "name_tr": "VİŞNE LİMONATASI",
+        "name_ru": "ВИШНЁВЫЙ ЛИМОНАД",
+        "name_en": "CHERRY LEMONADE",
+        "ingredients_ru": "0.4Л - 32 000, 1Л - 90 000",
+        "ingredients_en": "0.4L - 32 000, 1L - 90 000",
+        "price_05": "32000",
+        "price_1": "90000",
         "portions": [
           {
             "id": "1",
             "text": "1x",
-            "price": 60000
+            "price": 90000
           },
           {
             "id": "2",
             "text": "0.5x",
-            "price": 24000
+            "price": 32000
           }
         ]
       },
@@ -2634,9 +2619,9 @@
         "name_tr": "SOĞUK ÇAY",
         "name_ru": "Айсти(SOĞUK ÇAY)",
         "name_en": "ICE TEA",
-        "ingredients_ru": "0.4Л - 25 000, 1Л - 65 000, ",
+        "ingredients_ru": "0.4Л - 26 000, 1Л - 80 000, ",
         "ingredients_en": "",
-        "price_05": "65000",
+        "price_05": "26000",
         "price_1": "80000",
         "portions": [
           {
@@ -2656,9 +2641,9 @@
         "name_tr": "MOJİTO",
         "name_ru": "МОХИТО ",
         "name_en": "MOXITO",
-        "ingredients_ru": "0.4Л - 24 000, 1Л - 65 000, ",
+        "ingredients_ru": "0.4Л - 25 000, 1Л - 75 000, ",
         "ingredients_en": "",
-        "price_05": "65000",
+        "price_05": "26000",
         "price_1": "75000",
         "portions": [
           {
@@ -2669,18 +2654,18 @@
           {
             "id": "2",
             "text": "0.5x",
-            "price": 65000
+            "price": 26000
           }
         ]
       },
       {
         "id": "drinks_17",
         "name_tr": "LIMONLU LIMONATA",
-        "name_ru": "ЛИМОННЫЙ ЛИМОНАД ",
+        "name_ru": "ЛИМОНАД ",
         "name_en": "LEMON LEMONADE",
-        "ingredients_ru": "0.4Л - 24 000, 1Л - 65 000, ",
+        "ingredients_ru": "0.4Л - 30 000, 1Л - 75 000, ",
         "ingredients_en": "",
-        "price_05": "65000",
+        "price_05": "30000",
         "price_1": "75000",
         "portions": [
           {
@@ -2691,7 +2676,7 @@
           {
             "id": "2",
             "text": "0.5x",
-            "price": 65000
+            "price": 30000
           }
         ]
       },
