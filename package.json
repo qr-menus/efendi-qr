@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.2.0",
-    "axios": "^0.27.2",
+    "axios": "^1.6.0",
     "core-js": "^3.6.5",
     "v-mask": "^2.3.0",
     "vee-validate": "^3.4.14",
